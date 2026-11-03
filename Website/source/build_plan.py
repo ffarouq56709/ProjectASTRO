@@ -47,6 +47,8 @@ FILE_RECORDS = {
     5: ("PASS", "Arithmetic and options document only; ceiling undecided", "JacobsBaymax/evidence/day_005_budget_review.json"),
     6: ("PASS", "Configuration document; owner accepted 2026-10-28; G2 not released", "JacobsBaymax/evidence/day_006_configuration_review_R0_3.json"),
     7: ("PASS", "G0 released 2026-10-28 for documentation, software and analysis only", "JacobsBaymax/requirements/day_007_G0_baseline_review.md"),
+    8: ("PASS", "Requirement audit: 64 rows, links consistent, 9 wording issues for Day 14", "JacobsBaymax/requirements/day_008_requirement_audit.csv"),
+    9: ("PASS", "Fall hazard questions and envelope sketch; no ratings approved", "JacobsBaymax/requirements/day_009_fall_hazard_questions.md"),
 }
 
 HW_PHASES = {"Hardware", "Handling", "Enclosure", "Integration"}

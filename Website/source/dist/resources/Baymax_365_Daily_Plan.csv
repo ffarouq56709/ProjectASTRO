@@ -71,14 +71,14 @@ JacobsBaymax/tests/verification_matrix.csv","1. (30 min) Load requirements.csv i
 3. (40 min) Add columns 'Day 6/7 effect' and 'Wording issue'. Note JB-R-002 band vs Day 1 choice, JB-R-003 mass with off-robot handling stand, JB-R-005 joint count.
 4. (20 min) Save as a new CSV; leave requirements.csv unchanged.","Expected phase counts from R0.1: Year 1 = 50, Later = 6, Excluded = 8; total 64.",JacobsBaymax/requirements/day_008_requirement_audit.csv,,"64 rows, 64 unique IDs, phase counts recorded.
 Every row maps to an existing JB-V ID or the gap is listed.
-Original requirements.csv is unchanged (same SHA-256).",,,,7,,R0.3
+Original requirements.csv is unchanged (same SHA-256).",,,,7,"PASS: Requirement audit: 64 rows, links consistent, 9 wording issues for Day 14",R0.3
 9,2,Foundation,Desk work,Describe the robot fall hazards,"Write the questions a rigging provider must answer before any standing test, without guessing ratings.",110,"JacobsBaymax/risk_records/hazards.csv (JB-H-01, 14, 17, 20)
 JacobsBaymax/cad_specifications/parameters.json","1. (30 min) Sketch the robot in side and front view at 1.829 m. Draw the fall circle: radius = height, so 1.83 m around each foot. Mark it as a sketch, not a safe distance.
 2. (30 min) List the arrest path: robot attachment point → tether → connector → overhead beam or frame → building anchor. For each, write the question: rating, inspection date, who signs it.
 3. (30 min) Write the site checklist: floor area, ceiling height, beam or frame, power outlets, barrier, spectator line, where the stop operator stands.
 4. (20 min) Note the difference between an arrest system (catches a fall) and balance control (stops it happening).",Static weight 55 × 9.81 = 539.55 N. This does not size arrest equipment; dynamic arrest loads are larger and need the rigging provider.,JacobsBaymax/requirements/day_009_fall_hazard_questions.md,,"The fall envelope is labelled a sketch.
 Every arrest component has a rating question and a named role (unassigned is fine).
-No anchor capacity or safe distance is presented as approved.",,,,8,,R0.3
+No anchor capacity or safe distance is presented as approved.",,,,8,PASS: Fall hazard questions and envelope sketch; no ratings approved,R0.3
 10,2,Foundation,Desk work,Describe joint and payload hazards,Link each motion and payload hazard to a control idea and a test.,120,"JacobsBaymax/risk_records/hazards.csv
 JacobsBaymax/requirements/day_006_D03_D04_configuration.md
 JacobsBaymax/requirements/day_009_fall_hazard_questions.md","1. (35 min) List pinch points from the photo: knee pads, ankle gaps, hip, shoulder pins, shell seams. Give each a joint name from the 10-joint list.

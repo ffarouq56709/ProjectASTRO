@@ -948,6 +948,11 @@
     7
    ],
    "hardwareRecord": false,
+   "fileRecord": {
+    "result": "PASS",
+    "scope": "Requirement audit: 64 rows, links consistent, 9 wording issues for Day 14",
+    "evidence": "JacobsBaymax/requirements/day_008_requirement_audit.csv"
+   },
    "next": "Day 009: Describe the robot fall hazards"
   },
   {
@@ -1015,6 +1020,11 @@
     8
    ],
    "hardwareRecord": false,
+   "fileRecord": {
+    "result": "PASS",
+    "scope": "Fall hazard questions and envelope sketch; no ratings approved",
+    "evidence": "JacobsBaymax/requirements/day_009_fall_hazard_questions.md"
+   },
    "next": "Day 010: Describe joint and payload hazards"
   },
   {
