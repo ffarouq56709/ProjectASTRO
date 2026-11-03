@@ -1,6 +1,6 @@
 # Jacobs Baymax - Day 1 working record
 
-Prepared 2026-10-24. Accountable owner: Faisal Farouq. Documentation assistant: Codex.
+Prepared 2026-10-24. Accountable owner: Faisal Farouq. 
 
 Start with [the Day 001 mission draft](requirements/day_001_mission_acceptance.md). Its current outcome is **REWORK**, pending owner review, reconciliation with earlier local charters and actual time entry. No equipment, test result, engineering release or owner acceptance is created by these files.
 
