@@ -1,0 +1,51 @@
+{
+  "day": 10,
+  "date": "2026-11-02",
+  "owner": "Faisal Farouq",
+  "result": "PASS (desk work: hazard list only)",
+  "hazards": 15,
+  "maps_to": [
+    "JB-H-02",
+    "JB-H-03",
+    "JB-H-05",
+    "JB-H-17",
+    "JB-H-20"
+  ],
+  "key_numbers": {
+    "knee_pinch_N_at_0.10m": {
+      "rated": 760,
+      "peak": 2280
+    },
+    "hip_roll_pinch_N_at_0.10m": {
+      "rated": 1140,
+      "peak": 3420
+    },
+    "ankle_pinch_N_at_0.10m": {
+      "rated": 400,
+      "peak": 1200
+    },
+    "no_load_rad_s": {
+      "direct": 20.9,
+      "2:1": 10.5,
+      "3:1": 7.0
+    },
+    "leg_tip_runaway_m_s": 6.0,
+    "planned_swing_foot_m_s": 0.45,
+    "drop_J": {
+      "floor_from_1.1m": 21.6,
+      "catch_tray_0.15m": 2.9
+    }
+  },
+  "assumptions": [
+    "chest-height tray 1.1 m",
+    "arm mass about 1 kg",
+    "ISO 13854 gaps 25 mm finger / 100 mm hand to be confirmed"
+  ],
+  "severity_likelihood_residual": "UNASSESSED",
+  "robot_tests_executed": 0,
+  "files": {
+    "day_010_motion_payload_hazards.csv": "c39e8510a86ce43be79418baca22c68bb2df2854bf2fc2360b1f34468a02ced7",
+    "day_010_motion_payload_hazards.md": "70946053bfd812ceb82499eee4a839bafdc46f9a4348e693c00ab43defd4cb08",
+    "day_010_motion_payload_hazards.pdf": "207b821a7a68a1ebc2d7d53a1954e76956363051c3a4c5c9a0bfdde9c5c9284e"
+  }
+}
