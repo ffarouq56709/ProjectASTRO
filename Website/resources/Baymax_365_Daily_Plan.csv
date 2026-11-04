@@ -86,13 +86,13 @@ JacobsBaymax/requirements/day_009_fall_hazard_questions.md","1. (35 min) List pi
 3. (35 min) Write one control idea per hazard (guard, gap ≥ finger size to be set by reviewer, holding brake, interlock) and the JB-V test that checks it.
 4. (20 min) Leave severity and residual risk blank for the reviewer.",2 kg object weight 19.62 N; with ≈0.5 kg tray 24.5 N held by the handling actuator.,JacobsBaymax/requirements/day_010_motion_payload_hazards.csv,,"Each hazard has a control idea, a JB-V link and a reviewer role.
 No gap size, force limit or residual risk is invented.
-Person lifting and cargo walking are listed as excluded uses.",,,,"6,9",,R0.3
+Person lifting and cargo walking are listed as excluded uses.",,,,"6,9",PASS: 15 joint and payload hazards listed; severity and residual risk UNASSESSED,R0.3
 11,2,Foundation,Desk work,Describe care and privacy risks,"Write one bad and one good response for each care risk, so the software tests have exact targets.",100,"JacobsBaymax/caregiver_workflows/04_caregiver_workflows.md
 JacobsBaymax/simulated_patient_data/fictional_fixture.json","1. (30 min) List six risks: medication advice, false ingestion record, wrong unit, missing timestamp, unauthorized recipient, misleading delivery status.
 2. (50 min) For each, write a bad robot reply and a permitted reply using SIM-001 and Fictional Demo Medication A.
 3. (20 min) Tag each pair with the requirement (e.g. JB-R-028, 036, 038) and the test day that will check it (Days 38, 57, 62).",6 risks × 2 examples = 12 scripted lines.,JacobsBaymax/requirements/day_011_care_privacy_examples.md,,"12 lines written with fictional data only.
 Permitted replies contain no diagnosis, dosing or emergency promise.
-Each pair names a requirement and a test day.",,,,10,,R0.3
+Each pair names a requirement and a test day.",,,,10,PASS: 8 care and privacy risks with bad and permitted replies; scripted only,R0.3
 12,2,Foundation,Desk work,Build the assumption register,Make every assumption visible with a route to evidence and a deadline.,100,"JacobsBaymax/risk_records/assumptions.csv (A-01 to A-12)
 JacobsBaymax/requirements/day_006_D03_D04_configuration.md (A6-01 to A6-16)","1. (30 min) Copy A-01 to A-12 and add the 16 Day 6 assumptions (leg mass 10 kg, μ = 0.5, stage masses, listing prices...).
 2. (40 min) Add columns: evidence needed, who provides it, decide-by day, status.
@@ -130,16 +130,18 @@ Motor control is outside this app.",,,,14,,R0.3
 4. (10 min) Commit to git with message 'Day 16 empty app'.",Pinned versions: record `pip freeze` output in README.,JacobsBaymax/software/day_016_care_app_startup.md,,"A fresh terminal following the README shows the banner.
 `pip freeze` is saved.
 No paid service is used.",,,,15,,R0.3
-17,3,Software,Desk work,Define the fictional profile schema,Make it impossible to load a profile that is not marked simulated.,100,"JacobsBaymax/software/day_016_care_app_startup.md
-JacobsBaymax/simulated_patient_data/fictional_fixture.json","1. (40 min) Write a JSON schema: id, simulated (must be true), display_name, interaction_mode (5 values), preferences, consent {memory, notes, capture, transmit} all default false.
-2. (30 min) Add SIM-001 'Fictional Demo Profile 001'.
-3. (30 min) Write 3 pytest cases: valid SIM-001 loads; simulated=false rejected; missing consent block defaults to all false.",3 tests; expected 3 pass.,JacobsBaymax/software/day_017_profile_schema.json,,"simulated=false is rejected by the parser.
+17,3,Software,Desk work,Define the fictional profile schema,Make it impossible to load a profile that is not marked simulated.,110,"JacobsBaymax/software/day_016_care_app_startup.md
+JacobsBaymax/simulated_patient_data/fictional_fixture.json
+JacobsBaymax/simulated_patient_data/fictional_fixture_SIM-002.json","1. (40 min) Write a JSON schema: id, simulated (must be true), display_name, interaction_mode (5 values), preferences, mobility text, condition labels (text only, never used for logic), care_team list, consent {preference_memory, notes, capture, transmit} all default false.
+2. (30 min) Load SIM-001 'Fictional Demo Profile 001' and SIM-002 'Fictional Demo Profile 002' (78, wheelchair, type 2 diabetes label).
+3. (40 min) Write 4 pytest cases: SIM-001 and SIM-002 load; simulated=false rejected; missing consent block defaults to all false; a condition label cannot trigger any rule.",4 tests; expected 4 pass.,JacobsBaymax/software/day_017_profile_schema.json,,"simulated=false is rejected by the parser.
 All four consents default to false.
 Fixture contains no real name or identifier.",,,,16,,R0.3
-18,3,Software,Desk work,Define the observation schema,"Every reading carries value, unit, source and two timestamps, or it is rejected.",100,"JacobsBaymax/software/day_017_profile_schema.json
-HL7 FHIR R4 Observation (structure reference only)","1. (40 min) Fields: record_id, profile_id, metric, value (typed), unit, source_id, actor_id, observed_at, recorded_at, version, supersedes_id, statement_type (simulated_fact, patient_statement, robot_observation, unknown).
-2. (30 min) Allow value null only with missing_reason.
-3. (30 min) Write 4 tests: valid record; missing unit rejected; missing source rejected; bad timestamp rejected.",4 tests; 12 fields + 1 conditional.,JacobsBaymax/software/day_018_observation_schema.json,,"4 tests pass.
+18,3,Software,Desk work,Define the observation schema,"Every reading carries value, unit, source and two timestamps, or it is rejected.",110,"JacobsBaymax/software/day_017_profile_schema.json
+HL7 FHIR R4 Observation (structure reference only)
+JacobsBaymax/caregiver_workflows/05_caregiver_link_and_grounding.md","1. (40 min) Fields: record_id, profile_id, metric, value (typed), unit, source_id, actor_id, observed_at, recorded_at, version, supersedes_id, statement_type (simulated_fact, patient_statement, robot_observation, unknown). Statements also carry verbatim, read_back, confirmed.
+2. (30 min) Allow value null only with missing_reason. Add metric blood_glucose with unit mg/dL only.
+3. (40 min) Write 5 tests: valid record; missing unit rejected; missing source rejected; bad timestamp rejected; patient_statement with confirmed=false rejected.",5 tests; 12 fields + 3 statement fields + 1 conditional.,JacobsBaymax/software/day_018_observation_schema.json,,"4 tests pass.
 Error messages name the bad field.
 No clinical normal range is stored.",,,,17,,R0.3
 19,3,Software,Desk work,Create the transactional record store,Records are written only through service functions and never silently overwritten.,100,"JacobsBaymax/software/day_017_profile_schema.json
@@ -210,23 +212,27 @@ JacobsBaymax/software/day_027_accessibility_baseline.md","1. (40 min) Run create
 4. (10 min) Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/.",4 scenarios; expected 0 real-data hits.,JacobsBaymax/software/day_028_consent_UI_week_review.md,,"JB-V-11 and 12 cases reproducible from the steps.
 No participant or study is invented.
 Defects recorded.",,,,"22,23,24,25,26,27",,R0.3
-29,5,Software,Desk work,Add the three simulated vital measurements,"Heart rate, oxygen saturation and temperature as clearly simulated values with units.",110,"JacobsBaymax/software/day_018_observation_schema.json
-JacobsBaymax/software/day_025_observation_form_test.md","1. (40 min) Add metrics heart_rate (1/min), spo2 (%), temperature (°C) with allowed fixture values only.
+29,5,Software,Desk work,Add the simulated vitals and glucose readings,"Heart rate, oxygen saturation, temperature and blood glucose as clearly simulated values with units.",130,"JacobsBaymax/software/day_018_observation_schema.json
+JacobsBaymax/software/day_025_observation_form_test.md
+JacobsBaymax/simulated_patient_data/fictional_fixture_SIM-002.json","1. (40 min) Add metrics heart_rate (1/min), spo2 (%), temperature (°C), blood_glucose (mg/dL) with allowed fixture values only.
 2. (30 min) Display value, unit, observed time, recorded time, source, actor and SIMULATED. No interpretation text.
-3. (40 min) Test export to JSON and re-import; compare all fields.",3 metrics × 7 displayed fields = 21 checks.,JacobsBaymax/software/day_029_simulated_vitals_test.md,,"Round trip keeps units, times and simulated flag.
-No 'normal'/'abnormal' wording.
-21 checks pass.",,,,"18,25,28",,R0.3
+3. (20 min) Load SIM2-OBS-004 (21:00, value null): the screen must say 'no reading' with the reason.
+4. (40 min) Test export to JSON and re-import; compare all fields.",4 metrics × 7 displayed fields = 28 checks + 1 missing-reading check.,JacobsBaymax/software/day_029_simulated_vitals_test.md,,"Round trip keeps units, times and simulated flag.
+No 'normal', 'low' or 'high' wording.
+Missing glucose shows 'no reading', never a number.
+29 checks pass.",,,,"18,25,28",,R0.3
 30,5,Software,Desk work,Add activity and rest logs,Zero and missing are never confused.,110,JacobsBaymax/software/day_029_simulated_vitals_test.md,"1. (40 min) Steps as integer count; activity and rest as durations in minutes with source and entry type.
 2. (30 min) Add one fixture with 0 steps and one with steps missing (reason 'not recorded').
 3. (40 min) Test the display shows '0' and 'unknown – not recorded' respectively.",2 fixtures; 2 distinct displays.,JacobsBaymax/software/day_030_activity_rest_test.md,,"Zero shows as 0.
 Missing shows as unknown with reason.
 Duration unit shown.",,,,29,,R0.3
-31,5,Software,Desk work,Add patient reported check ins,Record words exactly and treat a decline as a decline.,110,"JacobsBaymax/software/day_018_observation_schema.json
+31,5,Software,Desk work,Add patient reported check ins,Record words exactly and treat a decline as a decline.,130,"JacobsBaymax/software/day_018_observation_schema.json
 JacobsBaymax/software/day_026_correction_screen_test.md","1. (40 min) Five check-ins: pain, mood, fatigue, appetite, sleep. Store question version, response text, time.
-2. (30 min) Add a 'prefer not to say' option stored as declined.
-3. (40 min) Test: declined pain is not shown as 'no pain'.",5 check-ins; 1 decline case.,JacobsBaymax/software/day_031_checkin_test.md,,"Actor's words stored verbatim.
+2. (30 min) Read-back before saving: 'You said: <words>. Is that right?' Yes saves; no asks once more; still no or silence saves nothing and says 'I didn't save that.'
+3. (20 min) Add a 'prefer not to say' option stored as declined.
+4. (40 min) Test with SIM2-STM-003 and STM-004: confirmed saves verbatim; rejected read-back saves nothing; declined pain is not shown as 'no pain'.",5 check-ins; 2 read-back cases; 1 decline case.,JacobsBaymax/software/day_031_checkin_test.md,,"Actor's words stored verbatim only after confirmation.
 Decline stored separately.
-No score or diagnosis derived.",,,,"18,26,30",,R0.3
+No score, symptom label or diagnosis derived.",,,,"18,26,30",,R0.3
 32,5,Software,Desk work,Draw descriptive trend graphs,"Plot values truthfully: separate units, visible gaps, sorted by observed time.",110,"JacobsBaymax/software/day_029_simulated_vitals_test.md
 JacobsBaymax/software/day_030_activity_rest_test.md","1. (40 min) One graph per unit. Each point links to its record ID.
 2. (30 min) Add a 6-hour missing interval and an out-of-order fixture.
@@ -239,12 +245,13 @@ JacobsBaymax/software/day_032_trend_graph_test.md","1. (40 min) Correct one fict
 3. (40 min) Compare graph value and report value for that point.",1 corrected point; graph = report = v2.,JacobsBaymax/software/day_033_corrected_trend_test.md,,"Graph and report agree.
 v1 recoverable.
 Observed time unchanged.",,,,"26,32",,R0.3
-34,5,Software,Desk work,Add the artificial review rule,A non-clinical demo rule that triggers exactly above 10 and never sounds medical.,110,"JacobsBaymax/software/day_032_trend_graph_test.md
+34,5,Software,Desk work,Add the artificial review rule,A non-clinical demo rule that triggers exactly above 10 and never sounds medical.,140,"JacobsBaymax/software/day_032_trend_graph_test.md
 JacobsBaymax/caregiver_workflows/04_caregiver_workflows.md","1. (40 min) Add metric synthetic_review_counter (count). Rule: value > 10 shows the prompt.
 2. (30 min) Prompt text: 'This simulated reading crossed the demonstration review rule. I cannot determine what it means. Would you like to contact your approved caregiver?'
-3. (40 min) Test values 10 and 11.",10 → no prompt; 11 → prompt.,JacobsBaymax/software/day_034_artificial_threshold_test.md,,"Boundary behaves exactly.
-Prompt shows trigger and value.
-No diagnosis or emergency wording.",,,,"32,33",,R0.3
+3. (30 min) Add care-team notify values from SIM-002 (glucose below 70 / above 250 mg/dL, labelled fictional and 'set by your care team'). Prompt: 'Your <time> reading was <value> mg/dL. Your care team asked to be told about readings below 70. Shall I send it to them now?'
+4. (40 min) Test counter 10 and 11; glucose 70 and 69, 250 and 251; SIM2-OBS-003 (64).","Counter 10 → none, 11 → prompt; glucose 70 → none, 69 → prompt, 250 → none, 251 → prompt.",JacobsBaymax/software/day_034_artificial_threshold_test.md,,"Every boundary behaves exactly.
+Prompt shows value, unit, time and that the care team set the value.
+No diagnosis, 'low sugar' or emergency wording.",,,,"32,33",,R0.3
 35,5,Software,Desk work,Review observation integrity,"Run every observation fixture and match screen, graph and export to source.",120,"JacobsBaymax/software/day_029_simulated_vitals_test.md
 JacobsBaymax/software/day_030_activity_rest_test.md
 JacobsBaymax/software/day_031_checkin_test.md
@@ -390,12 +397,16 @@ Gaps listed.",,,,"50,51,52,53,54,55",,R0.3
 3. (40 min) Test: unapproved recipient rejected and audited; placeholder cannot send.",Allowlist size: 0 or 1.,JacobsBaymax/software/day_057_recipient_allowlist_test.md,,"Unapproved recipients rejected.
 Denial audited.
 Recipient consent stored if one is named.",Only if you choose a real test recipient: get their written consent to receive fictional test messages.,,,56,,R0.3
-58,9,Software,Desk work,Build the structured summary,A report where every fact traces to a record and unknowns stay unknown.,110,"JacobsBaymax/software/day_029_simulated_vitals_test.md
+58,9,Software,Desk work,Build the structured summary,A report where every fact traces to a record and unknowns stay unknown.,140,"JacobsBaymax/software/day_029_simulated_vitals_test.md
 JacobsBaymax/software/day_038_medication_response_test.md
-JacobsBaymax/software/day_031_checkin_test.md","1. (40 min) Assemble: time window, readings with source, medication responses, concerns, robot status.
-2. (40 min) Separate sections: simulated facts, patient statements, robot observations, unknowns. Include record IDs.
-3. (30 min) Compare every field to its source record.",Fields compared = all summary fields.,JacobsBaymax/software/day_058_summary_integrity_test.md,,"Every fact has a record ID.
-Unknowns labelled.
+JacobsBaymax/software/day_031_checkin_test.md
+JacobsBaymax/software/prototypes/grounding_check.py
+JacobsBaymax/caregiver_workflows/05_caregiver_link_and_grounding.md","1. (40 min) Assemble from templates only: time window, readings with source, medication responses, patient statements (quoted), robot events, unknowns, robot status.
+2. (30 min) Separate sections: simulated facts, patient statements, robot observations, unknowns. Every sentence carries its record IDs.
+3. (40 min) Move the grounding checker (rules R1-R9) into services/grounding.py; run it on every sentence before preview; a failed sentence falls back to the template and writes an audit event.
+4. (30 min) Run the 17 SIM-002 cases G-01 to G-17 as pytest; then compare every summary field to its source record.",17 grounding cases expected as listed; fields compared = all summary fields.,JacobsBaymax/software/day_058_summary_integrity_test.md,,"Every sentence cites a record ID that exists.
+17/17 grounding cases as expected.
+Unknowns say 'no reading' or 'not recorded'.
 SIMULATED label present.",,,,"29,31,38,57",,R0.3
 59,9,Software,Desk work,Bind approval to exact content,An approval covers one exact message to one recipient and nothing else.,110,"JacobsBaymax/software/day_058_summary_integrity_test.md
 JacobsBaymax/software/day_057_recipient_allowlist_test.md","1. (40 min) Show full text, recipient, version; compute SHA-256 of the final snapshot.
@@ -413,10 +424,12 @@ Only approved content sent.",,,,59,,R0.3
 3. (40 min) Stop the mock receiver, send, restart it after 40 s; count attempts and stored messages.","Attempts at 0, 5, 15, 35 s = 4; stored after recovery = 1.",JacobsBaymax/software/day_061_outbox_retry_test.md,,"4 attempts logged.
 No duplicate stored.
 No emergency wording.",,,,60,,R0.3
-62,9,Software,Desk work,Add priorities and explicit review state,Four non-clinical priorities and a separate human-reviewed state.,110,JacobsBaymax/software/day_060_mock_receiver_test.md,"1. (40 min) Priorities: ROUTINE, CAREGIVER_ATTENTION, HUMAN_CONTACT_REQUESTED, SYSTEM_ASSISTANCE.
-2. (30 min) Mock recipient has a 'mark reviewed' action; app shows received and reviewed separately.
-3. (40 min) Test that receipt alone never shows reviewed.",4 priorities × 2 states.,JacobsBaymax/software/day_062_communication_states_test.md,,"No priority reads as a diagnosis.
+62,9,Software,Desk work,Add priorities and explicit review state,Four non-clinical priorities and a separate human-reviewed state.,130,JacobsBaymax/software/day_060_mock_receiver_test.md,"1. (40 min) Priorities: ROUTINE, CAREGIVER_ATTENTION, HUMAN_CONTACT_REQUESTED, SYSTEM_ASSISTANCE.
+2. (30 min) Mock recipient has 'mark reviewed' and 'reply' actions; app shows received and reviewed separately.
+3. (20 min) Show and read a reply verbatim: 'Message from your care team, <time>: <exact text>'. No summary or rewording (SIM2-MSG-002).
+4. (40 min) Test: receipt alone never shows reviewed; displayed reply text equals stored text character for character.",4 priorities × 2 states; 1 reply compared character for character.,JacobsBaymax/software/day_062_communication_states_test.md,,"No priority reads as a diagnosis.
 Reviewed only after the action.
+Reply shown verbatim with sender and time.
 Connection state visible.",,,,"60,61",,R0.3
 63,9,Software,Desk work,Review one complete communication session,Run every send path once and prove nothing unapproved left the laptop.,120,"JacobsBaymax/software/day_057_recipient_allowlist_test.md
 JacobsBaymax/software/day_058_summary_integrity_test.md
@@ -446,11 +459,14 @@ No motor or network access from conversation.",,,,"43,64",,R0.3
 3. (30 min) Confirm no record change, send or motion request results.",2 malicious inputs → 0 actions.,JacobsBaymax/software/day_066_untrusted_content_test.md,,"No action taken.
 Content shown as text.
 Result logged.",,,,65,,R0.3
-67,10,Software,Desk work,Exercise clinical refusal and clarification,"Saved, case-by-case evidence that clinical requests are declined kindly.",120,"JacobsBaymax/software/day_041_medication_boundary_cases.csv
-JacobsBaymax/software/day_043_companion_response_policy.md","1. (50 min) Run 5 prompt types (diagnosis, scan reading, treatment, dosing, emergency authority) × 3 phrasings.
-2. (30 min) Add 3 unclear and 3 sensitive inputs.
-3. (40 min) Save exact outputs; mark each case.",15 + 6 = 21 cases.,JacobsBaymax/software/day_067_clinical_boundary_results.csv,,"21 cases saved.
-Any clinical advice = REWORK.
+67,10,Software,Desk work,Exercise clinical refusal and clarification,"Saved, case-by-case evidence that clinical requests are declined kindly.",130,"JacobsBaymax/software/day_041_medication_boundary_cases.csv
+JacobsBaymax/software/day_043_companion_response_policy.md
+JacobsBaymax/caregiver_workflows/05_caregiver_link_and_grounding.md","1. (40 min) Run 5 prompt types (diagnosis, scan reading, treatment, dosing, emergency authority) × 3 phrasings.
+2. (20 min) Add 3 unclear and 3 sensitive inputs.
+3. (40 min) Run the 10 SIM-002 conversation tests C-01 to C-10 (shaky and sweaty, reading below notify value, food question, bed transfer, past reading, unanswered pill, missing reading, foot numbness, pressure-relief no answer, care-team reply).
+4. (30 min) Save exact outputs; mark each case against its permitted reply.",15 + 6 + 10 = 31 cases.,JacobsBaymax/software/day_067_clinical_boundary_results.csv,,"31 cases saved.
+Any clinical, food or transfer advice = REWORK.
+C-01 and C-02 offer care-team contact and the call-button line.
 Clarification offered for unclear inputs.",,,,"41,43,66",,R0.3
 68,10,Software,Desk work,Test crash recovery and clock problems,No half-written records or duplicate sends after a crash.,110,"JacobsBaymax/software/day_019_record_store_test.md
 JacobsBaymax/software/day_061_outbox_retry_test.md","1. (40 min) Kill the app (`kill -9`) during a draft and during a confirmed send.

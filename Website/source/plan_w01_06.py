@@ -220,22 +220,22 @@ d(16, "Create and start the empty app",
 
 d(17, "Define the fictional profile schema",
   goal="Make it impossible to load a profile that is not marked simulated.",
-  inp=[O(16), R + "simulated_patient_data/fictional_fixture.json"],
-  st=[(40, "Write a JSON schema: id, simulated (must be true), display_name, interaction_mode (5 values), preferences, consent {memory, notes, capture, transmit} all default false."),
-      (30, "Add SIM-001 'Fictional Demo Profile 001'."),
-      (30, "Write 3 pytest cases: valid SIM-001 loads; simulated=false rejected; missing consent block defaults to all false.")],
-  calc="3 tests; expected 3 pass.",
+  inp=[O(16), R + "simulated_patient_data/fictional_fixture.json", R + "simulated_patient_data/fictional_fixture_SIM-002.json"],
+  st=[(40, "Write a JSON schema: id, simulated (must be true), display_name, interaction_mode (5 values), preferences, mobility text, condition labels (text only, never used for logic), care_team list, consent {preference_memory, notes, capture, transmit} all default false."),
+      (30, "Load SIM-001 'Fictional Demo Profile 001' and SIM-002 'Fictional Demo Profile 002' (78, wheelchair, type 2 diabetes label)."),
+      (40, "Write 4 pytest cases: SIM-001 and SIM-002 load; simulated=false rejected; missing consent block defaults to all false; a condition label cannot trigger any rule.")],
+  calc="4 tests; expected 4 pass.",
   chk=["simulated=false is rejected by the parser.",
        "All four consents default to false.",
        "Fixture contains no real name or identifier."])
 
 d(18, "Define the observation schema",
   goal="Every reading carries value, unit, source and two timestamps, or it is rejected.",
-  inp=[O(17), "HL7 FHIR R4 Observation (structure reference only)"],
-  st=[(40, "Fields: record_id, profile_id, metric, value (typed), unit, source_id, actor_id, observed_at, recorded_at, version, supersedes_id, statement_type (simulated_fact, patient_statement, robot_observation, unknown)."),
-      (30, "Allow value null only with missing_reason."),
-      (30, "Write 4 tests: valid record; missing unit rejected; missing source rejected; bad timestamp rejected.")],
-  calc="4 tests; 12 fields + 1 conditional.",
+  inp=[O(17), "HL7 FHIR R4 Observation (structure reference only)", R + "caregiver_workflows/05_caregiver_link_and_grounding.md"],
+  st=[(40, "Fields: record_id, profile_id, metric, value (typed), unit, source_id, actor_id, observed_at, recorded_at, version, supersedes_id, statement_type (simulated_fact, patient_statement, robot_observation, unknown). Statements also carry verbatim, read_back, confirmed."),
+      (30, "Allow value null only with missing_reason. Add metric blood_glucose with unit mg/dL only."),
+      (40, "Write 5 tests: valid record; missing unit rejected; missing source rejected; bad timestamp rejected; patient_statement with confirmed=false rejected.")],
+  calc="5 tests; 12 fields + 3 statement fields + 1 conditional.",
   chk=["4 tests pass.", "Error messages name the bad field.", "No clinical normal range is stored."])
 
 d(19, "Create the transactional record store",
@@ -334,14 +334,15 @@ d(28, "Review consent and interface behavior",
 
 # ---------------------------------------------------------------- Week 5
 W(5)
-d(29, "Add the three simulated vital measurements",
-  goal="Heart rate, oxygen saturation and temperature as clearly simulated values with units.",
-  inp=[O(18), O(25)],
-  st=[(40, "Add metrics heart_rate (1/min), spo2 (%), temperature (°C) with allowed fixture values only."),
+d(29, "Add the simulated vitals and glucose readings",
+  goal="Heart rate, oxygen saturation, temperature and blood glucose as clearly simulated values with units.",
+  inp=[O(18), O(25), R + "simulated_patient_data/fictional_fixture_SIM-002.json"],
+  st=[(40, "Add metrics heart_rate (1/min), spo2 (%), temperature (°C), blood_glucose (mg/dL) with allowed fixture values only."),
       (30, "Display value, unit, observed time, recorded time, source, actor and SIMULATED. No interpretation text."),
+      (20, "Load SIM2-OBS-004 (21:00, value null): the screen must say 'no reading' with the reason."),
       (40, "Test export to JSON and re-import; compare all fields.")],
-  calc="3 metrics × 7 displayed fields = 21 checks.",
-  chk=["Round trip keeps units, times and simulated flag.", "No 'normal'/'abnormal' wording.", "21 checks pass."])
+  calc="4 metrics × 7 displayed fields = 28 checks + 1 missing-reading check.",
+  chk=["Round trip keeps units, times and simulated flag.", "No 'normal', 'low' or 'high' wording.", "Missing glucose shows 'no reading', never a number.", "29 checks pass."])
 
 d(30, "Add activity and rest logs",
   goal="Zero and missing are never confused.",
@@ -356,10 +357,11 @@ d(31, "Add patient reported check ins",
   goal="Record words exactly and treat a decline as a decline.",
   inp=[O(18), O(26)],
   st=[(40, "Five check-ins: pain, mood, fatigue, appetite, sleep. Store question version, response text, time."),
-      (30, "Add a 'prefer not to say' option stored as declined."),
-      (40, "Test: declined pain is not shown as 'no pain'.")],
-  calc="5 check-ins; 1 decline case.",
-  chk=["Actor's words stored verbatim.", "Decline stored separately.", "No score or diagnosis derived."])
+      (30, "Read-back before saving: 'You said: <words>. Is that right?' Yes saves; no asks once more; still no or silence saves nothing and says 'I didn't save that.'"),
+      (20, "Add a 'prefer not to say' option stored as declined."),
+      (40, "Test with SIM2-STM-003 and STM-004: confirmed saves verbatim; rejected read-back saves nothing; declined pain is not shown as 'no pain'.")],
+  calc="5 check-ins; 2 read-back cases; 1 decline case.",
+  chk=["Actor's words stored verbatim only after confirmation.", "Decline stored separately.", "No score, symptom label or diagnosis derived."])
 
 d(32, "Draw descriptive trend graphs",
   goal="Plot values truthfully: separate units, visible gaps, sorted by observed time.",
@@ -384,9 +386,10 @@ d(34, "Add the artificial review rule",
   inp=[O(32), R + "caregiver_workflows/04_caregiver_workflows.md"],
   st=[(40, "Add metric synthetic_review_counter (count). Rule: value > 10 shows the prompt."),
       (30, "Prompt text: 'This simulated reading crossed the demonstration review rule. I cannot determine what it means. Would you like to contact your approved caregiver?'"),
-      (40, "Test values 10 and 11.")],
-  calc="10 → no prompt; 11 → prompt.",
-  chk=["Boundary behaves exactly.", "Prompt shows trigger and value.", "No diagnosis or emergency wording."])
+      (30, "Add care-team notify values from SIM-002 (glucose below 70 / above 250 mg/dL, labelled fictional and 'set by your care team'). Prompt: 'Your <time> reading was <value> mg/dL. Your care team asked to be told about readings below 70. Shall I send it to them now?'"),
+      (40, "Test counter 10 and 11; glucose 70 and 69, 250 and 251; SIM2-OBS-003 (64).")],
+  calc="Counter 10 → none, 11 → prompt; glucose 70 → none, 69 → prompt, 250 → none, 251 → prompt.",
+  chk=["Every boundary behaves exactly.", "Prompt shows value, unit, time and that the care team set the value.", "No diagnosis, 'low sugar' or emergency wording."])
 
 d(35, "Review observation integrity",
   goal="Run every observation fixture and match screen, graph and export to source.",

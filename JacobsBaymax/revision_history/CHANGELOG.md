@@ -15,3 +15,7 @@ Owner accepted the Day 6 R0.3 recommendations: D-03 Option A with 0.30 m hip-rol
 G0 | 2026-10-28 | Owner Faisal Farouq
 
 Owner accepted the R0.2 mission wording for all five Day 1 charter differences (D-06). Day 1 PASS. Day 7 PASS; G0 released for documentation, software and analysis only. D-02 deferred with dates; D-05 restricted to mock receiver.
+
+Caregiver link proposal | 2026-11-04 | Owner Faisal Farouq
+
+Added fictional patient SIM-002 (78, manual wheelchair, type 2 diabetes label; glucose in mg/dL; Demo Medications B and C; care-team notify values 70/250 mg/dL marked fictional) in simulated_patient_data/fictional_fixture_SIM-002.json; SIM-001 unchanged. New caregiver_workflows/05_caregiver_link_and_grounding.md: two-way mock caregiver line with verbatim replies, four record types, read-back before saving statements, eight anti-hallucination layers and grounding rules R1-R9. Prototype software/prototypes/grounding_check.py run on SIM-002: 17/17 cases as expected (desk prototype on fixture data, not a system test). Proposed JB-R-065 to 073 and JB-V-27 (grounding and record integrity) for owner decision D-07 on Day 14. Plan Days 17, 18, 29, 31, 34, 58, 62 and 67 updated. Mock receiver only (D-05).

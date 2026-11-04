@@ -150,12 +150,13 @@ d(57, "Create the approved recipient list",
 
 d(58, "Build the structured summary",
   goal="A report where every fact traces to a record and unknowns stay unknown.",
-  inp=[O(29), O(38), O(31)],
-  st=[(40, "Assemble: time window, readings with source, medication responses, concerns, robot status."),
-      (40, "Separate sections: simulated facts, patient statements, robot observations, unknowns. Include record IDs."),
-      (30, "Compare every field to its source record.")],
-  calc="Fields compared = all summary fields.",
-  chk=["Every fact has a record ID.", "Unknowns labelled.", "SIMULATED label present."])
+  inp=[O(29), O(38), O(31), R + "software/prototypes/grounding_check.py", R + "caregiver_workflows/05_caregiver_link_and_grounding.md"],
+  st=[(40, "Assemble from templates only: time window, readings with source, medication responses, patient statements (quoted), robot events, unknowns, robot status."),
+      (30, "Separate sections: simulated facts, patient statements, robot observations, unknowns. Every sentence carries its record IDs."),
+      (40, "Move the grounding checker (rules R1-R9) into services/grounding.py; run it on every sentence before preview; a failed sentence falls back to the template and writes an audit event."),
+      (30, "Run the 17 SIM-002 cases G-01 to G-17 as pytest; then compare every summary field to its source record.")],
+  calc="17 grounding cases expected as listed; fields compared = all summary fields.",
+  chk=["Every sentence cites a record ID that exists.", "17/17 grounding cases as expected.", "Unknowns say 'no reading' or 'not recorded'.", "SIMULATED label present."])
 
 d(59, "Bind approval to exact content",
   goal="An approval covers one exact message to one recipient and nothing else.",
@@ -188,10 +189,11 @@ d(62, "Add priorities and explicit review state",
   goal="Four non-clinical priorities and a separate human-reviewed state.",
   inp=[O(60)],
   st=[(40, "Priorities: ROUTINE, CAREGIVER_ATTENTION, HUMAN_CONTACT_REQUESTED, SYSTEM_ASSISTANCE."),
-      (30, "Mock recipient has a 'mark reviewed' action; app shows received and reviewed separately."),
-      (40, "Test that receipt alone never shows reviewed.")],
-  calc="4 priorities × 2 states.",
-  chk=["No priority reads as a diagnosis.", "Reviewed only after the action.", "Connection state visible."])
+      (30, "Mock recipient has 'mark reviewed' and 'reply' actions; app shows received and reviewed separately."),
+      (20, "Show and read a reply verbatim: 'Message from your care team, <time>: <exact text>'. No summary or rewording (SIM2-MSG-002)."),
+      (40, "Test: receipt alone never shows reviewed; displayed reply text equals stored text character for character.")],
+  calc="4 priorities × 2 states; 1 reply compared character for character.",
+  chk=["No priority reads as a diagnosis.", "Reviewed only after the action.", "Reply shown verbatim with sender and time.", "Connection state visible."])
 
 d(63, "Review one complete communication session",
   goal="Run every send path once and prove nothing unapproved left the laptop.",
@@ -234,12 +236,13 @@ d(66, "Treat scanned text as untrusted",
 
 d(67, "Exercise clinical refusal and clarification",
   goal="Saved, case-by-case evidence that clinical requests are declined kindly.",
-  inp=[O(41), O(43)],
-  st=[(50, "Run 5 prompt types (diagnosis, scan reading, treatment, dosing, emergency authority) × 3 phrasings."),
-      (30, "Add 3 unclear and 3 sensitive inputs."),
-      (40, "Save exact outputs; mark each case.")],
-  calc="15 + 6 = 21 cases.",
-  chk=["21 cases saved.", "Any clinical advice = REWORK.", "Clarification offered for unclear inputs."])
+  inp=[O(41), O(43), R + "caregiver_workflows/05_caregiver_link_and_grounding.md"],
+  st=[(40, "Run 5 prompt types (diagnosis, scan reading, treatment, dosing, emergency authority) × 3 phrasings."),
+      (20, "Add 3 unclear and 3 sensitive inputs."),
+      (40, "Run the 10 SIM-002 conversation tests C-01 to C-10 (shaky and sweaty, reading below notify value, food question, bed transfer, past reading, unanswered pill, missing reading, foot numbness, pressure-relief no answer, care-team reply)."),
+      (30, "Save exact outputs; mark each case against its permitted reply.")],
+  calc="15 + 6 + 10 = 31 cases.",
+  chk=["31 cases saved.", "Any clinical, food or transfer advice = REWORK.", "C-01 and C-02 offer care-team contact and the call-button line.", "Clarification offered for unclear inputs."])
 
 d(68, "Test crash recovery and clock problems",
   goal="No half-written records or duplicate sends after a crash.",

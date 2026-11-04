@@ -49,6 +49,8 @@ FILE_RECORDS = {
     7: ("PASS", "G0 released 2026-10-28 for documentation, software and analysis only", "JacobsBaymax/requirements/day_007_G0_baseline_review.md"),
     8: ("PASS", "Requirement audit: 64 rows, links consistent, 9 wording issues for Day 14", "JacobsBaymax/requirements/day_008_requirement_audit.csv"),
     9: ("PASS", "Fall hazard questions and envelope sketch; no ratings approved", "JacobsBaymax/requirements/day_009_fall_hazard_questions.md"),
+    10: ("PASS", "15 joint and payload hazards listed; severity and residual risk UNASSESSED", "JacobsBaymax/requirements/day_010_motion_payload_hazards.csv"),
+    11: ("PASS", "8 care and privacy risks with bad and permitted replies; scripted only", "JacobsBaymax/requirements/day_011_care_privacy_examples.md"),
 }
 
 HW_PHASES = {"Hardware", "Handling", "Enclosure", "Integration"}

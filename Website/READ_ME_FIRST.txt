@@ -7,10 +7,12 @@ Your progress stays in the browser where you enter it. Same browser, same file l
 
 Each day shows three separate things: the planned date, your task record (PASS / REWORK / BLOCKED) and, on hands-on days, the hardware result (what the robot actually did).
 
-Planned time: about 669 hours over 365 days (90-135 min a day), inside your 2-3 hour budget. Outside reviews and fabrication are extra.
+Planned time: about 672 hours over 365 days (90-140 min a day), inside your 2-3 hour budget. Outside reviews and fabrication are extra.
 
 source/ holds the editable plan (plan_w*.py), build scripts and checks:
   python3 build_plan.py      -> dist/plan.json and the 365-day CSV
   python3 build_offline.py   -> ../Baymax_365_Offline.html
   node verify_site.mjs       -> qa/logic_checks_R0_3.json
 archive_R0_2/ keeps the previous offline site, CSV and code unchanged.
+
+Progress file: import Baymax_365_Progress_Days_001-011.json with Settings -> Import -> Merge (keep my records). It replaces the 001-009 file.

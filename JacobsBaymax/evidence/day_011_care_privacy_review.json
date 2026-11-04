@@ -1,0 +1,19 @@
+{
+  "day": 11,
+  "date": "2026-11-04",
+  "owner": "Faisal Farouq",
+  "result": "PASS (desk work: scripted examples only)",
+  "risks": 8,
+  "scripted_lines": 16,
+  "fixture": "simulated_patient_data/fictional_fixture.json (SIM-001, SIM-MED-001, SIM-OBS-001..003)",
+  "fixture_gaps": [
+    "consent block missing notes scope (fix Day 17)",
+    "approved_recipients empty (correct until D-05, Day 57)"
+  ],
+  "software_tests_executed": 0,
+  "files": {
+    "day_011_care_privacy_examples.md": "4690401c3627862c859d15d62f67799463624d8cab8a320b8ac3b605b263a19f",
+    "day_011_care_privacy_examples.csv": "6ee60bcfa4858145894e5ebd5c764a45970b7b6807852a9c65c84e4953c5b2ed",
+    "day_011_care_privacy_examples.pdf": "26a7e28adbfb19bbee28141a3fa5f68c505e652115037103005bb0a2fb01e5ae"
+  }
+}

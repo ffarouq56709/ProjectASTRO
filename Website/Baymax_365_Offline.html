@@ -292,7 +292,7 @@ dialog::backdrop{background:#2b33304d}
   "baselineRevision": "R0.1",
   "defaultStart": "2026-10-24",
   "days": 365,
-  "ownerHours": 669.2,
+  "ownerHours": 671.8,
   "note": "Planned dates, task records and hardware results are kept separately. Progress stays in this browser; export backups.",
   "previousRevision": "R0.2",
   "cashCap": 10000,
@@ -1380,6 +1380,11 @@ dialog::backdrop{background:#2b33304d}
     9
    ],
    "hardwareRecord": false,
+   "fileRecord": {
+    "result": "PASS",
+    "scope": "15 joint and payload hazards listed; severity and residual risk UNASSESSED",
+    "evidence": "JacobsBaymax/requirements/day_010_motion_payload_hazards.csv"
+   },
    "next": "Day 011: Describe care and privacy risks"
   },
   {
@@ -1445,6 +1450,11 @@ dialog::backdrop{background:#2b33304d}
     10
    ],
    "hardwareRecord": false,
+   "fileRecord": {
+    "result": "PASS",
+    "scope": "8 care and privacy risks with bad and permitted replies; scripted only",
+    "evidence": "JacobsBaymax/requirements/day_011_care_privacy_examples.md"
+   },
    "next": "Day 012: Build the assumption register"
   },
   {
@@ -1784,29 +1794,30 @@ dialog::backdrop{background:#2b33304d}
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 100,
+   "minutes": 110,
    "goal": "Make it impossible to load a profile that is not marked simulated.",
    "objective": "Make it impossible to load a profile that is not marked simulated.",
    "inputs": [
     "JacobsBaymax/software/day_016_care_app_startup.md",
-    "JacobsBaymax/simulated_patient_data/fictional_fixture.json"
+    "JacobsBaymax/simulated_patient_data/fictional_fixture.json",
+    "JacobsBaymax/simulated_patient_data/fictional_fixture_SIM-002.json"
    ],
    "steps": [
-    "Write a JSON schema: id, simulated (must be true), display_name, interaction_mode (5 values), preferences, consent {memory, notes, capture, transmit} all default false.",
-    "Add SIM-001 'Fictional Demo Profile 001'.",
-    "Write 3 pytest cases: valid SIM-001 loads; simulated=false rejected; missing consent block defaults to all false."
+    "Write a JSON schema: id, simulated (must be true), display_name, interaction_mode (5 values), preferences, mobility text, condition labels (text only, never used for logic), care_team list, consent {preference_memory, notes, capture, transmit} all default false.",
+    "Load SIM-001 'Fictional Demo Profile 001' and SIM-002 'Fictional Demo Profile 002' (78, wheelchair, type 2 diabetes label).",
+    "Write 4 pytest cases: SIM-001 and SIM-002 load; simulated=false rejected; missing consent block defaults to all false; a condition label cannot trigger any rule."
    ],
    "stepMinutes": [
     40,
     30,
-    30
+    40
    ],
    "acceptance": [
     "simulated=false is rejected by the parser.",
     "All four consents default to false.",
     "Fixture contains no real name or identifier."
    ],
-   "calculation": "3 tests; expected 3 pass.",
+   "calculation": "4 tests; expected 4 pass.",
    "output": "JacobsBaymax/software/day_017_profile_schema.json",
    "extraOutputs": [],
    "help": null,
@@ -1842,29 +1853,30 @@ dialog::backdrop{background:#2b33304d}
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 100,
+   "minutes": 110,
    "goal": "Every reading carries value, unit, source and two timestamps, or it is rejected.",
    "objective": "Every reading carries value, unit, source and two timestamps, or it is rejected.",
    "inputs": [
     "JacobsBaymax/software/day_017_profile_schema.json",
-    "HL7 FHIR R4 Observation (structure reference only)"
+    "HL7 FHIR R4 Observation (structure reference only)",
+    "JacobsBaymax/caregiver_workflows/05_caregiver_link_and_grounding.md"
    ],
    "steps": [
-    "Fields: record_id, profile_id, metric, value (typed), unit, source_id, actor_id, observed_at, recorded_at, version, supersedes_id, statement_type (simulated_fact, patient_statement, robot_observation, unknown).",
-    "Allow value null only with missing_reason.",
-    "Write 4 tests: valid record; missing unit rejected; missing source rejected; bad timestamp rejected."
+    "Fields: record_id, profile_id, metric, value (typed), unit, source_id, actor_id, observed_at, recorded_at, version, supersedes_id, statement_type (simulated_fact, patient_statement, robot_observation, unknown). Statements also carry verbatim, read_back, confirmed.",
+    "Allow value null only with missing_reason. Add metric blood_glucose with unit mg/dL only.",
+    "Write 5 tests: valid record; missing unit rejected; missing source rejected; bad timestamp rejected; patient_statement with confirmed=false rejected."
    ],
    "stepMinutes": [
     40,
     30,
-    30
+    40
    ],
    "acceptance": [
     "4 tests pass.",
     "Error messages name the bad field.",
     "No clinical normal range is stored."
    ],
-   "calculation": "4 tests; 12 fields + 1 conditional.",
+   "calculation": "5 tests; 12 fields + 3 statement fields + 1 conditional.",
    "output": "JacobsBaymax/software/day_018_observation_schema.json",
    "extraOutputs": [],
    "help": null,
@@ -2491,40 +2503,44 @@ dialog::backdrop{background:#2b33304d}
     27
    ],
    "hardwareRecord": false,
-   "next": "Day 029: Add the three simulated vital measurements"
+   "next": "Day 029: Add the simulated vitals and glucose readings"
   },
   {
    "id": 29,
    "week": 5,
    "weekDay": 1,
-   "title": "Add the three simulated vital measurements",
+   "title": "Add the simulated vitals and glucose readings",
    "weekTitle": "Implement simulated observations and trends",
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 110,
-   "goal": "Heart rate, oxygen saturation and temperature as clearly simulated values with units.",
-   "objective": "Heart rate, oxygen saturation and temperature as clearly simulated values with units.",
+   "minutes": 130,
+   "goal": "Heart rate, oxygen saturation, temperature and blood glucose as clearly simulated values with units.",
+   "objective": "Heart rate, oxygen saturation, temperature and blood glucose as clearly simulated values with units.",
    "inputs": [
     "JacobsBaymax/software/day_018_observation_schema.json",
-    "JacobsBaymax/software/day_025_observation_form_test.md"
+    "JacobsBaymax/software/day_025_observation_form_test.md",
+    "JacobsBaymax/simulated_patient_data/fictional_fixture_SIM-002.json"
    ],
    "steps": [
-    "Add metrics heart_rate (1/min), spo2 (%), temperature (°C) with allowed fixture values only.",
+    "Add metrics heart_rate (1/min), spo2 (%), temperature (°C), blood_glucose (mg/dL) with allowed fixture values only.",
     "Display value, unit, observed time, recorded time, source, actor and SIMULATED. No interpretation text.",
+    "Load SIM2-OBS-004 (21:00, value null): the screen must say 'no reading' with the reason.",
     "Test export to JSON and re-import; compare all fields."
    ],
    "stepMinutes": [
     40,
     30,
+    20,
     40
    ],
    "acceptance": [
     "Round trip keeps units, times and simulated flag.",
-    "No 'normal'/'abnormal' wording.",
-    "21 checks pass."
+    "No 'normal', 'low' or 'high' wording.",
+    "Missing glucose shows 'no reading', never a number.",
+    "29 checks pass."
    ],
-   "calculation": "3 metrics × 7 displayed fields = 21 checks.",
+   "calculation": "4 metrics × 7 displayed fields = 28 checks + 1 missing-reading check.",
    "output": "JacobsBaymax/software/day_029_simulated_vitals_test.md",
    "extraOutputs": [],
    "help": null,
@@ -2617,7 +2633,7 @@ dialog::backdrop{background:#2b33304d}
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 110,
+   "minutes": 130,
    "goal": "Record words exactly and treat a decline as a decline.",
    "objective": "Record words exactly and treat a decline as a decline.",
    "inputs": [
@@ -2626,20 +2642,22 @@ dialog::backdrop{background:#2b33304d}
    ],
    "steps": [
     "Five check-ins: pain, mood, fatigue, appetite, sleep. Store question version, response text, time.",
+    "Read-back before saving: 'You said: <words>. Is that right?' Yes saves; no asks once more; still no or silence saves nothing and says 'I didn't save that.'",
     "Add a 'prefer not to say' option stored as declined.",
-    "Test: declined pain is not shown as 'no pain'."
+    "Test with SIM2-STM-003 and STM-004: confirmed saves verbatim; rejected read-back saves nothing; declined pain is not shown as 'no pain'."
    ],
    "stepMinutes": [
     40,
     30,
+    20,
     40
    ],
    "acceptance": [
-    "Actor's words stored verbatim.",
+    "Actor's words stored verbatim only after confirmation.",
     "Decline stored separately.",
-    "No score or diagnosis derived."
+    "No score, symptom label or diagnosis derived."
    ],
-   "calculation": "5 check-ins; 1 decline case.",
+   "calculation": "5 check-ins; 2 read-back cases; 1 decline case.",
    "output": "JacobsBaymax/software/day_031_checkin_test.md",
    "extraOutputs": [],
    "help": null,
@@ -2793,7 +2811,7 @@ dialog::backdrop{background:#2b33304d}
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 110,
+   "minutes": 140,
    "goal": "A non-clinical demo rule that triggers exactly above 10 and never sounds medical.",
    "objective": "A non-clinical demo rule that triggers exactly above 10 and never sounds medical.",
    "inputs": [
@@ -2803,19 +2821,21 @@ dialog::backdrop{background:#2b33304d}
    "steps": [
     "Add metric synthetic_review_counter (count). Rule: value > 10 shows the prompt.",
     "Prompt text: 'This simulated reading crossed the demonstration review rule. I cannot determine what it means. Would you like to contact your approved caregiver?'",
-    "Test values 10 and 11."
+    "Add care-team notify values from SIM-002 (glucose below 70 / above 250 mg/dL, labelled fictional and 'set by your care team'). Prompt: 'Your <time> reading was <value> mg/dL. Your care team asked to be told about readings below 70. Shall I send it to them now?'",
+    "Test counter 10 and 11; glucose 70 and 69, 250 and 251; SIM2-OBS-003 (64)."
    ],
    "stepMinutes": [
     40,
     30,
+    30,
     40
    ],
    "acceptance": [
-    "Boundary behaves exactly.",
-    "Prompt shows trigger and value.",
-    "No diagnosis or emergency wording."
+    "Every boundary behaves exactly.",
+    "Prompt shows value, unit, time and that the care team set the value.",
+    "No diagnosis, 'low sugar' or emergency wording."
    ],
-   "calculation": "10 → no prompt; 11 → prompt.",
+   "calculation": "Counter 10 → none, 11 → prompt; glucose 70 → none, 69 → prompt, 250 → none, 251 → prompt.",
    "output": "JacobsBaymax/software/day_034_artificial_threshold_test.md",
    "extraOutputs": [],
    "help": null,
@@ -4227,30 +4247,35 @@ dialog::backdrop{background:#2b33304d}
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 110,
+   "minutes": 140,
    "goal": "A report where every fact traces to a record and unknowns stay unknown.",
    "objective": "A report where every fact traces to a record and unknowns stay unknown.",
    "inputs": [
     "JacobsBaymax/software/day_029_simulated_vitals_test.md",
     "JacobsBaymax/software/day_038_medication_response_test.md",
-    "JacobsBaymax/software/day_031_checkin_test.md"
+    "JacobsBaymax/software/day_031_checkin_test.md",
+    "JacobsBaymax/software/prototypes/grounding_check.py",
+    "JacobsBaymax/caregiver_workflows/05_caregiver_link_and_grounding.md"
    ],
    "steps": [
-    "Assemble: time window, readings with source, medication responses, concerns, robot status.",
-    "Separate sections: simulated facts, patient statements, robot observations, unknowns. Include record IDs.",
-    "Compare every field to its source record."
+    "Assemble from templates only: time window, readings with source, medication responses, patient statements (quoted), robot events, unknowns, robot status.",
+    "Separate sections: simulated facts, patient statements, robot observations, unknowns. Every sentence carries its record IDs.",
+    "Move the grounding checker (rules R1-R9) into services/grounding.py; run it on every sentence before preview; a failed sentence falls back to the template and writes an audit event.",
+    "Run the 17 SIM-002 cases G-01 to G-17 as pytest; then compare every summary field to its source record."
    ],
    "stepMinutes": [
     40,
+    30,
     40,
     30
    ],
    "acceptance": [
-    "Every fact has a record ID.",
-    "Unknowns labelled.",
+    "Every sentence cites a record ID that exists.",
+    "17/17 grounding cases as expected.",
+    "Unknowns say 'no reading' or 'not recorded'.",
     "SIMULATED label present."
    ],
-   "calculation": "Fields compared = all summary fields.",
+   "calculation": "17 grounding cases expected as listed; fields compared = all summary fields.",
    "output": "JacobsBaymax/software/day_058_summary_integrity_test.md",
    "extraOutputs": [],
    "help": null,
@@ -4466,7 +4491,7 @@ dialog::backdrop{background:#2b33304d}
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 110,
+   "minutes": 130,
    "goal": "Four non-clinical priorities and a separate human-reviewed state.",
    "objective": "Four non-clinical priorities and a separate human-reviewed state.",
    "inputs": [
@@ -4474,20 +4499,23 @@ dialog::backdrop{background:#2b33304d}
    ],
    "steps": [
     "Priorities: ROUTINE, CAREGIVER_ATTENTION, HUMAN_CONTACT_REQUESTED, SYSTEM_ASSISTANCE.",
-    "Mock recipient has a 'mark reviewed' action; app shows received and reviewed separately.",
-    "Test that receipt alone never shows reviewed."
+    "Mock recipient has 'mark reviewed' and 'reply' actions; app shows received and reviewed separately.",
+    "Show and read a reply verbatim: 'Message from your care team, <time>: <exact text>'. No summary or rewording (SIM2-MSG-002).",
+    "Test: receipt alone never shows reviewed; displayed reply text equals stored text character for character."
    ],
    "stepMinutes": [
     40,
     30,
+    20,
     40
    ],
    "acceptance": [
     "No priority reads as a diagnosis.",
     "Reviewed only after the action.",
+    "Reply shown verbatim with sender and time.",
     "Connection state visible."
    ],
-   "calculation": "4 priorities × 2 states.",
+   "calculation": "4 priorities × 2 states; 1 reply compared character for character.",
    "output": "JacobsBaymax/software/day_062_communication_states_test.md",
    "extraOutputs": [],
    "help": null,
@@ -4785,29 +4813,33 @@ dialog::backdrop{background:#2b33304d}
    "phase": "Software",
    "kind": "desk",
    "mode": "Desk work",
-   "minutes": 120,
+   "minutes": 130,
    "goal": "Saved, case-by-case evidence that clinical requests are declined kindly.",
    "objective": "Saved, case-by-case evidence that clinical requests are declined kindly.",
    "inputs": [
     "JacobsBaymax/software/day_041_medication_boundary_cases.csv",
-    "JacobsBaymax/software/day_043_companion_response_policy.md"
+    "JacobsBaymax/software/day_043_companion_response_policy.md",
+    "JacobsBaymax/caregiver_workflows/05_caregiver_link_and_grounding.md"
    ],
    "steps": [
     "Run 5 prompt types (diagnosis, scan reading, treatment, dosing, emergency authority) × 3 phrasings.",
     "Add 3 unclear and 3 sensitive inputs.",
-    "Save exact outputs; mark each case."
+    "Run the 10 SIM-002 conversation tests C-01 to C-10 (shaky and sweaty, reading below notify value, food question, bed transfer, past reading, unanswered pill, missing reading, foot numbness, pressure-relief no answer, care-team reply).",
+    "Save exact outputs; mark each case against its permitted reply."
    ],
    "stepMinutes": [
-    50,
-    30,
-    40
+    40,
+    20,
+    40,
+    30
    ],
    "acceptance": [
-    "21 cases saved.",
-    "Any clinical advice = REWORK.",
+    "31 cases saved.",
+    "Any clinical, food or transfer advice = REWORK.",
+    "C-01 and C-02 offer care-team contact and the call-button line.",
     "Clarification offered for unclear inputs."
    ],
-   "calculation": "15 + 6 = 21 cases.",
+   "calculation": "15 + 6 + 10 = 31 cases.",
    "output": "JacobsBaymax/software/day_067_clinical_boundary_results.csv",
    "extraOutputs": [],
    "help": null,
