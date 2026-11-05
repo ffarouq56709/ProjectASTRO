@@ -86,7 +86,7 @@ assert all(sum(d["stepMinutes"]) == d["minutes"] for d in days)
 hours = round(sum(d["minutes"] for d in days) / 60, 1)
 meta = dict(OLD["meta"])
 meta.update(revision="R0.3", date="2026-10-28", previousRevision="R0.2", ownerHours=hours,
-            cashCap=10000, cashScenario=15000, ceilingStatus="Final ceiling undecided (D-01)",
+            cashCap=15000, cashScenario=None, ceilingStatus="Owner raised the working cap to at least USD 15,000 on 2026-11-04; final ceiling Day 193 (D-01)",
             note="Planned dates, task records and hardware results are kept separately. Progress stays in this browser; export backups.",
             costReferences={"B-01": {"forecast": 3481, "basis": "R0.3 listing screen: 10 x USD 319 + 4 stages x USD 50 (assumed) + USD 91.25 CAN hub. Listings 2026-10-28, not quotes. Low case USD 2,841.", "r01Reference": 8899}},
             appearanceReference="JacobsBaymax/cad_specifications/reference/baymax-rigid-panel-concept-v1.png")

@@ -1,0 +1,51 @@
+First tier,Category,Item,Specification,Qty,Unit low USD,Unit high USD,Line low USD,Line high USD,Status,Source,Needed by day,Why
+$15k · Minimum walker,Actuation,Leg actuators,"RobStride 04, 120 N m peak / 40 N m rated, 48 V, 1.42 kg",10,319,319,3190,3190,LISTING,"rcdrone.top RobStride listings, checked 2026-11-04 (RS04 from USD 319; RS03 224; RS05 149); openelab lists RS04 at EUR 254.75, sold out",~190,10 leg joints (D-03)
+$15k · Minimum walker,Actuation,Bench + spare actuator,"RobStride 04; used on the single-joint bench first, then kept as the spare",1,319,319,319,319,LISTING,"rcdrone.top RobStride listings, checked 2026-11-04 (RS04 from USD 319; RS03 224; RS05 149); openelab lists RS04 at EUR 254.75, sold out",~20,"Learn the real torque, backlash and heat early"
+$15k · Minimum walker,Actuation,Gear stages,"Belt or printed planetary: 3:1 on both hip rolls, 2:1 on both knees",4,50,150,200,600,ESTIMATE,"Estimate, no quote",~150,Torque margin from Day 6
+$15k · Minimum walker,Appearance,Shell panels,3D-printed / thermoformed panels and mounts,1,600,1500,600,1500,ESTIMATE,"Estimate, no quote",~300,
+$15k · Minimum walker,Care software,Voice and screen,"USB microphone/speaker, 10 in touchscreen",1,150,400,150,400,ESTIMATE,"Estimate, no quote",~40,Local LLM and mock server cost $0
+$15k · Minimum walker,Electronics,USB-CAN adapters,"USB to CAN 2.0, 1 Mbit/s (one per leg bus)",2,40,90,80,180,ESTIMATE,"Estimate, no quote",~20,Talk to the actuators
+$15k · Minimum walker,Electronics,Main computer,Jetson Orin Nano Super 8 GB + NVMe SSD,1,249,330,249,330,LISTING,NVIDIA Jetson Orin Nano Super launch price USD 249 (Dec 2024 press),~60,"Walking controller, logging, care app"
+$15k · Minimum walker,Electronics,IMU,"Consumer 9-axis IMU board (BNO085 class), 1 spare",2,25,60,50,120,ESTIMATE,"Estimate, no quote",~60,Body tilt for balance
+$15k · Minimum walker,Electronics,Foot load cells,4 load cells per foot + 2 amplifier boards,1,80,200,80,200,ESTIMATE,"Estimate, no quote",~100,"Which foot is on the floor, centre of pressure"
+$15k · Minimum walker,Electronics,Wiring and connectors,"CAN cable, XT60/XT90, DC-DC converters, enclosures",1,300,600,300,600,ESTIMATE,"Estimate, no quote",~60,
+$15k · Minimum walker,Handling,Handling stand,"Guided linear actuator ≥ 98 N holding, controller, limit switches, base (D-04)",1,400,900,400,900,ESTIMATE,"Estimate, no quote",~187,
+$15k · Minimum walker,Power,Bench / tether power supply,"48 V, ~1 kW enclosed supply (Mean Well RSP-1000-48 class)",1,250,400,250,400,ESTIMATE,"Estimate, no quote",~20,Safe power for bench and first tethered tests
+$15k · Minimum walker,Safety,Stop chain,"2 wired e-stops, safety relay, 48 V DC contactor, fuses, breaker",1,300,700,300,700,ESTIMATE,"Estimate, no quote",~25,Cuts motor power independent of software
+$15k · Minimum walker,Services,"Shipping, tariffs, tax","~15% on imported parts (actuators, compute, sensors)",1,600,1200,600,1200,ESTIMATE,"Estimate, no quote",on order,Tariff rates change; check at order
+$15k · Minimum walker,Structure,Frame parts,Laser-cut / CNC aluminium plates and tubes from an online shop,1,1500,3000,1500,3000,ESTIMATE,"Estimate, no quote",~150,R0.1 allowed only USD 650
+$15k · Minimum walker,Structure,"Bearings, shafts, fasteners",,1,300,600,300,600,ESTIMATE,"Estimate, no quote",~150,
+$15k · Minimum walker,Structure,Feet,Aluminium plates + rubber soles,1,100,250,100,250,ESTIMATE,"Estimate, no quote",~150,
+$15k · Minimum walker,Structure,3D-printing material,PETG / nylon; assumes printer access,1,200,400,200,400,ESTIMATE,"Estimate, no quote",ongoing,"Add USD 600-1,200 if you must buy a printer"
+$15k · Minimum walker,Test rigs,Single-joint bench,"Aluminium extrusion frame, lever arm, weights, load cell",1,200,400,200,400,ESTIMATE,"Estimate, no quote",~20-30,First powered learning
+$15k · Minimum walker,Test rigs,One-leg rig,"Extrusion frame, vertical linear guide, hanging support",1,500,1000,500,1000,ESTIMATE,"Estimate, no quote",~60-90,Debug one leg before two
+$15k · Minimum walker,Test rigs,"Trolley, tether, rated connectors",Rigger specifies; includes slack adjuster,1,300,700,300,700,ESTIMATE,"Estimate, no quote",~134,Tether stays vertical (Day 9)
+$15k · Minimum walker,Test rigs,Tether load cell,In-line load cell + amplifier,1,100,300,100,300,ESTIMATE,"Estimate, no quote",~146,Proves how much the tether helps
+$15k · Minimum walker,Test rigs,Chain hoist,Manual chain hoist on the gantry,1,150,350,150,350,ESTIMATE,"Estimate, no quote",~150,You can't safely lift 55 kg alone
+"$20k · Core, paid for",Power,Robot battery,"48 V nominal, 15-20 Ah, with BMS",1,400,900,400,900,ESTIMATE,"Estimate, no quote",~220,"Untethered power, only after power tests"
+"$20k · Core, paid for",Power,Charger + fire-safe charging,"Matched charger, metal charging container, Class ABC extinguisher",1,150,400,150,400,ESTIMATE,"Estimate, no quote",~220,Battery fire risk
+"$20k · Core, paid for",Services,Paid reviews,"Limited hours: structural/mechanical, rigging, battery/electrical",1,1500,3000,1500,3000,ESTIMATE,"Estimate, no quote",112-199,Lower if your contacts review for free; not assumed
+"$20k · Core, paid for",Tools,Tools if not owned,"Multimeter, torque wrench, crimpers, USB oscilloscope",1,300,700,300,700,ESTIMATE,"Estimate, no quote",~20,
+$25k · Reliable core (recommended),Actuation,Second spare actuator,RobStride 04,1,319,319,319,319,LISTING,"rcdrone.top RobStride listings, checked 2026-11-04 (RS04 from USD 319; RS03 224; RS05 149); openelab lists RS04 at EUR 254.75, sold out",~190,One failure no longer stops testing
+$25k · Reliable core (recommended),Electronics,Better IMU,VectorNav VN-100 Rugged development kit,1,1200,1525,1200,1525,LISTING,"VectorNav store, VN-100 Rugged Development Kit USD 1,200-1,525, checked 2026-11-04",~100,"Cleaner tilt signal, calibrated"
+$25k · Reliable core (recommended),Power,Second power supply,"Same 48 V supply, for parallel or spare",1,250,400,250,400,ESTIMATE,"Estimate, no quote",~218,
+$25k · Reliable core (recommended),Test rigs,Overhead gantry,"1-ton adjustable aluminium gantry, ≥ 10 ft under beam (budget brand)",1,1500,2500,1500,2500,ESTIMATE,"Estimate, no quote",~134,Fall arrest and lifting; $0 only if a facility beam is approved in writing
+$25k · Reliable core (recommended),Tools,CAN analyser,PCAN-USB class interface + software,1,300,500,300,500,ESTIMATE,"Estimate, no quote",~30,Debug bus errors fast
+$35k · Expressive Baymax,Actuation,Machined gear stages,Upgrade printed/belt stages to machined planetary (extra cost over tier 1),1,800,1800,800,1800,ESTIMATE,"Estimate, no quote",~150,"Less backlash, more life"
+$35k · Expressive Baymax,Actuation,Moving arms (2 DoF each),"RobStride 03 (60 N m peak), shoulder pitch + elbow, both arms",4,224,224,896,896,LISTING,"rcdrone.top RobStride listings, checked 2026-11-04 (RS04 from USD 319; RS03 224; RS05 149); openelab lists RS04 at EUR 254.75, sold out",~280,Wave and gesture; never lifts or holds a person (JB-R-059)
+$35k · Expressive Baymax,Actuation,Arm brackets and covers,,1,300,600,300,600,ESTIMATE,"Estimate, no quote",~280,Mass check needed: 55 kg cap
+$35k · Expressive Baymax,Actuation,Head pan/tilt,RobStride 05 (5.5 N m),2,149,149,298,298,LISTING,"rcdrone.top RobStride listings, checked 2026-11-04 (RS04 from USD 319; RS03 224; RS05 149); openelab lists RS04 at EUR 254.75, sold out",~280,Looks at the person speaking
+$35k · Expressive Baymax,Appearance,Better shell,Shop vacuum-formed panels (extra cost over tier 1),1,1500,3000,1500,3000,ESTIMATE,"Estimate, no quote",~300,Closer to the reference photo
+$35k · Expressive Baymax,Power,Second battery,Same pack as tier 1,1,400,900,400,900,ESTIMATE,"Estimate, no quote",~260,Longer test sessions
+$35k · Expressive Baymax,Safety,Wireless e-stop,Rated wireless stop for the stop operator,1,400,1000,400,1000,ESTIMATE,"Estimate, no quote",~218,Operator can move around the keep-out zone
+$35k · Expressive Baymax,Services,Extra review hours,More reviewer time before G2 and G4,1,1000,2000,1000,2000,ESTIMATE,"Estimate, no quote",112-199,
+$50k · Research grade,Actuation,Spare leg set,5 x RobStride 04,5,319,319,1595,1595,LISTING,"rcdrone.top RobStride listings, checked 2026-11-04 (RS04 from USD 319; RS03 224; RS05 149); openelab lists RS04 at EUR 254.75, sold out",~260,A whole leg can be swapped in a day
+$50k · Research grade,Measurement,Motion capture,"OptiTrack Flex 3, 6-camera bundle",1,6000,7000,6000,7000,LISTING,"OptiTrack Flex 3 page: 6-camera bundle 'under $7k', checked 2026-11-04",~200,True body position for gait tuning
+$50k · Research grade,Services,Test-space rental,If no free space is approved,1,1000,2500,1000,2500,ESTIMATE,"Estimate, no quote",~134,
+$50k · Research grade,Structure,Machined frame upgrade,Shop-machined joints and brackets (extra cost over tier 1),1,2000,4000,2000,4000,ESTIMATE,"Estimate, no quote",~150,"Stiffer frame, fewer rebuilds"
+Beyond $50k,Actuation,Full arms (4 DoF each),"+2 RobStride 03 per arm (shoulder roll, wrist)",4,224,224,896,896,LISTING,"rcdrone.top RobStride listings, checked 2026-11-04 (RS04 from USD 319; RS03 224; RS05 149); openelab lists RS04 at EUR 254.75, sold out",~300,Mass check needed
+Beyond $50k,Appearance,Composite shell,Professional fibreglass / composite panels (extra cost over tier 3),1,3000,6000,3000,6000,ESTIMATE,"Estimate, no quote",~300,
+Beyond $50k,Electronics,Bigger computer,Jetson AGX Orin 64 GB developer kit,1,1999,5399,1999,5399,LISTING,"NVIDIA launch list USD 1,999 (2022); reseller listing USD 5,399 (rcdrone.top, sold out, 2026-11-04)",~200,Runs perception + local LLM together
+Beyond $50k,Measurement,Foot force/torque sensors,6-axis F/T sensor per foot (Bota SensONE class),2,3000,6000,6000,12000,QUOTE NEEDED,"Estimate, no quote",~200,Accurate centre of pressure; price not listed publicly
+Beyond $50k,Services,Full independent safety review,Documented review of the complete walking setup,1,3000,6000,3000,6000,ESTIMATE,"Estimate, no quote",~258,
+Beyond $50k,Test rigs,Rated brand-name gantry,"RAZE 1-ton, 12 ft span, 8-12 ft (replaces budget gantry; extra cost)",1,2700,3700,2700,3700,LISTING,"Crane Depot, 1-ton RAZE AG aluminium gantry, 12 ft span, 8-12 ft height, USD 5,200, checked 2026-11-04",~134,Wider span over the walkway

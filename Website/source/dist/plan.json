@@ -9,9 +9,9 @@
   "ownerHours": 671.8,
   "note": "Planned dates, task records and hardware results are kept separately. Progress stays in this browser; export backups.",
   "previousRevision": "R0.2",
-  "cashCap": 10000,
-  "cashScenario": 15000,
-  "ceilingStatus": "Final ceiling undecided (D-01)",
+  "cashCap": 15000,
+  "cashScenario": null,
+  "ceilingStatus": "Owner raised the working cap to at least USD 15,000 on 2026-11-04; final ceiling Day 193 (D-01)",
   "costReferences": {
    "B-01": {
     "forecast": 3481,
@@ -12152,7 +12152,7 @@
     "JacobsBaymax/requirements/day_006_D03_D04_configuration.md"
    ],
    "steps": [
-    "Compare the landed total with USD 10,000 and the USD 15,000 scenario.",
+    "Compare the landed total with the USD 15,000 working cap (owner, 2026-11-04) and the uncommitted reserve.",
     "Choose and write: fund the gap (from where?), documented sponsorship, redesign (what?), or extend the schedule. Record the final ceiling.",
     "If unfunded, mark procurement BLOCKED and write the rework package."
    ],

@@ -1253,7 +1253,7 @@ Thresholds applied.",,G2,,"103,190,191",,R0.3
 193,28,Procurement,Quotes and orders,Resolve the budget route with Faisal,Set the final cash ceiling (D-01) from real quotes.,110,"JacobsBaymax/budget/day_190_landed_cost_BOM.csv
 JacobsBaymax/budget/day_192_procurement_mass_reconciliation.csv
 JacobsBaymax/requirements/day_005_D01_budget_options.md
-JacobsBaymax/requirements/day_006_D03_D04_configuration.md","1. (50 min) Compare the landed total with USD 10,000 and the USD 15,000 scenario.
+JacobsBaymax/requirements/day_006_D03_D04_configuration.md","1. (50 min) Compare the landed total with the USD 15,000 working cap (owner, 2026-11-04) and the uncommitted reserve.
 2. (40 min) Choose and write: fund the gap (from where?), documented sponsorship, redesign (what?), or extend the schedule. Record the final ceiling.
 3. (20 min) If unfunded, mark procurement BLOCKED and write the rework package.",Gap = landed total − chosen ceiling.,JacobsBaymax/budget/day_193_D01_funding_disposition_update.md,,"Ceiling and funding source recorded.
 No safety or review line cut to fit.

@@ -1,0 +1,46 @@
+{
+  "day": 12,
+  "date": "2026-11-04",
+  "owner": "Faisal Farouq",
+  "result": "PASS (desk work: assumption register only)",
+  "counts": {
+    "rows": 28,
+    "unique_ids": 28,
+    "baseline_A_01_to_A_12": 12,
+    "day_6_A6_01_to_A6_16": 16,
+    "rows_with_decide_by_day": 28,
+    "rows_with_evidence_route": 28,
+    "rows_with_provider": 28,
+    "assumed_free_resources_confirmed": 0
+  },
+  "status_summary": {
+    "accepted_as_planning_basis": 1,
+    "accepted_for_modelling_but_unverified": 3,
+    "target_unmeasured": 1,
+    "open_or_restricted": 23
+  },
+  "explicitly_unconfirmed_resources": [
+    "facility and rated robot arrest",
+    "volunteer or paid specialist help",
+    "laptop ownership and suitability",
+    "tools and inspection equipment",
+    "vendor prices and non-actuator allowances"
+  ],
+  "reconciled_R0_3_items": [
+    "48.5 kg component projection plus 6.5 kg reserve replaces the stale 47.8 plus 7.2 working value",
+    "0.30 m hip-roll-axis spacing and the ten-joint no-yaw topology are accepted for modelling only",
+    "3:1 hip-roll and 2:1 knee stages are modelling assumptions; stage masses, efficiency, cost and actuator listings remain unquoted or untested",
+    "2.5 m2 shell allocation versus 3.5 m2 risk screen remains open",
+    "USD 10,000 is the working cap; no free labour, laptop, facility or equipment is credited as confirmed"
+  ],
+  "robot_tests_executed": 0,
+  "simulation_runs_executed": 0,
+  "purchases_authorized": 0,
+  "output": "requirements/day_012_assumptions_working.csv",
+  "output_sha256": "988397ed063641934b6c166bc7ecba341129267fff83e7ab3777d6bec37be777",
+  "progress_backup": "../Website/Baymax_365_Progress_Days_001-012.json",
+  "progress_backup_sha256": "55a5d7344d08a57811dcb5ac19e727e14334927262d602a6769a6a10cf2c03da",
+  "owner_hours": 2,
+  "owner_role": "Owner",
+  "preparer_role": "Codex - AI documentation and planning assistant; not an engineering, safety, clinical or procurement reviewer"
+}
