@@ -98,14 +98,19 @@ JacobsBaymax/requirements/day_006_D03_D04_configuration.md (A6-01 to A6-16)","1.
 2. (40 min) Add columns: evidence needed, who provides it, decide-by day, status.
 3. (30 min) Flag as assumptions: facility access, volunteer help, laptop ownership, the 55 kg allocation, shell area 2.5 vs 3.5 m².",12 + 16 = 28 assumptions.,JacobsBaymax/requirements/day_012_assumptions_working.csv,,"28 rows, each with a decide-by day.
 No assumed free resource is marked confirmed.
-Day 6 assumptions keep their A6- IDs.",,,,"6,11",,R0.3
+Day 6 assumptions keep their A6- IDs.",,,,"6,11",PASS: 28 working assumptions with evidence routes and deadlines; desk work only,R0.3
 13,2,Foundation,Desk work,Link hazards to tests,Check every hazard and test link in both directions and block releases on open P0 hazards.,100,"JacobsBaymax/risk_records/hazards.csv
 JacobsBaymax/tests/verification_matrix.csv
 JacobsBaymax/requirements/day_010_motion_payload_hazards.csv","1. (40 min) For each of 20 hazards, check its requirement and JB-V links exist. Then check each JB-V points back.
 2. (30 min) Add the Day 10 hazards with new IDs JB-H-21 onward.
-3. (30 min) Add a column 'blocks gate' and fill it for each P0 hazard (e.g. JB-H-01 blocks G5/G6).",Links checked = hazards × 2 directions.,JacobsBaymax/requirements/day_013_hazard_traceability.csv,,"All linked IDs exist.
+3. (30 min) Add a column 'blocks gate' and fill it for each P0 hazard (e.g. JB-H-01 blocks G5/G6).",Links checked = hazards × 2 directions.,JacobsBaymax/requirements/day_013_hazard_traceability.csv,"JacobsBaymax/requirements/day_013_hazard_traceability.md
+JacobsBaymax/risk_records/hazards_R0_3.csv
+JacobsBaymax/requirements/requirements_R0_3.csv
+JacobsBaymax/tests/verification_matrix_R0_3.csv
+JacobsBaymax/requirements/day_013_link_changes.csv
+JacobsBaymax/evidence/day_013_hazard_traceability_review.json","All linked IDs exist.
 Every P0 hazard names the gate it blocks.
-Likelihood and residual risk remain UNASSESSED.",,,,"10,12",,R0.3
+Likelihood and residual risk remain UNASSESSED.",,,,"10,12",PASS: 35 hazards linked to 26 protocols; reverse links and P0 gate holds checked; 2 hours logged; desk work only,R0.3
 14,2,Foundation,Desk work,Hold the first evidence review,Close Week 2 with a clean R0.3 register set and a short change list.,100,"JacobsBaymax/requirements/day_008_requirement_audit.csv
 JacobsBaymax/requirements/day_009_fall_hazard_questions.md
 JacobsBaymax/requirements/day_010_motion_payload_hazards.csv

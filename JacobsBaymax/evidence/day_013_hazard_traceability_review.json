@@ -1,0 +1,80 @@
+{
+  "day": 13,
+  "date": "2026-11-04",
+  "owner": "Faisal Farouq",
+  "result": "PASS (desk work: hazard-to-test traceability only)",
+  "counts": {
+    "baseline_hazards": 20,
+    "day_10_scenarios": 15,
+    "working_hazards": 35,
+    "requirements": 64,
+    "verification_protocols": 26,
+    "hazard_requirement_pairs": 103,
+    "hazard_verification_pairs": 76,
+    "requirement_verification_pairs": 64,
+    "direct_hazard_verification_pairs": 56,
+    "directed_hazard_links_checked": 358,
+    "changed_baseline_link_fields": 33,
+    "P0_hazards_with_gate_holds": 31,
+    "missing_IDs": 0,
+    "missing_reverse_links": 0
+  },
+  "permanent_ID_mapping": {
+    "MP-01": "JB-H-21",
+    "MP-02": "JB-H-22",
+    "MP-03": "JB-H-23",
+    "MP-04": "JB-H-24",
+    "MP-05": "JB-H-25",
+    "MP-06": "JB-H-26",
+    "MP-07": "JB-H-27",
+    "MP-08": "JB-H-28",
+    "MP-09": "JB-H-29",
+    "MP-10": "JB-H-30",
+    "MP-11": "JB-H-31",
+    "MP-12": "JB-H-32",
+    "MP-13": "JB-H-33",
+    "MP-14": "JB-H-34",
+    "MP-15": "JB-H-35"
+  },
+  "checks": {
+    "all_linked_IDs_exist": "PASS",
+    "bidirectional_hazard_links": "PASS",
+    "bidirectional_requirement_test_links": "PASS",
+    "every_P0_names_blocked_gates": "PASS",
+    "likelihood_and_residual_risk_unassessed": "PASS",
+    "all_26_protocols_remain_unexecuted": "PASS"
+  },
+  "limitations": [
+    "New scenarios have conservative P0 planning priority; severity, likelihood and residual risk are UNASSESSED.",
+    "Reverse/supporting links establish traceability, not adequacy or successful execution of a protocol.",
+    "Day 10 numeric screens and control ideas are retained as unverified source text, not approved design criteria.",
+    "Coverage additions identify work for qualified reviewers; no specialist review or gate release is claimed.",
+    "Day 14 must reconcile the USD 10,000 wording in baseline requirements/tests/gates and Day 12 assumptions with decided D-01 USD 15,000; D-07 and D-10 remain proposed."
+  ],
+  "robot_tests_executed": 0,
+  "simulation_runs_executed": 0,
+  "verification_protocols_executed": 0,
+  "purchases_authorized": 0,
+  "gates_released": [],
+  "owner_hours": 2,
+  "hours_basis": "Explicit owner instruction: Do day 13, log 2 hours",
+  "preparer_role": "Codex - AI documentation assistant; not an independent engineering or safety reviewer",
+  "inputs_sha256": {
+    "risk_records/hazards.csv": "117f1fa2585c61e2de30f4498d555066733500b3e78268afdf69e2c0f5193061",
+    "tests/verification_matrix.csv": "60bbc9f22aeaa26324e83b0578eaf76ecca6d3b4b3efab7d0080076527b5848b",
+    "requirements/requirements.csv": "efb250bc3af67225c06c2dc2b6d72b3b927071b0d596abb6b8b777edd31678b1",
+    "requirements/day_010_motion_payload_hazards.csv": "c39e8510a86ce43be79418baca22c68bb2df2854bf2fc2360b1f34468a02ced7",
+    "revision_history/gates.csv": "e2202b6a111f5d9459f64cfd60f8ca7c5caf5ec685de8e1229321d45e76a920d"
+  },
+  "audit_script_sha256": "d19f13b8e5f8f0bc39002d39307f8f58a9a8ada8f712f17e5eae6115bfda331c",
+  "outputs_sha256": {
+    "risk_records/hazards_R0_3.csv": "370cca2ec8dadb4f983fc6bea7b23e029daff0f6eb1186e7223f40cd22da9ab0",
+    "tests/verification_matrix_R0_3.csv": "6372418fabf169eaaadf6a783c7d395769b34c1c9ed92aa5f7cfe6269ba79712",
+    "requirements/requirements_R0_3.csv": "a07d2e1b1d902114898282d3c0688f20a43c558f2bc201bb323e6b38515344f2",
+    "requirements/day_013_hazard_traceability.csv": "9c9fc10d0bf962a0348ce3659f4eb01fea6d1cef0760e15e0f54d515d5378769",
+    "requirements/day_013_link_changes.csv": "b3d27438f09e03b2eb90b94efc8688f93cf8b9055607b2dd13057487019a6eb6"
+  },
+  "progress_backup": "../Website/Baymax_365_Progress_Days_001-013.json",
+  "progress_backup_sha256": "61e14eeaee71c93232348c7650e76b04965f05f63027b37f8cfbfbaa3a62c9e2",
+  "summary_sha256": "df96d39a11263d55dd4f2d98c23fbea19b5b1714ef9ac862b6e142f9105a51db"
+}

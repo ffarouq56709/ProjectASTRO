@@ -1235,6 +1235,11 @@
     11
    ],
    "hardwareRecord": false,
+   "fileRecord": {
+    "result": "PASS",
+    "scope": "28 working assumptions with evidence routes and deadlines; desk work only",
+    "evidence": "JacobsBaymax/evidence/day_012_assumption_register_review.json"
+   },
    "next": "Day 013: Link hazards to tests"
   },
   {
@@ -1271,9 +1276,16 @@
    ],
    "calculation": "Links checked = hazards × 2 directions.",
    "output": "JacobsBaymax/requirements/day_013_hazard_traceability.csv",
-   "extraOutputs": [],
+   "extraOutputs": [
+    "JacobsBaymax/requirements/day_013_hazard_traceability.md",
+    "JacobsBaymax/risk_records/hazards_R0_3.csv",
+    "JacobsBaymax/requirements/requirements_R0_3.csv",
+    "JacobsBaymax/tests/verification_matrix_R0_3.csv",
+    "JacobsBaymax/requirements/day_013_link_changes.csv",
+    "JacobsBaymax/evidence/day_013_hazard_traceability_review.json"
+   ],
    "help": null,
-   "note": null,
+   "note": "Day 13 PASS for document traceability only: 35 hazards, 358 directed hazard-link checks, 31 P0 gate holds; 2 owner hours logged. Working CSVs preserve R0.1 originals. All 26 verification protocols remain unexecuted; Day 14 reconciles retained budget/scope wording.",
    "stop": "Stop if the work needs real patient data, clinical authority, spending or powered motion.",
    "gates": [],
    "stages": [],
@@ -1302,6 +1314,11 @@
     12
    ],
    "hardwareRecord": false,
+   "fileRecord": {
+    "result": "PASS",
+    "scope": "35 hazards linked to 26 protocols; reverse links and P0 gate holds checked; 2 hours logged; desk work only",
+    "evidence": "JacobsBaymax/evidence/day_013_hazard_traceability_review.json"
+   },
    "next": "Day 014: Hold the first evidence review"
   },
   {

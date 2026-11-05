@@ -15,4 +15,4 @@ source/ holds the editable plan (plan_w*.py), build scripts and checks:
   node verify_site.mjs       -> qa/logic_checks_R0_3.json
 archive_R0_2/ keeps the previous offline site, CSV and code unchanged.
 
-Progress file: import Baymax_365_Progress_Days_001-011.json with Settings -> Import -> Merge (keep my records). It replaces the 001-009 file.
+Progress file: import Baymax_365_Progress_Days_001-013.json with Settings -> Import -> Merge (keep my records). It extends the saved Days 1-12 records with Day 13 PASS (document audit only), 2 hours. Existing browser records stay in place. The project-file notice and library downloads are updated in the rebuilt site; browser-local task records change only after import.

@@ -51,6 +51,8 @@ FILE_RECORDS = {
     9: ("PASS", "Fall hazard questions and envelope sketch; no ratings approved", "JacobsBaymax/requirements/day_009_fall_hazard_questions.md"),
     10: ("PASS", "15 joint and payload hazards listed; severity and residual risk UNASSESSED", "JacobsBaymax/requirements/day_010_motion_payload_hazards.csv"),
     11: ("PASS", "8 care and privacy risks with bad and permitted replies; scripted only", "JacobsBaymax/requirements/day_011_care_privacy_examples.md"),
+    12: ("PASS", "28 working assumptions with evidence routes and deadlines; desk work only", "JacobsBaymax/evidence/day_012_assumption_register_review.json"),
+    13: ("PASS", "35 hazards linked to 26 protocols; reverse links and P0 gate holds checked; 2 hours logged; desk work only", "JacobsBaymax/evidence/day_013_hazard_traceability_review.json"),
 }
 
 HW_PHASES = {"Hardware", "Handling", "Enclosure", "Integration"}

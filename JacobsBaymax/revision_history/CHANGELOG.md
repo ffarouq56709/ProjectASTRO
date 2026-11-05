@@ -31,3 +31,7 @@ D-02: owner has outside contacts; outreach starts now. D-08: tethered walking st
 Budget tiers | 2026-11-04 | Owner Faisal Farouq
 
 Added budget/budget_tiers_R0_4.md, .pdf and .csv: 55 part lines across five tiers (USD 15k to 50k) plus a beyond-50k list. Mid-estimate totals: 13,879 / 17,554 / 21,960 / 30,004 / 42,849. Listing prices checked 2026-11-04 for RobStride, Jetson Orin Nano Super, VectorNav VN-100, OptiTrack, RAZE gantry; all other lines are estimates. D-10 proposed: target the USD 25k tier.
+
+Day 13 | 2026-11-04 | Owner Faisal Farouq
+
+Completed hazard-to-test traceability as desk work; logged 2 owner hours at the owner's instruction. Promoted MP-01 to MP-15 to JB-H-21 to JB-H-35 in working R0.3 CSVs; R0.1 registers unchanged. Audited 35 hazards, 64 requirements and 26 protocols; 358 directed hazard-link checks with zero missing IDs or reverse links. Added explicit test-to-hazard backlinks, 31 P0 gate holds, supplemental protocol coverage and a 33-field link change log. New scenario priorities are conservative planning holds, not assessed risk. All likelihood/residual risk remains UNASSESSED and all protocols remain unexecuted. Saved evidence hashes and Days 1-13 progress backup; rebuilt planner with project-file records and downloads. Day 14 retains budget/scope wording reconciliation and D-07 disposition. No gate release, purchase, simulation or robot test.

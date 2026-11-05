@@ -3,6 +3,16 @@ import base64, json, shutil
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 dist = ROOT / "dist"
+# Keep downloadable working registers and the progress backup in both builds.
+project = ROOT.parents[1]
+for source, target in [
+    ("JacobsBaymax/requirements/day_013_hazard_traceability.csv", "Day_013_Hazard_Traceability.csv"),
+    ("JacobsBaymax/risk_records/hazards_R0_3.csv", "Hazards_R0_3.csv"),
+    ("JacobsBaymax/requirements/requirements_R0_3.csv", "Requirements_R0_3.csv"),
+    ("JacobsBaymax/tests/verification_matrix_R0_3.csv", "Verification_R0_3.csv"),
+    ("Website/Baymax_365_Progress_Days_001-013.json", "Baymax_365_Progress_Days_001-013.json"),
+]:
+    shutil.copy2(project / source, dist / "resources" / target)
 html = (dist / "index.html").read_text()
 css = (dist / "styles.css").read_text()
 js = (dist / "app.js").read_text()

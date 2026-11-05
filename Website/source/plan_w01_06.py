@@ -178,7 +178,14 @@ d(13, "Link hazards to tests",
   calc="Links checked = hazards × 2 directions.",
   chk=["All linked IDs exist.",
        "Every P0 hazard names the gate it blocks.",
-       "Likelihood and residual risk remain UNASSESSED."])
+       "Likelihood and residual risk remain UNASSESSED."],
+  extra=[R + "requirements/day_013_hazard_traceability.md",
+         R + "risk_records/hazards_R0_3.csv",
+         R + "requirements/requirements_R0_3.csv",
+         R + "tests/verification_matrix_R0_3.csv",
+         R + "requirements/day_013_link_changes.csv",
+         R + "evidence/day_013_hazard_traceability_review.json"],
+  note="Day 13 PASS for document traceability only: 35 hazards, 358 directed hazard-link checks, 31 P0 gate holds; 2 owner hours logged. Working CSVs preserve R0.1 originals. All 26 verification protocols remain unexecuted; Day 14 reconciles retained budget/scope wording.")
 
 d(14, "Hold the first evidence review",
   goal="Close Week 2 with a clean R0.3 register set and a short change list.",
