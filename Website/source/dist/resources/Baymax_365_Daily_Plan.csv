@@ -106,7 +106,7 @@ JacobsBaymax/requirements/day_010_motion_payload_hazards.csv","1. (40 min) Rank 
 2. (40 min) For each risk record the earliest observable warning, owner action, evidence file, cost label and day range.
 3. (30 min) Link every walking risk to an existing JB-H or create a proposed ID for Day 14 review; keep severity, likelihood and residual risk UNASSESSED until reviewed.",10 ranked risks; each has 1 warning + 1 mitigation + 1 evidence route.,JacobsBaymax/requirements/day_013_hazard_traceability.csv,,"Exactly ten risks are ranked with no fabricated test result.
 Every risk has an early warning and a dated mitigation.
-Unquoted costs and untested controls are labelled.",,,,"10,12",,R0.3
+Unquoted costs and untested controls are labelled.",,,,"10,12",PASS: 10 walking-critical risks ranked qualitatively; no risk scores or hardware results; 2 owner hours,R0.3
 14,2,Foundation,Review with outside help,Approve the walking first reset,Make the five owner decisions that unlock early bench learning while keeping powered work behind a permit and named second person.,120,"JacobsBaymax/requirements/day_013_hazard_traceability.csv
 JacobsBaymax/revision_history/decision_log_R0_3.csv
 JacobsBaymax/requirements/contact_schedule.csv","1. (30 min) Review D-11 to D-15: milestone ladder, battery/charging policy, LLM boundary, public name/look and budget tier.
@@ -114,14 +114,14 @@ JacobsBaymax/requirements/contact_schedule.csv","1. (30 min) Review D-11 to D-15
 3. (30 min) Authorize only the exact low-cost bench purchase scope, or keep Day 20 blocked. This is not a generic procurement or powered-test release.
 4. (30 min) Send scheduling requests to the contacts required by Days 19, 24, 28, 35, 47 and 56; record replies, dates and costs without inventing names.",5 decisions + 6 scheduling targets; 0 powered tests authorized by the document alone.,JacobsBaymax/requirements/day_014_walking_first_reset.md,,"D-11 to D-15 each shows recommendation, status, action and decide-by day.
 Any bench purchase has an exact item and amount authorization.
-Every powered milestone still requires permit, reviewed current limit and second person.",Owner decision review. A controls/safety reviewer and stop operator are needed before the first powered day.,,,13,,R0.3
+Every powered milestone still requires permit, reviewed current limit and second person.",Owner decision review. A controls/safety reviewer and stop operator are needed before the first powered day.,,,13,REWORK: D-11 to D-15 accepted; owner outreach not yet sent; 2 owner hours,R0.3
 15,3,Software,Software on your laptop,Freeze the bench and care software boundary,Separate the actuator bench controller from caregiver software so a demo defect can never create motion.,110,"JacobsBaymax/requirements/day_014_walking_first_reset.md
 JacobsBaymax/software/bench/single_joint_bench.py
 JacobsBaymax/caregiver_workflows/05_caregiver_link_and_grounding.md","1. (35 min) Draw two processes and two privilege boundaries: bench control/logging and fictional caregiver app; show that neither imports nor calls the other.
 2. (40 min) Record laptop model, OS, Python version, disk space and available CAN interface; mark any missing item UNCONFIRMED.
 3. (35 min) Define repository owners, log locations and a deny-by-default interface rule for future robot integration.",2 processes; 0 allowed care-app-to-motor calls.,JacobsBaymax/software/day_015_bench_care_boundary.md,,"Care software has no motor or CAN access.
 Bench assets and laptop capabilities are recorded, not assumed.
-The dry-run command works without hardware.",,,,14,,R0.3
+The dry-run command works without hardware.",,,,14,PASS: Bench/care process boundary and laptop inventory; 40-row simulated dry run only; 2 owner hours,R0.3
 16,3,Software,Quotes and orders,Prepare the eleven actuator request,Ask vendors for a comparable landed quote and the protocol evidence needed to qualify eleven RobStride 04 modules.,110,"JacobsBaymax/software/day_015_bench_care_boundary.md
 JacobsBaymax/procurement/11_make_versus_buy.md
 JacobsBaymax/requirements/day_006_D03_D04_configuration.md","1. (40 min) Write an RFQ for 11 identical RobStride 04 modules: 10 robot units plus 1 bench/spare unit; request hardware and firmware revision, lead time, stock, warranty and return terms.

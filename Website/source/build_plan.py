@@ -52,6 +52,9 @@ FILE_RECORDS = {
     10: ("PASS", "15 joint and payload hazards listed; severity and residual risk UNASSESSED", "JacobsBaymax/requirements/day_010_motion_payload_hazards.csv"),
     11: ("PASS", "8 care and privacy risks with bad and permitted replies; scripted only", "JacobsBaymax/requirements/day_011_care_privacy_examples.md"),
     12: ("PASS", "28-row assumption register; desk documentation only; 2 owner hours", "JacobsBaymax/requirements/day_012_assumptions_working.csv"),
+    13: ("PASS", "10 walking-critical risks ranked qualitatively; no risk scores or hardware results; 2 owner hours", "JacobsBaymax/requirements/day_013_hazard_traceability.csv"),
+    14: ("REWORK", "D-11 to D-15 accepted; owner outreach not yet sent; 2 owner hours", "JacobsBaymax/requirements/day_014_walking_first_reset.md"),
+    15: ("PASS", "Bench/care process boundary and laptop inventory; 40-row simulated dry run only; 2 owner hours", "JacobsBaymax/software/day_015_bench_care_boundary.md"),
 }
 
 HW_PHASES = {"Hardware", "Handling", "Enclosure", "Integration"}

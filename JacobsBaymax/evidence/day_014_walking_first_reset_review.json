@@ -1,0 +1,34 @@
+{
+  "day": 14,
+  "date": "2026-11-05",
+  "owner": "Faisal Farouq",
+  "result": "REWORK (owner decisions accepted; owner outreach not yet sent)",
+  "owner_hours": 2,
+  "decision_review": {
+    "ids": ["D-11", "D-12", "D-13", "D-14", "D-15"],
+    "recommendations_present": 5,
+    "status": "ACCEPTED - owner 2026-11-05",
+    "owner_accept_change_defer_recorded": 5
+  },
+  "scheduling_targets": {
+    "targets": ["Day 19", "Day 24", "Day 28", "Day 35", "Day 47", "Day 56"],
+    "requests_sent": 0,
+    "blocker": "Owner will contact personally; no request, appointment or reply is recorded"
+  },
+  "procurement": {
+    "day_20_status": "BLOCKED",
+    "bench_actuator_authorized": false,
+    "full_fleet_authorized": false,
+    "reason": "No revision-specific landed quote and no exact owner purchase authorization"
+  },
+  "powered_test_boundary": "Every powered milestone still requires a signed permit, reviewed current/speed/travel limits and a named second-person stop operator",
+  "robot_tests_executed": 0,
+  "purchases_authorized": 0,
+  "contacts_invented": 0,
+  "output": "requirements/day_014_walking_first_reset.md",
+  "output_sha256": "6477ffe9c9e4a86b22ae19a5f8acc8e75142901792fc73b53584c923b5b65e58",
+  "progress_backup": "../Website/Baymax_365_Progress_Days_001-015.json",
+  "progress_backup_sha256": "ca897f3cee155111b4d322487f420aeb98a361e5e4a5a60bab2147d774ec710c",
+  "owner_role": "Owner decision authority - D-11 through D-15 accepted; outreach pending",
+  "preparer_role": "Codex - AI documentation and planning assistant; not an owner decision maker, procurement authority or reviewer"
+}
