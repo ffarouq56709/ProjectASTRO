@@ -27,7 +27,7 @@ check('Every day has 2-8 steps, 2-4 checks, a goal and inputs', () => assert(dat
 check('Step minutes add up per day', () => assert(data.days.every(d => d.stepMinutes.reduce((a, b) => a + b, 0) === d.minutes)));
 check('Planned time fits 2-3 h days (90-180 min)', () => assert(data.days.every(d => d.minutes >= 90 && d.minutes <= 180)));
 const old = JSON.parse(await fs.readFile(new URL('./source_r02_plan.json', import.meta.url), 'utf8'));
-check('Output paths, weeks, gates and stages unchanged from R0.2', () => assert(data.days.every((d, i) => d.output === old.days[i].output && d.week === old.days[i].week && JSON.stringify(d.gates) === JSON.stringify(old.days[i].gates) && JSON.stringify(d.stages) === JSON.stringify(old.days[i].stages))));
+check('Weeks, gates and stages unchanged from R0.2', () => assert(data.days.every((d, i) => d.week === old.days[i].week && JSON.stringify(d.gates) === JSON.stringify(old.days[i].gates) && JSON.stringify(d.stages) === JSON.stringify(old.days[i].stages))));
 check('Requirement, gate and stage links exist', () => assert(data.days.every(d => d.requirements.every(r => reqIds.has(r)) && d.gates.every(g => data.gates.some(x => x.id === g)) && d.stages.every(g => data.stages.some(x => x.id === g)))));
 check('Dependencies point backwards', () => assert(data.days.every(d => d.dependencyDays.every(k => k < d.id))));
 check('Powered days name outside help', () => assert(data.days.filter(d => d.kind === 'powered').every(d => d.help && d.help.length > 20)));
@@ -48,7 +48,7 @@ check('Escaping works', () => assert.equal(api.esc('<b>'), '&lt;b&gt;'));
 check('All views render', () => { for (const f of ['renderDay', 'renderPlan', 'renderRoadmap', 'renderReviews', 'renderControls', 'renderResources', 'renderSettings', 'renderRegister']) assert(api[f]().length > 500, f); });
 for (const name of ['Jacobs_Baymax_Mission_R0_1.pdf', 'Jacobs_Baymax_Engineering_Baseline_R0_1.pdf', 'Jacobs_Baymax_Control_Workbook_R0_1.xlsx', 'Jacobs_Baymax_Complete_Package_R0_1.zip', 'Baymax_365_Daily_Plan.csv', 'Requirements_R0_1.csv', 'Hazards_R0_1.csv', 'Verification_R0_1.csv', 'Day_006_Configuration_R0_3.pdf', 'baymax-rigid-panel-concept-v1.png']) await fs.access(new URL('./dist/resources/' + name, import.meta.url));
 checks.push({ name: 'All linked resources exist', result: 'PASS' });
-const report = { date: '2026-10-28', plan: data.meta.revision, scope: 'Website data and logic only. No robot test.', checks };
+const report = { date: '2026-11-05', plan: data.meta.revision, scope: 'Website data and logic only. No robot test.', checks };
 await fs.mkdir(new URL('./qa/', import.meta.url), { recursive: true });
 await fs.writeFile(new URL('./qa/logic_checks_R0_3.json', import.meta.url), JSON.stringify(report, null, 2));
 console.log(JSON.stringify({ checks: checks.length, all: checks.every(c => c.result === 'PASS') }));

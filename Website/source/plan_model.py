@@ -1,8 +1,8 @@
 """R0.3 day model. Content modules call W() and d(); build_plan.py assembles them.
 
-Old R0.2 data (week titles, phases, gates, stages, requirement links and output
-paths) are read from source_r02_plan.json so day numbers, outputs and
-dependencies stay stable.
+Old R0.2 data supplies week titles, phases, gates, stages and requirement links.
+Rewritten days may set a new unique output path. O(n) resolves the already
+defined rewritten output so dependencies remain accurate.
 """
 import json
 import re
@@ -27,8 +27,8 @@ KINDS = {
 
 
 def O(n):
-    """Output path of day n (stable from R0.2)."""
-    return OLD_DAYS[n]["output"]
+    """Output path of an earlier day, including a rewritten output."""
+    return DAYS[n]["output"] if n in DAYS else OLD_DAYS[n]["output"]
 
 
 def W(n):

@@ -31,3 +31,7 @@ D-02: owner has outside contacts; outreach starts now. D-08: tethered walking st
 Budget tiers | 2026-11-04 | Owner Faisal Farouq
 
 Added budget/budget_tiers_R0_4.md, .pdf and .csv: 55 part lines across five tiers (USD 15k to 50k) plus a beyond-50k list. Mid-estimate totals: 13,879 / 17,554 / 21,960 / 30,004 / 42,849. Listing prices checked 2026-11-04 for RobStride, Jetson Orin Nano Super, VectorNav VN-100, OptiTrack, RAZE gantry; all other lines are estimates. D-10 proposed: target the USD 25k tier.
+
+Walking-first reset | 2026-11-05 | Owner Faisal Farouq
+
+Replaced plan Days 12-84 with an evidence-gated walking-first path: safe-by-default single-joint bench, one-leg development rig, measured simulation, bounded caregiver software work and a two-leg hanging milestone. Day 12 remains PASS as completed two-hour desk work; no hardware evidence is claimed. Added dry-run bench logger/analyzer, grounding-check v2 and 119-case adversarial fixture suite. Added contact_schedule.csv and proposed D-11 through D-15 for owner decision. The USD 15,000 working cap remains current; USD 25,000 is recommended as the planning tier. No CAN identifiers/registers were invented, no purchase or powered-test release was granted, and no standing/walking result is claimed.

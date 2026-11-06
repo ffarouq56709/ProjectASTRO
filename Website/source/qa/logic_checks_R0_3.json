@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28",
+  "date": "2026-11-05",
   "plan": "R0.3",
   "scope": "Website data and logic only. No robot test.",
   "checks": [
@@ -24,7 +24,7 @@
       "result": "PASS"
     },
     {
-      "name": "Output paths, weeks, gates and stages unchanged from R0.2",
+      "name": "Weeks, gates and stages unchanged from R0.2",
       "result": "PASS"
     },
     {

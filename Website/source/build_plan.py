@@ -51,6 +51,7 @@ FILE_RECORDS = {
     9: ("PASS", "Fall hazard questions and envelope sketch; no ratings approved", "JacobsBaymax/requirements/day_009_fall_hazard_questions.md"),
     10: ("PASS", "15 joint and payload hazards listed; severity and residual risk UNASSESSED", "JacobsBaymax/requirements/day_010_motion_payload_hazards.csv"),
     11: ("PASS", "8 care and privacy risks with bad and permitted replies; scripted only", "JacobsBaymax/requirements/day_011_care_privacy_examples.md"),
+    12: ("PASS", "28-row assumption register; desk documentation only; 2 owner hours", "JacobsBaymax/requirements/day_012_assumptions_working.csv"),
 }
 
 HW_PHASES = {"Hardware", "Handling", "Enclosure", "Integration"}
@@ -85,8 +86,8 @@ assert all(sum(d["stepMinutes"]) == d["minutes"] for d in days)
 
 hours = round(sum(d["minutes"] for d in days) / 60, 1)
 meta = dict(OLD["meta"])
-meta.update(revision="R0.3", date="2026-10-28", previousRevision="R0.2", ownerHours=hours,
-            cashCap=15000, cashScenario=None, ceilingStatus="Owner raised the working cap to at least USD 15,000 on 2026-11-04; final ceiling Day 193 (D-01)",
+meta.update(revision="R0.3", date="2026-11-05", previousRevision="R0.2", ownerHours=hours,
+            cashCap=15000, cashScenario=None, ceilingStatus="Owner set a USD 15,000 working cap on 2026-11-05; final ceiling Day 193 (D-01)",
             note="Planned dates, task records and hardware results are kept separately. Progress stays in this browser; export backups.",
             costReferences={"B-01": {"forecast": 3481, "basis": "R0.3 listing screen: 10 x USD 319 + 4 stages x USD 50 (assumed) + USD 91.25 CAN hub. Listings 2026-10-28, not quotes. Low case USD 2,841.", "r01Reference": 8899}},
             appearanceReference="JacobsBaymax/cad_specifications/reference/baymax-rigid-panel-concept-v1.png")
@@ -97,7 +98,7 @@ data["kinds"] = pm.KINDS
 (ROOT / "dist/plan.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
 
 with (ROOT / "dist/resources/Baymax_365_Daily_Plan.csv").open("w", newline="") as f:
-    w = csv.writer(f)
+    w = csv.writer(f, lineterminator="\n")
     w.writerow(["Day", "Week", "Phase", "Work type", "Title", "Goal", "Planned minutes", "Inputs", "Steps",
                 "Calculation or measurement", "Output", "Extra outputs", "Completion checks", "Outside help",
                 "Gates", "Prior stages", "Depends on days", "Project file record", "Revision"])

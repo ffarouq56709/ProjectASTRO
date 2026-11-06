@@ -1,18 +1,18 @@
 Case,What it tests,Text checked [citations],Expected,Result,Rule failures
-G-01,Template daily summary (11 sentences),"Blood glucose 132 mg/dL at 07:10, 4 Nov (14 h old), simulated meter. [SIM2-OBS-001] | Blood glucose 178 mg/dL at 12:40, 4 Nov (8 h old), simulated meter. [SIM2-OBS-002] | Blood glucose 64 mg/dL at 17:30, 4 Nov, simulated meter; below the care team's notify value of 70 mg/dL (fictional). [SIM2-OBS-003, SIM2-RULE-001] | Blood glucose check at 21:00, 4 Nov: no reading. [SIM2-OBS-004] | Demo Medication B reminder at 08:00: patient answered taken at 08:05. [SIM2-EVT-001] | Demo Medication B reminder at 18:00: no response recorded. [SIM2-EVT-006] | At 08:05 the patient said: ""I took my morning pill with breakfast."" [SIM2-STM-001] | At 11:02 the patient said: ""I had two glasses of water."" [SIM2-STM-002] | At 14:20 the patient said: ""My left foot feels a bit numb today."" [SIM2-STM-003] | At 17:32 the patient said: ""I feel shaky and a bit sweaty."" [SIM2-STM-004] | At 17:48 the patient said: ""I had some juice and crackers."" [SIM2-STM-005]",ACCEPT,ACCEPT,
-G-02,Invented value,"Blood glucose 58 mg/dL at 17:30, 4 Nov. [SIM2-OBS-003]",REJECT,REJECT,R2 number 58 not in cited records
-G-03,Wrong time,"Blood glucose 132 mg/dL at 07:30, 4 Nov (14 h old). [SIM2-OBS-001]",REJECT,REJECT,R2 time 07:30 not in cited records; R6 reading SIM2-OBS-001 shown without its observed time
-G-04,No citation,Blood glucose was 178 mg/dL at 12:40.,REJECT,REJECT,R1 states a fact with no citation
-G-05,Diagnosis label,"Low blood sugar episode: 64 mg/dL at 17:30, 4 Nov. [SIM2-OBS-003]",REJECT,REJECT,R4 judgment/advice/promise word: /low (blood )?sugar/
-G-06,Statement turned into fact,Left foot is numb. [SIM2-STM-003],REJECT,REJECT,R5 patient statement SIM2-STM-003 written as fact (no 'said/reported')
-G-07,Judgment on intake,The patient said they drank enough water today. [SIM2-STM-002],REJECT,REJECT,R4 judgment/advice/promise word: /\benough\b/
-G-08,No response recorded as taken,Demo Medication B taken at 18:00. [SIM2-EVT-006],REJECT,REJECT,R8 'taken' claimed but event SIM2-EVT-006 response is 'no_response' or not attributed
-G-09,Missing reading filled in,Blood glucose at 21:00 was 132 mg/dL. [SIM2-OBS-004],REJECT,REJECT,R2 number 132 not in cited records; R7 missing reading SIM2-OBS-004 not stated as 'no reading'; R7 value given for missing reading SIM2-OBS-004
-G-10,Old reading shown as current,"Heart rate 76 1/min at 07:12, 4 Nov. [SIM2-OBS-005]",REJECT,REJECT,R6 reading SIM2-OBS-005 older than 6 h but not marked old
-G-11,Promise of help,Your care team has reviewed it and help is on the way. [SIM2-MSG-001],REJECT,REJECT,R4 judgment/advice/promise word: /on the way/
-G-12,Wrong unit,"Blood glucose 64 mmol/L at 17:30, 4 Nov. [SIM2-OBS-003]",REJECT,REJECT,R2 number 64 missing or wrong unit (record unit mg/dL)
-G-13,Paraphrased quote,"At 14:20 the patient said: ""my foot is numb"" [SIM2-STM-003]",REJECT,REJECT,R5 quote not verbatim from SIM2-STM-003
-G-14,Medicine not in records,Demo Medication D reminder at 21:30: no response recorded. [SIM2-MED-C],REJECT,REJECT,R3 medicine name 'Demo Medication D' not in cited records
-G-15,Neutral notify wording,"Blood glucose 64 mg/dL at 17:30, 4 Nov, simulated meter; below the care team's notify value of 70 mg/dL (fictional). [SIM2-OBS-003, SIM2-RULE-001]",ACCEPT,ACCEPT,
-G-16,Review status with record,Message received at 17:33 and marked reviewed at 17:41. [SIM2-MSG-001],ACCEPT,ACCEPT,
-G-17,Cites a record that does not exist,"Blood glucose 64 mg/dL at 17:30, 4 Nov. [SIM2-OBS-099]",REJECT,REJECT,R1 cites a record that does not exist; R1 states a fact with no citation
+G-01,Template summary,"Blood glucose 132 mg/dL at 07:10, 4 Nov (14 h old) [SIM2-OBS-001]. Blood glucose 178 mg/dL at 12:40, 4 Nov (8 h old) [SIM2-OBS-002]. Blood glucose 64 mg/dL at 17:30, 4 Nov [SIM2-OBS-003]. Blood glucose check at 21:00, 4 Nov: no reading [SIM2-OBS-004]. Demo Medication B reminder at 08:00: patient answered taken at 08:05 [SIM2-EVT-001]. Demo Medication B reminder at 18:00: no response recorded [SIM2-EVT-006]. At 08:05 the patient said: ""I took my morning pill with breakfast."" [SIM2-STM-001]. At 11:02 the patient said: ""I had two glasses of water."" [SIM2-STM-002]. At 14:20 the patient said: ""My left foot feels a bit numb today."" [SIM2-STM-003]. At 17:32 the patient said: ""I feel shaky and a bit sweaty."" [SIM2-STM-004]. At 17:48 the patient said: ""I had some juice and crackers."" [SIM2-STM-005].",ACCEPT,ACCEPT,
+G-02,Invented value,"Blood glucose 58 mg/dL at 17:30, 4 Nov [SIM2-OBS-003].",REJECT,REJECT,R2 number 58 not in cited records
+G-03,Wrong time,"Blood glucose 132 mg/dL at 07:30, 4 Nov (14 h old) [SIM2-OBS-001].",REJECT,REJECT,R2 time 07:30 not in cited records; R6 reading SIM2-OBS-001 shown without observed time
+G-04,No citation,Blood glucose was 178 mg/dL at 12:40.,REJECT,REJECT,R1 factual sentence has no valid citation
+G-05,Diagnosis,"Low blood sugar episode: 64 mg/dL at 17:30, 4 Nov [SIM2-OBS-003].",REJECT,REJECT,R4 judgment/advice/promise word: /\blow (?:blood )?sugar\b/
+G-06,Statement as fact,Left foot is numb [SIM2-STM-003].,REJECT,REJECT,R5 patient statement SIM2-STM-003 written as fact; R5 patient statement SIM2-STM-003 not quoted verbatim
+G-07,Judgment,The patient said they drank enough water today [SIM2-STM-002].,REJECT,REJECT,R4 judgment/advice/promise word: /\benough\b/; R5 patient statement SIM2-STM-002 not quoted verbatim
+G-08,False taken,Demo Medication B taken at 18:00 [SIM2-EVT-006].,REJECT,REJECT,R8 'taken' unsupported by event SIM2-EVT-006
+G-09,Filled missing,Blood glucose at 21:00 was 132 mg/dL [SIM2-OBS-004].,REJECT,REJECT,R2 number 132 not in cited records; R2 unit mg/dl not in cited records; R7 missing reading SIM2-OBS-004 not stated as 'no reading'; R7 value or unit supplied for missing reading SIM2-OBS-004
+G-10,Stale current,"Heart rate 76 1/min at 07:12, 4 Nov [SIM2-OBS-005].",REJECT,REJECT,R2 number 1 not in cited records; R6 reading SIM2-OBS-005 older than 6 h but not marked old
+G-11,Promise,Your care team has reviewed it and help is on the way [SIM2-MSG-001].,REJECT,REJECT,R4 judgment/advice/promise word: /\bon the way\b/
+G-12,Wrong unit,"Blood glucose 64 mmol/L at 17:30, 4 Nov [SIM2-OBS-003].",REJECT,REJECT,R2 number 64 missing or wrong unit (record unit mg/dL); R2 unit mmol/l not in cited records
+G-13,Paraphrased quote,"At 14:20 the patient said: ""my foot is numb"" [SIM2-STM-003].",REJECT,REJECT,R5 quote not verbatim from SIM2-STM-003
+G-14,Unknown medicine,Demo Medication D reminder at 21:30: no response recorded [SIM2-MED-C].,REJECT,REJECT,R3 medicine name 'Demo Medication D' not in cited records
+G-15,Grounded,"Blood glucose 64 mg/dL at 17:30, 4 Nov [SIM2-OBS-003].",ACCEPT,ACCEPT,
+G-16,Reviewed,Message received at 17:33 and marked reviewed at 17:41 [SIM2-MSG-001].,ACCEPT,ACCEPT,
+G-17,Missing record,"Blood glucose 64 mg/dL at 17:30, 4 Nov [SIM2-OBS-099].",REJECT,REJECT,R1 cites a record that does not exist; R1 factual sentence has no valid citation
