@@ -1,0 +1,56 @@
+{
+  "day": 9,
+  "date": "2026-11-02",
+  "owner": "Faisal Farouq",
+  "result": "PASS (desk work: hazard questions only)",
+  "hazards_covered": [
+    "ASTRO-H-01",
+    "ASTRO-H-14",
+    "ASTRO-H-17",
+    "ASTRO-H-20"
+  ],
+  "numbers": {
+    "weight_N": 539.55,
+    "tip_reach_from_foot_centre_m": 1.99,
+    "keep_out_sketch_m": [
+      4.4,
+      4.3
+    ],
+    "untethered_fall_energy_J": 540,
+    "catch_force_illustrative_N": {
+      "slack_0.02_m": 1619,
+      "slack_0.05_m": 3237,
+      "slack_0.20_m": 11331
+    },
+    "fixed_anchor_tether_angle_deg": {
+      "2.6_m": [
+        23.2,
+        12.1
+      ],
+      "3.0_m": [
+        17.2,
+        8.8
+      ],
+      "3.5_m": [
+        13.0,
+        6.6
+      ]
+    }
+  },
+  "assumptions": [
+    "CoM 1.0 m",
+    "back attachment 1.55 m",
+    "tether slack 0.02 m, stretch 0.01 m (illustrative)",
+    "walkway 0.45 m"
+  ],
+  "approved_ratings": null,
+  "physical_work": "none",
+  "robot_tests_executed": 0,
+  "files": {
+    "day_009_fall_hazard_questions.md": "f9ff74f0993687cb85e1f7f17a692c8db5653aee41e312e9afa9f5fb53d555c6",
+    "day_009_fall_hazard_questions.pdf": "173140a777eb29c10f21393e138ef9867be874ee224ae4452c011927b0134c81",
+    "day_009_fall_envelope.png": "11e216b2d8ca7ce5d7aabc850950cdc4753b8ac9da2c3b3c6348293665f0391e"
+  },
+  "owner_hours": 2,
+  "owner_role": "Owner"
+}

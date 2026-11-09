@@ -1,0 +1,14 @@
+ID,Subsystem,Allocation kg,Assumed center height m,Basis
+M-01,Primary structure and load-bearing joint brackets,12.0,0.9,Concept allowance; FEA and drawings absent
+M-02,Ten lower-body actuators and transmissions,14.0,0.61,Includes mounting and transmission allowance; no actuator selection
+M-03,Feet soles and ground-contact sensing,2.5,0.07,Both broad feet
+M-04,Battery pack with enclosure and BMS,3.5,0.85,48 V 8 Ah is an energy example only
+M-05,Protected power distribution and converters,1.4,0.9,"Includes fusing, contactors and isolation hardware"
+M-06,Independent safety controls and stops,0.6,1.0,Hardware architecture unresolved
+M-07,Computer audio and local display,0.9,1.35,No hardware selected
+M-08,Perception sensors,0.6,1.4,Camera/depth/IMU allocation
+M-09,Supported object-handling module,3.0,1.1,Included onboard even during walking; no payload while walking
+M-10,Passive upper limbs and head supports,2.0,1.45,No active whole-arm humanoid promise
+M-11,Rigid exterior panels and panel mounts,5.2,1.1,2.5 m2 x 1.5 mm plastic example plus mounts
+M-12,Harnesses connectors and cable protection,1.3,0.9,Service loops included
+M-13,Fasteners seals and labels,0.8,0.95,No hidden duplicate mounting allowance

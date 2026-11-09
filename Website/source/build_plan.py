@@ -1,4 +1,4 @@
-"""Build dist/plan.json and the 365-day CSV for Baymax 365 R0.3.
+"""Build dist/plan.json and the 365-day CSV for ASTRO 365 R0.3.
 
 python3 build_plan.py
 """
@@ -40,21 +40,22 @@ ALT = {
 ALT_DEFAULT = ["List what is missing for today's task.", "Do only the safe, reversible part with inputs you have.", "Record the blocker, who can unblock it and the follow-up date."]
 
 FILE_RECORDS = {
-    1: ("PASS", "Mission accepted; charter differences resolved 2026-10-28", "JacobsBaymax/requirements/day_001_mission_acceptance.md"),
-    2: ("PASS", "Folder and archive setup only", "JacobsBaymax/evidence/day_002_folder_setup.json"),
-    3: ("PASS", "Checklist coverage only", "JacobsBaymax/evidence/day_003_checklist_review.json"),
-    4: ("PASS", "List completeness only; six specialist roles unassigned", "JacobsBaymax/evidence/day_004_responsibility_review.json"),
-    5: ("PASS", "Arithmetic and options document only; ceiling undecided", "JacobsBaymax/evidence/day_005_budget_review.json"),
-    6: ("PASS", "Configuration document; owner accepted 2026-10-28; G2 not released", "JacobsBaymax/evidence/day_006_configuration_review_R0_3.json"),
-    7: ("PASS", "G0 released 2026-10-28 for documentation, software and analysis only", "JacobsBaymax/requirements/day_007_G0_baseline_review.md"),
-    8: ("PASS", "Requirement audit: 64 rows, links consistent, 9 wording issues for Day 14", "JacobsBaymax/requirements/day_008_requirement_audit.csv"),
-    9: ("PASS", "Fall hazard questions and envelope sketch; no ratings approved", "JacobsBaymax/requirements/day_009_fall_hazard_questions.md"),
-    10: ("PASS", "15 joint and payload hazards listed; severity and residual risk UNASSESSED", "JacobsBaymax/requirements/day_010_motion_payload_hazards.csv"),
-    11: ("PASS", "8 care and privacy risks with bad and permitted replies; scripted only", "JacobsBaymax/requirements/day_011_care_privacy_examples.md"),
-    12: ("PASS", "28-row assumption register; desk documentation only; 2 owner hours", "JacobsBaymax/requirements/day_012_assumptions_working.csv"),
-    13: ("PASS", "10 walking-critical risks ranked qualitatively; no risk scores or hardware results; 2 owner hours", "JacobsBaymax/requirements/day_013_hazard_traceability.csv"),
-    14: ("REWORK", "D-11 to D-15 accepted; owner outreach not yet sent; 2 owner hours", "JacobsBaymax/requirements/day_014_walking_first_reset.md"),
-    15: ("PASS", "Bench/care process boundary and laptop inventory; 40-row simulated dry run only; 2 owner hours", "JacobsBaymax/software/day_015_bench_care_boundary.md"),
+    1: ("PASS", "Mission accepted; charter differences resolved 2026-10-28", "ProjectASTRO/requirements/day_001_mission_acceptance.md"),
+    2: ("PASS", "Folder and archive setup only", "ProjectASTRO/evidence/day_002_folder_setup.json"),
+    3: ("PASS", "Checklist coverage only", "ProjectASTRO/evidence/day_003_checklist_review.json"),
+    4: ("PASS", "List completeness only; six specialist roles unassigned", "ProjectASTRO/evidence/day_004_responsibility_review.json"),
+    5: ("PASS", "Arithmetic and options document only; ceiling undecided", "ProjectASTRO/evidence/day_005_budget_review.json"),
+    6: ("PASS", "Configuration document; owner accepted 2026-10-28; G2 not released", "ProjectASTRO/evidence/day_006_configuration_review_R0_3.json"),
+    7: ("PASS", "G0 released 2026-10-28 for documentation, software and analysis only", "ProjectASTRO/requirements/day_007_G0_baseline_review.md"),
+    8: ("PASS", "Requirement audit: 64 rows, links consistent, 9 wording issues for Day 14", "ProjectASTRO/requirements/day_008_requirement_audit.csv"),
+    9: ("PASS", "Fall hazard questions and envelope sketch; no ratings approved", "ProjectASTRO/requirements/day_009_fall_hazard_questions.md"),
+    10: ("PASS", "15 joint and payload hazards listed; severity and residual risk UNASSESSED", "ProjectASTRO/requirements/day_010_motion_payload_hazards.csv"),
+    11: ("PASS", "8 care and privacy risks with bad and permitted replies; scripted only", "ProjectASTRO/requirements/day_011_care_privacy_examples.md"),
+    12: ("PASS", "28-row assumption register; desk documentation only; 2 owner hours", "ProjectASTRO/requirements/day_012_assumptions_working.csv"),
+    13: ("PASS", "10 walking-critical risks ranked qualitatively; no risk scores or hardware results; 2 owner hours", "ProjectASTRO/requirements/day_013_hazard_traceability.csv"),
+    14: ("REWORK", "D-11 to D-15 accepted; owner outreach not yet sent; 2 owner hours", "ProjectASTRO/requirements/day_014_walking_first_reset.md"),
+    15: ("PASS", "Bench/care process boundary and laptop inventory; 40-row simulated dry run only; 2 owner hours", "ProjectASTRO/software/day_015_bench_care_boundary.md"),
+    16: ("PASS", "11-unit RobStride 04 RFQ package complete; three real routes identified; owner dispatch pending; no quote or order; 2 owner hours", "ProjectASTRO/procurement/day_016_robstride04_RFQ.md"),
 }
 
 HW_PHASES = {"Hardware", "Handling", "Enclosure", "Integration"}
@@ -93,14 +94,14 @@ meta.update(revision="R0.3", date="2026-11-05", previousRevision="R0.2", ownerHo
             cashCap=15000, cashScenario=None, ceilingStatus="Owner set a USD 15,000 working cap on 2026-11-05; final ceiling Day 193 (D-01)",
             note="Planned dates, task records and hardware results are kept separately. Progress stays in this browser; export backups.",
             costReferences={"B-01": {"forecast": 3481, "basis": "R0.3 listing screen: 10 x USD 319 + 4 stages x USD 50 (assumed) + USD 91.25 CAN hub. Listings 2026-10-28, not quotes. Low case USD 2,841.", "r01Reference": 8899}},
-            appearanceReference="JacobsBaymax/cad_specifications/reference/baymax-rigid-panel-concept-v1.png")
+            appearanceReference="ProjectASTRO/cad_specifications/reference/astro-rigid-panel-concept-v1.png")
 
 data = dict(OLD)
 data.update(meta=meta, days=days)
 data["kinds"] = pm.KINDS
 (ROOT / "dist/plan.json").write_text(json.dumps(data, ensure_ascii=False, indent=1))
 
-with (ROOT / "dist/resources/Baymax_365_Daily_Plan.csv").open("w", newline="") as f:
+with (ROOT / "dist/resources/ASTRO_365_Daily_Plan.csv").open("w", newline="") as f:
     w = csv.writer(f, lineterminator="\n")
     w.writerow(["Day", "Week", "Phase", "Work type", "Title", "Goal", "Planned minutes", "Inputs", "Steps",
                 "Calculation or measurement", "Output", "Extra outputs", "Completion checks", "Outside help",

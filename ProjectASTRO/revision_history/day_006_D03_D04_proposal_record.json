@@ -1,0 +1,163 @@
+{
+  "revision": "R0.3",
+  "date": "2026-10-28",
+  "owner": "Faisal Farouq",
+  "D-03": {
+    "proposal_id": "Y1-LB10-NOYAW-P1",
+    "proposal": "Five active joints per leg, no hip yaw; both ankle axes; hip-roll axes 0.30 m apart under wide thigh shells (photo look); 120 N m-peak module class with 3:1 stage on hip roll and 2:1 on knee",
+    "count": 10,
+    "joint_names": [
+      "l_hip_roll",
+      "l_hip_pitch",
+      "l_knee_pitch",
+      "l_ankle_pitch",
+      "l_ankle_roll",
+      "r_hip_roll",
+      "r_hip_pitch",
+      "r_knee_pitch",
+      "r_ankle_pitch",
+      "r_ankle_roll"
+    ],
+    "status": "ACCEPTED FOR MODELLING / PROVISIONAL UNTIL G2",
+    "owner_review": "ACCEPTED 2026-10-28",
+    "gate": "G2",
+    "gate_released": false,
+    "alternatives": [
+      {
+        "id": "B",
+        "count": 12,
+        "conflict": "Exceeds ASTRO-R-005 by two joints; no requirement change approved"
+      },
+      {
+        "id": "C",
+        "count": 10,
+        "trade": "Replaces ankle roll with hip yaw; independent ankle-roll channel removed; no validation"
+      }
+    ],
+    "screen": {
+      "file": "architecture/day_006_joint_load_screen.csv",
+      "hip_roll_static_Nm": {
+        "spacing_0.24_m": 64.7,
+        "spacing_0.30_m": 80.9,
+        "spacing_0.34_m": 91.7,
+        "spacing_0.36_m": 97.1
+      },
+      "knee_static_Nm": {
+        "0.5_rad": 51.7,
+        "0.7_rad": 71.6
+      },
+      "ankle_pitch_static_Nm": 32.4,
+      "ankle_roll_static_Nm": 21.6,
+      "hip_pitch_static_Nm": 17.2,
+      "status": "HAND SCREEN - NOT SIMULATED - NOT REVIEWED"
+    },
+    "alternative_hip_option": "0.24 m spacing with 2:1 on hip roll and knee (narrower stance)"
+  },
+  "D-04": {
+    "proposal_id": "Y1-HAND-STAND-P1",
+    "proposal": "One powered vertical axis using a bought guided linear actuator with a datasheet static holding force or brake, on a separate floor stand; retained tray; robot secured and stationary; walking disabled",
+    "alternative": "Counterbalanced support concept remains unselected",
+    "payload_target_kg": 2,
+    "repetition_target": 10,
+    "reach_assumption_m": 0.3,
+    "vertical_travel_assumption_m": 0.1,
+    "approved_operating_envelope": null,
+    "fixture_drawing": null,
+    "controller_revision": null,
+    "signed_limit_set_hash": null,
+    "status": "ACCEPTED FOR MODELLING / PROVISIONAL UNTIL G2",
+    "owner_review": "ACCEPTED 2026-10-28",
+    "gate": "G2",
+    "gate_released": false,
+    "mechanism_proposal": {
+      "guides": 2,
+      "powered_vertical_axes": 1,
+      "payload_retention": "positively retained tray",
+      "vertical_travel_analysis_m": 0.1,
+      "powered_horizontal_axes": 0,
+      "support": "separate floor stand; robot secured to its own frame",
+      "power_independent_retention": "Required; device and design unselected",
+      "drive": "commercial guided linear actuator or screw stage, stroke >= 100 mm",
+      "held_load_N": 24.5,
+      "holding_force_screen_N": 98,
+      "holding_ratio_assumed": 4
+    }
+  },
+  "baseline_registers_modified": false,
+  "engineering_gates_released": [],
+  "owner_review_history": [
+    {
+      "date": "2026-10-28",
+      "owner": "Faisal Farouq",
+      "response": "REWORK \u2014 I want to change a proposal",
+      "status": "CHANGE REQUESTED; affected proposal and requested change not yet specified",
+      "time": {
+        "reported_text": "2 hrs",
+        "hours": 2,
+        "minutes": 120,
+        "scope": "Day 6 only"
+      },
+      "architecture_change_applied": false,
+      "follow_up": "Ask whether D-03, D-04 or both should change, and what the intended replacement is."
+    },
+    {
+      "date": "2026-10-28",
+      "owner": "Faisal Farouq",
+      "response": "I want it a proposal. Be as specific as possible and i want it to actually work and be like astro whatever that needs to happen make that happen",
+      "interpretation": "Prepare a more concrete engineering proposal and recommend implementation choices; no specific new joint layout, approved envelope, funding ceiling or test success supplied.",
+      "status": "REVISED PROPOSAL PREPARED; OWNER REVIEW PENDING",
+      "approved_architecture": false
+    },
+    {
+      "date": "2026-10-28",
+      "owner": "Faisal Farouq",
+      "response": "Asked for the Day 6 choices to be challenged with engineering evidence and changes explained",
+      "status": "R0.3 PREPARED; OWNER REVIEW PENDING",
+      "approved_architecture": false
+    },
+    {
+      "date": "2026-10-28",
+      "owner": "Faisal Farouq",
+      "response": "\"i accept but im also open to what you think is best\"",
+      "decisions": {
+        "D-03": "Option A, 0.30 m hip axes, 3:1 hip roll, 2:1 knee",
+        "D-04": "bought actuator on separate stand",
+        "D-01": "USD 10,000 working cap until quotes; final Day 193"
+      },
+      "approved_architecture": "for modelling only; G2 review still required"
+    }
+  ],
+  "overall_owner_review": "ACCEPTED 2026-10-28 (modelling basis); G2 not released",
+  "implementation_proposal": {
+    "fixed_heads": 1,
+    "passive_upper_arm_assemblies": 2,
+    "active_lower_body_axes": 10,
+    "handling_axes": 1,
+    "total_proposed_commanded_axes_across_separate_setups": 11,
+    "lower_body_position_feedback_channels": 10,
+    "pelvis_imu_assemblies": 1,
+    "foot_normal_load_channels": 8,
+    "tether_load_measurement_channels": 1,
+    "external_reference_camera_views": 2,
+    "status": "All quantities are proposal inputs, not installed hardware or released specifications",
+    "arm_state_during_gait": "pinned (locked) at shoulder",
+    "hands": "sculpted, fixed, no motors"
+  },
+  "mass_projection_kg": {
+    "components": 48.5,
+    "reserve": 6.5,
+    "target": 55,
+    "risk_shell_kg": 1.6,
+    "basis": "M-02 14.0->17.3; M-09 3.0->0.4; shell risk from reference photo not included"
+  },
+  "cash_screen_usd": {
+    "actuator_line_low": 2841.25,
+    "actuator_line_high": 3481.25,
+    "r01_pool": 3000,
+    "project_total_low": 9841.25,
+    "project_total_high": 10481.25,
+    "status": "LISTINGS CHECKED 2026-10-28, NOT QUOTES"
+  },
+  "archive_of_previous_revision": "revision_history/day_006_revised_proposal_R0_2.zip",
+  "appearance_reference": "cad_specifications/reference/astro-rigid-panel-concept-v1.png"
+}

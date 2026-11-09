@@ -1,10 +1,10 @@
 from plan_model import W, d, O
 
-R = "JacobsBaymax/"
-PHOTO = R + "cad_specifications/reference/baymax-rigid-panel-concept-v1.png"
+R = "ProjectASTRO/"
+PHOTO = R + "cad_specifications/reference/astro-rigid-panel-concept-v1.png"
 STOPOP = "A second competent adult as stop operator, briefed on the e-stop and standing outside the fall zone. Get: their name and signature on the run sheet."
 PERMIT = "Your named reviewer signs the stage permit. Get: signed permit naming the configuration, limits file hash and people."
-BACKUP = "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/."
+BACKUP = "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/."
 
 # ---------------------------------------------------------------- Week 43 · handling setup
 W(43)
@@ -512,7 +512,7 @@ d(344, "Audit every requirement evidence link",
 d(345, "Audit prohibited capability boundaries",
   goal="Show the excluded functions are absent.",
   inp=[O(344)],
-  st=[(60, "Check UI, tools, motion interfaces, endpoints and wording for each of JB-R-057 to 064."),
+  st=[(60, "Check UI, tools, motion interfaces, endpoints and wording for each of ASTRO-R-057 to 064."),
       (40, "Attach a denial test or inspection for each."),
       (20, "Fix any wording that slipped in.")],
   calc="8 excluded requirements.",

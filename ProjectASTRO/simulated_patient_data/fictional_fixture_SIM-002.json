@@ -1,0 +1,334 @@
+{
+  "revision": "R0.3",
+  "date": "2026-11-04",
+  "owner": "Faisal Farouq",
+  "simulated": true,
+  "notice": "FICTIONAL - for workflow testing only. Not clinical guidance.",
+  "profiles": [
+    {
+      "id": "SIM-002",
+      "display_name": "Fictional Demo Profile 002",
+      "simulated": true,
+      "age_years": 78,
+      "age_mode": "older_adult",
+      "mobility": "Uses a manual wheelchair; moves between chair and bed with caregiver help (fictional)",
+      "conditions": [
+        {
+          "label": "Type 2 diabetes",
+          "source": "test caregiver entry",
+          "note": "FICTIONAL - for workflow testing only. Not clinical guidance."
+        }
+      ],
+      "communication": {
+        "speech_rate": "slow",
+        "text_size": "large",
+        "hearing": "prefers captions on"
+      },
+      "preferences": {
+        "activity": "card games",
+        "music": "1960s songs",
+        "greeting": "Good morning"
+      },
+      "consent": {
+        "preference_memory": false,
+        "notes": false,
+        "capture": false,
+        "transmit": false
+      },
+      "care_team": [
+        {
+          "id": "MOCK-CARE-01",
+          "role": "test caregiver (mock receiver only)",
+          "endpoint": "http://127.0.0.1:8001",
+          "real_person": false
+        }
+      ],
+      "care_team_notify_values": [
+        {
+          "id": "SIM2-RULE-001",
+          "metric": "blood_glucose",
+          "unit": "mg/dL",
+          "notify_below": 70,
+          "notify_above": 250,
+          "entered_by": "MOCK-CARE-01",
+          "entered_at": "2026-11-01T09:00:00-08:00",
+          "note": "FICTIONAL - for workflow testing only. Not clinical guidance. The robot only compares; it never interprets."
+        }
+      ],
+      "reminders": [
+        {
+          "id": "SIM2-REM-001",
+          "type": "pressure_relief",
+          "label": "Shift your weight in your chair",
+          "times": [
+            "10:00",
+            "12:00",
+            "14:00",
+            "16:00"
+          ],
+          "configured_by": "MOCK-CARE-01",
+          "note": "Non-treatment reminder (ASTRO-R-032)."
+        },
+        {
+          "id": "SIM2-REM-002",
+          "type": "hydration",
+          "label": "Time for a drink of water",
+          "times": [
+            "09:00",
+            "11:00",
+            "15:00"
+          ],
+          "configured_by": "MOCK-CARE-01"
+        },
+        {
+          "id": "SIM2-REM-003",
+          "type": "glucose_check",
+          "label": "Your care team asked you to check your blood sugar",
+          "times": [
+            "07:00",
+            "12:30",
+            "17:30",
+            "21:00"
+          ],
+          "configured_by": "MOCK-CARE-01"
+        }
+      ]
+    }
+  ],
+  "medications": [
+    {
+      "id": "SIM2-MED-B",
+      "name": "Demo Medication B",
+      "simulated": true,
+      "original_instruction": "DEMONSTRATION ONLY. Fictional oral medicine. Schedule entered by the test caregiver: with breakfast and with dinner.",
+      "schedule": [
+        "08:00",
+        "18:00"
+      ],
+      "instruction_version": 1,
+      "source": "fictional fixture",
+      "responses": [
+        "taken",
+        "skipped",
+        "postponed",
+        "no_response"
+      ]
+    },
+    {
+      "id": "SIM2-MED-C",
+      "name": "Demo Medication C",
+      "simulated": true,
+      "original_instruction": "DEMONSTRATION ONLY. Fictional evening medicine. Schedule entered by the test caregiver: at bedtime.",
+      "schedule": [
+        "21:30"
+      ],
+      "instruction_version": 1,
+      "source": "fictional fixture",
+      "responses": [
+        "taken",
+        "skipped",
+        "postponed",
+        "no_response"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "SIM2-OBS-001",
+      "metric": "blood_glucose",
+      "value": 132,
+      "unit": "mg/dL",
+      "source_kind": "device_reading",
+      "source": "simulated meter (fixture)",
+      "observed_at": "2026-11-04T07:10:00-08:00",
+      "recorded_at": "2026-11-04T07:11:00-08:00",
+      "actor": "scripted-test-actor"
+    },
+    {
+      "id": "SIM2-OBS-002",
+      "metric": "blood_glucose",
+      "value": 178,
+      "unit": "mg/dL",
+      "source_kind": "device_reading",
+      "source": "simulated meter (fixture)",
+      "observed_at": "2026-11-04T12:40:00-08:00",
+      "recorded_at": "2026-11-04T12:41:00-08:00",
+      "actor": "scripted-test-actor"
+    },
+    {
+      "id": "SIM2-OBS-003",
+      "metric": "blood_glucose",
+      "value": 64,
+      "unit": "mg/dL",
+      "source_kind": "device_reading",
+      "source": "simulated meter (fixture)",
+      "observed_at": "2026-11-04T17:30:00-08:00",
+      "recorded_at": "2026-11-04T17:31:00-08:00",
+      "actor": "scripted-test-actor"
+    },
+    {
+      "id": "SIM2-OBS-004",
+      "metric": "blood_glucose",
+      "value": null,
+      "unit": "mg/dL",
+      "missing_reason": "No reading entered for the 21:00 check",
+      "source_kind": "device_reading",
+      "source": "simulated meter (fixture)",
+      "observed_at": "2026-11-04T21:00:00-08:00",
+      "recorded_at": "2026-11-04T21:15:00-08:00",
+      "actor": "robot"
+    },
+    {
+      "id": "SIM2-OBS-005",
+      "metric": "heart_rate",
+      "value": 76,
+      "unit": "1/min",
+      "source_kind": "device_reading",
+      "source": "simulated monitor (fixture)",
+      "observed_at": "2026-11-04T07:12:00-08:00",
+      "recorded_at": "2026-11-04T07:12:00-08:00",
+      "actor": "scripted-test-actor"
+    },
+    {
+      "id": "SIM2-OBS-006",
+      "metric": "temperature",
+      "value": 36.6,
+      "unit": "degC",
+      "source_kind": "device_reading",
+      "source": "simulated thermometer (fixture)",
+      "observed_at": "2026-11-04T07:13:00-08:00",
+      "recorded_at": "2026-11-04T07:13:00-08:00",
+      "actor": "scripted-test-actor"
+    }
+  ],
+  "patient_statements": [
+    {
+      "id": "SIM2-STM-001",
+      "said_at": "2026-11-04T08:05:00-08:00",
+      "verbatim": "I took my morning pill with breakfast.",
+      "read_back": "You said you took your morning pill with breakfast. Is that right?",
+      "confirmed": true,
+      "linked_to": "SIM2-MED-B 08:00"
+    },
+    {
+      "id": "SIM2-STM-002",
+      "said_at": "2026-11-04T11:02:00-08:00",
+      "verbatim": "I had two glasses of water.",
+      "read_back": "You said you had two glasses of water. Shall I note that?",
+      "confirmed": true,
+      "note": "Patient statement, not a measured intake."
+    },
+    {
+      "id": "SIM2-STM-003",
+      "said_at": "2026-11-04T14:20:00-08:00",
+      "verbatim": "My left foot feels a bit numb today.",
+      "read_back": "You said your left foot feels a bit numb today. Shall I note that for your care team?",
+      "confirmed": true
+    },
+    {
+      "id": "SIM2-STM-004",
+      "said_at": "2026-11-04T17:32:00-08:00",
+      "verbatim": "I feel shaky and a bit sweaty.",
+      "read_back": "You said you feel shaky and a bit sweaty. Is that right?",
+      "confirmed": true
+    },
+    {
+      "id": "SIM2-STM-005",
+      "said_at": "2026-11-04T17:48:00-08:00",
+      "verbatim": "I had some juice and crackers.",
+      "read_back": "You said you had some juice and crackers. Shall I note that?",
+      "confirmed": true
+    }
+  ],
+  "interaction_events": [
+    {
+      "id": "SIM2-EVT-001",
+      "at": "2026-11-04T08:00:00-08:00",
+      "event": "medication_reminder",
+      "ref": "SIM2-MED-B",
+      "response": "taken",
+      "response_at": "2026-11-04T08:05:00-08:00",
+      "statement_type": "patient_statement"
+    },
+    {
+      "id": "SIM2-EVT-002",
+      "at": "2026-11-04T10:00:00-08:00",
+      "event": "pressure_relief_reminder",
+      "ref": "SIM2-REM-001",
+      "response": "done",
+      "response_at": "2026-11-04T10:01:00-08:00"
+    },
+    {
+      "id": "SIM2-EVT-003",
+      "at": "2026-11-04T12:00:00-08:00",
+      "event": "pressure_relief_reminder",
+      "ref": "SIM2-REM-001",
+      "response": "no_response",
+      "response_at": null
+    },
+    {
+      "id": "SIM2-EVT-004",
+      "at": "2026-11-04T14:00:00-08:00",
+      "event": "pressure_relief_reminder",
+      "ref": "SIM2-REM-001",
+      "response": "done",
+      "response_at": "2026-11-04T14:03:00-08:00"
+    },
+    {
+      "id": "SIM2-EVT-005",
+      "at": "2026-11-04T15:00:00-08:00",
+      "event": "activity",
+      "ref": "card game",
+      "response": "played 20 min",
+      "response_at": "2026-11-04T15:20:00-08:00"
+    },
+    {
+      "id": "SIM2-EVT-006",
+      "at": "2026-11-04T18:00:00-08:00",
+      "event": "medication_reminder",
+      "ref": "SIM2-MED-B",
+      "response": "no_response",
+      "response_at": null
+    }
+  ],
+  "messages": [
+    {
+      "id": "SIM2-MSG-001",
+      "direction": "to_care_team",
+      "to": "MOCK-CARE-01",
+      "priority": "HUMAN_CONTACT_REQUESTED",
+      "approved_by": "SIM-002 (one-tap)",
+      "approved_at": "2026-11-04T17:33:00-08:00",
+      "content_refs": [
+        "SIM2-OBS-003",
+        "SIM2-RULE-001",
+        "SIM2-STM-004"
+      ],
+      "received_at": "2026-11-04T17:33:05-08:00",
+      "reviewed_at": "2026-11-04T17:41:00-08:00",
+      "idempotency_key": "SIM2-MSG-001-K1"
+    },
+    {
+      "id": "SIM2-MSG-002",
+      "direction": "from_care_team",
+      "from": "MOCK-CARE-01",
+      "received_at": "2026-11-04T17:42:00-08:00",
+      "verbatim": "Thanks for letting us know. Please follow the plan we gave you, and recheck your sugar in 15 minutes. Someone will call you shortly.",
+      "shown_to_patient_at": "2026-11-04T17:42:10-08:00",
+      "read_aloud": "verbatim"
+    }
+  ],
+  "communication": {
+    "approved_recipients": [
+      "MOCK-CARE-01"
+    ],
+    "endpoint": "http://127.0.0.1:8001",
+    "real_recipients": 0,
+    "allow_send": "mock only",
+    "retry_delays_s": [
+      5,
+      10,
+      20
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+Role,Allowed actions,Boundary
+Owner Faisal Farouq,Approve scope budgets and reviewer appointments,Cannot substitute for specialist competence; no automatic physical-task authority
+Patient test actor,View own fictional profile; choose activity; confirm note and report; request human,No safety-limit or medication-instruction edits
+Authorized caregiver test actor,Enter fictional notes and original medication instructions; confirm revisions,No autonomous clinical decisions delegated to robot
+Companion model,Read minimized consented fictional context; propose typed drafts and approved skill requests,"No motor bus, raw DB writes, recipients, safety limits or transmission credentials"
+Record and medication services,Validate/commit authorized transactions and append versions,No unaudited mutation; no dosing engine
+Communication service,Send exact approved snapshot to allowlisted mock recipient,No unapproved content/recipient; no false review or emergency claims
+Qualified test director and operator,Execute only signed test permit and released configuration,Must be named before physical task; cannot waive independent review
+Qualified safety and engineering reviewers,Review within documented competence; sign exact scope and limits,Unassigned until appointed; no sign-off implied
+Safety controller and stop hardware,Inhibit hazardous motion independently,No conversational dependency; reset does not restart
+Evidence service,Append synchronized logs and configuration hashes,No ability to command motion or rewrite original evidence

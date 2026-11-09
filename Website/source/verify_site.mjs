@@ -1,4 +1,4 @@
-// Website logic checks for Baymax 365 R0.3 (no browser, no robot). Run: node verify_site.mjs
+// Website logic checks for ASTRO 365 R0.3 (no browser, no robot). Run: node verify_site.mjs
 import fs from 'node:fs/promises';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
@@ -18,7 +18,7 @@ ctx.window = ctx; ctx.window.addEventListener = () => {}; ctx.window.scrollTo = 
 class FD { constructor(o) { this.o = o; } get(k) { return this.o[k] ?? ''; } }
 ctx.FormData = FD;
 vm.runInNewContext(app, ctx, { timeout: 5000 });
-const api = ctx.window.__baymax;
+const api = ctx.window.__astro;
 let s = api.init(data);
 const reqIds = new Set(data.requirements.map(r => r[0]));
 check('365 sequential days', () => assert.deepEqual(data.days.map(d => d.id), Array.from({ length: 365 }, (_, i) => i + 1)));
@@ -42,11 +42,11 @@ check('Hardware FAIL can be recorded and is separate from the task record', () =
 check('R0.2 records migrate: outcome and notes kept, old ticks set aside', () => {
   const st = api.S; st.days[6] = { steps: [true, true, true, true, true, true], checks: [true, true, true], notes: 'old note', result: 'REWORK', evidence: 'day_006', reviewer: 'Owner', hours: 2, recordedAt: '2026-10-28T18:00:00Z', history: [] };
   const r = api.dayState(6); assert.equal(r.result, 'REWORK'); assert.equal(r.notes, 'old note'); assert.equal(r.hours, 2); assert.equal(r.legacy.rev, 'R0.2'); assert.equal(r.steps.length, data.days[5].steps.length); assert(!r.steps.some(Boolean)); });
-check('R0.2 backup imports', () => { const n = api.sanitizeImport({ format: 'baymax365-progress', version: 2, state: { version: 2, start: '2026-10-24', days: { 5: { steps: [true, true, true, true, true, true], checks: [true, true, true], result: 'PASS', evidence: 'day_005', hours: 2.5, notes: 'n' } } } }); assert.equal(n.days['5'].result, 'PASS'); assert.equal(n.days['5'].planRev, 'R0.2'); });
+check('R0.2 backup imports', () => { const n = api.sanitizeImport({ format: 'astro365-progress', version: 2, state: { version: 2, start: '2026-10-24', days: { 5: { steps: [true, true, true, true, true, true], checks: [true, true, true], result: 'PASS', evidence: 'day_005', hours: 2.5, notes: 'n' } } } }); assert.equal(n.days['5'].result, 'PASS'); assert.equal(n.days['5'].planRev, 'R0.2'); });
 check('Unsupported backup rejected', () => assert.throws(() => api.sanitizeImport({ version: 1 })));
 check('Escaping works', () => assert.equal(api.esc('<b>'), '&lt;b&gt;'));
 check('All views render', () => { for (const f of ['renderDay', 'renderPlan', 'renderRoadmap', 'renderReviews', 'renderControls', 'renderResources', 'renderSettings', 'renderRegister']) assert(api[f]().length > 500, f); });
-for (const name of ['Jacobs_Baymax_Mission_R0_1.pdf', 'Jacobs_Baymax_Engineering_Baseline_R0_1.pdf', 'Jacobs_Baymax_Control_Workbook_R0_1.xlsx', 'Jacobs_Baymax_Complete_Package_R0_1.zip', 'Baymax_365_Daily_Plan.csv', 'Requirements_R0_1.csv', 'Hazards_R0_1.csv', 'Verification_R0_1.csv', 'Day_006_Configuration_R0_3.pdf', 'baymax-rigid-panel-concept-v1.png']) await fs.access(new URL('./dist/resources/' + name, import.meta.url));
+for (const name of ['Project_ASTRO_Mission_R0_1.pdf', 'Project_ASTRO_Engineering_Baseline_R0_1.pdf', 'Project_ASTRO_Control_Workbook_R0_1.xlsx', 'Project_ASTRO_Complete_Package_R0_1.zip', 'ASTRO_365_Daily_Plan.csv', 'Requirements_R0_1.csv', 'Hazards_R0_1.csv', 'Verification_R0_1.csv', 'Day_006_Configuration_R0_3.pdf', 'astro-rigid-panel-concept-v1.png']) await fs.access(new URL('./dist/resources/' + name, import.meta.url));
 checks.push({ name: 'All linked resources exist', result: 'PASS' });
 const report = { date: '2026-11-05', plan: data.meta.revision, scope: 'Website data and logic only. No robot test.', checks };
 await fs.mkdir(new URL('./qa/', import.meta.url), { recursive: true });

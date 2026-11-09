@@ -1,0 +1,529 @@
+{
+  "revision": "R0.2",
+  "date": "2026-10-27",
+  "owner": "Faisal Farouq",
+  "preparer": "Project documentation record",
+  "calculations": {
+    "non_actuator_allowances_usd": "7000",
+    "actuator_count": 10,
+    "original_limit_usd": "10000",
+    "original_actuator_pool_usd": "3000",
+    "original_unit_allowance_usd": "300",
+    "r01_reference_unit_usd": "889.9",
+    "r01_reference_actuators_usd": "8899.0",
+    "r01_reference_total_usd": "15899.0",
+    "r01_excess_over_original_usd": "5899.0",
+    "scenario_amount_usd": "15000",
+    "scenario_actuator_pool_usd": "8000",
+    "scenario_unit_allowance_usd": "800",
+    "r01_excess_over_scenario_usd": "899.0",
+    "scenario_increase_over_original_usd": "5000"
+  },
+  "sources": [
+    {
+      "path": "budget/Project_ASTRO_Control_Workbook_R0_1.xlsx",
+      "sha256": "c1a056a982336ca925523f08bc230348320869ad49810847d5add681ef532bd6"
+    },
+    {
+      "path": "budget/financial_budget.csv",
+      "sha256": "9e6eb4f2b5ec8ca1f12dd12a031f5f6b6fa707a268d063c1309ab0b6992b368e"
+    },
+    {
+      "path": "budget/07_financial_budget.md",
+      "sha256": "f4fa0c87d531c70f1d33b93b14c04a4cd04080a998569539d4fbaba86d5f400f"
+    },
+    {
+      "path": "revision_history/decisions.csv",
+      "sha256": "1a43c82dee19b4e041b8dd933711f20b79411fccea6574453ca7fca9e8de92c9"
+    },
+    {
+      "path": "requirements/requirements.csv",
+      "sha256": "efb250bc3af67225c06c2dc2b6d72b3b927071b0d596abb6b8b777edd31678b1"
+    },
+    {
+      "path": "requirements/Project_ASTRO_Mission_R0_1.pdf",
+      "sha256": "3eff42766d70a967ffd50304a09e4594a3112766463fd0382dcc0ccd2e2a1c32"
+    },
+    {
+      "path": "release_archive/R0_1/Project_ASTRO_Engineering_Baseline_R0_1.pdf",
+      "sha256": "55672646357306ada0ffd99a9e58257a030cb9038ef01b30e6da63cace83a441"
+    },
+    {
+      "path": "requirements/day_004_responsibility_matrix.csv",
+      "sha256": "cb73cd3d578b42bb975152c810adcee2518d71bc3985deaa47d68ad43cde1d75"
+    },
+    {
+      "path": "evidence/day_004_responsibility_review.json",
+      "sha256": "4fbd1e3f9b30c778581b14bc3e9011f6892ee93236ebef40ff5c2f7d7a8bbb52"
+    },
+    {
+      "path": "revision_history/day_004_style_notes.md",
+      "sha256": "ea7c425eb5fe41db95cce63ff0b670ceb79439d2c63430cb3c64d99e72bf626a"
+    }
+  ],
+  "user_time": {
+    "reported_text": "Sorry i meant 2 hours",
+    "hours": 2,
+    "minutes": 120,
+    "unit_status": "CONFIRMED BY LATEST USER CORRECTION",
+    "correction_history": [
+      "Initial answer: 2 (unit unspecified)",
+      "Clarification answer: 2 minutes",
+      "Latest user correction: Sorry i meant 2 hours"
+    ],
+    "scope": "Day 5 total, separate from earlier days"
+  },
+  "website_plan": {
+    "meta": {
+      "owner": "Faisal Farouq",
+      "revision": "R0.2",
+      "date": "2026-10-24",
+      "baselineRevision": "R0.1",
+      "defaultStart": "2026-10-24",
+      "days": 365,
+      "ownerHours": 886.0,
+      "note": "Provisional dependency plan; physical completion and budget feasibility are unproven. Progress is browser-local and is not a safety approval."
+    },
+    "day": {
+      "id": 5,
+      "week": 1,
+      "weekDay": 5,
+      "title": "Expose the budget gap",
+      "weekTitle": "Set the project boundaries",
+      "phase": "Foundation",
+      "mode": "Desk work",
+      "minutes": 150,
+      "objective": "Complete expose the budget gap and produce D01_budget_options.md with traceable evidence.",
+      "inputs": [
+        "R0.1 one-page mission, engineering baseline and Decisions tab.",
+        "Review Day 004's output and unresolved items. If unavailable, identify the missing input rather than inventing it."
+      ],
+      "steps": [
+        "Open the required inputs listed below. Check the exact revision and identify unresolved decisions for 'expose the budget gap'. Do not assume equipment, approval or test results exist.",
+        "Open the Budget tab; verify USD 7000 of non-actuator allowances and USD 3000 left for ten actuator assemblies.",
+        "Write D-01 options: obtain documented reuse or sponsorship, redesign within the cap, or extend the schedule; do not silently raise the funding limit.",
+        "Perform this completion check and save the actual observations: Show (10000-7000)/10=300 USD per assembly and the R0.1 reference excess of 5899 USD; label prices unquoted.",
+        "Save the deliverable as ProjectASTRO/requirements/day_005_D01_budget_options.md. Include revision R0.2, actual date, accountable owner Faisal Farouq, your actual role, source references, results and unresolved limitations. Preserve prior evidence.",
+        "Record PASS, REWORK or BLOCKED for this day with the actual evidence reference and time spent. PASS means the stated task was evidenced; it does not release a gate, certify safety or prove the whole robot works."
+      ],
+      "stepMinutes": [
+        15,
+        50,
+        40,
+        30,
+        10,
+        5
+      ],
+      "acceptance": [
+        "Show (10000-7000)/10=300 USD per assembly and the R0.1 reference excess of 5899 USD; label prices unquoted.",
+        "The named deliverable contains actual evidence, source/revision/date/owner and limitations.",
+        "Required permissions and prior releases are evidenced; unknown, failed and unexecuted results stay visible."
+      ],
+      "output": "ProjectASTRO/requirements/day_005_D01_budget_options.md",
+      "calculation": "Target 1.829 m; robot mass <=55 kg; >65 kg major review; 10 lower-body joints; USD 10000 cap.",
+      "stop": "Stop if the requested scope introduces real patient data, clinical authority, unapproved spending or powered motion.",
+      "gates": [],
+      "stages": [],
+      "requirements": [
+        "ASTRO-R-001",
+        "ASTRO-R-002",
+        "ASTRO-R-003",
+        "ASTRO-R-004",
+        "ASTRO-R-005",
+        "ASTRO-R-009",
+        "ASTRO-R-044"
+      ],
+      "alternative": [
+        "Inspect the named input documents and list missing evidence for this exact daily objective.",
+        "Complete only the safe reversible analysis or fictional software case possible with confirmed available inputs.",
+        "Record the blocker, required decision/reviewer, next action and follow-up date without claiming the original task passed."
+      ],
+      "alternativeOutput": "ProjectASTRO/revision_history/day_005_blocked_work.md",
+      "dependencyDays": [
+        4
+      ],
+      "next": "Day 006: Choose the provisional research configuration"
+    },
+    "source_sha256": "0a5c6e75bbd23e4baad8286a7303714b7e2f7390196d6f8f79c5b2125f7924db"
+  },
+  "new_spend_usd": 0,
+  "physical_work": "NONE",
+  "day_task_result": "PASS - budget arithmetic and options document only",
+  "installation_status": "VERIFIED AT ACTUAL PROJECT PATH",
+  "checks": [
+    {
+      "check": "Budget tab and inputs reviewed",
+      "result": "PASS",
+      "observation": "R0.1, owner and 2026-10-23 header read. Budget line inputs/formulas/cached outputs and D-01 inspected without modifying the workbook."
+    },
+    {
+      "check": "all saved line products",
+      "result": "PASS",
+      "observation": "14/14 quantity x unit allowance products match saved totals."
+    },
+    {
+      "check": "non-actuator total",
+      "result": "PASS",
+      "observation": "Rows 7-19 sum to USD 7,000, including USD 800 contingency."
+    },
+    {
+      "check": "original actuator allowance",
+      "result": "PASS",
+      "observation": "(10000-7000)/10 = USD 300 per assembly; total pool USD 3,000."
+    },
+    {
+      "check": "R0.1 reference excess",
+      "result": "PASS",
+      "observation": "10 x 889.90 + 7000 = 15899; 15899 - 10000 = USD 5899."
+    },
+    {
+      "check": "scenario arithmetic",
+      "result": "PASS",
+      "observation": "(15000-7000)/10 = USD 800 per assembly; reference excess USD 899."
+    },
+    {
+      "check": "owner scenario-only disposition retained",
+      "result": "PASS",
+      "observation": "USD 15,000 remains a scenario, approved new ceiling is null, final ceiling is undecided."
+    },
+    {
+      "check": "three options recorded",
+      "result": "PASS",
+      "observation": "Documented reuse/sponsorship, redesign within the cap and schedule extension included; no route assumed selected."
+    },
+    {
+      "check": "unquoted pricing visible",
+      "result": "PASS",
+      "observation": "Historic reference and all allowances explicitly UNQUOTED; no live price claim or vendor qualification."
+    },
+    {
+      "check": "time and roles identified",
+      "result": "PASS",
+      "observation": "Latest user correction confirms 2 hours; owner and actual AI preparer role identified; no specialist review claimed."
+    },
+    {
+      "check": "installed document and links",
+      "result": "PASS",
+      "observation": "Required Markdown exists at the exact path, required arithmetic/unquoted labels are present and all linked files resolve."
+    },
+    {
+      "check": "notebook PDF visual review",
+      "result": "PASS",
+      "observation": "Both PDF pages rendered with PDFium and visually checked. No clipping or overlap; math and scenario labels legible."
+    },
+    {
+      "check": "source preservation",
+      "result": "PASS",
+      "observation": "All 10 source fingerprints unchanged; source workbook matches its preserved R0.1 archive."
+    },
+    {
+      "check": "requested presentation cleanup",
+      "result": "PASS",
+      "observation": "Flagged footer, matching time badge wording and tool credit in PDF metadata removed. Companion note cleaned and standing preference saved. Budget figures and decision status unchanged."
+    }
+  ],
+  "budget_tab_observations": {
+    "source": "/Users/sudadabdulrazak/BerkeleyProjects/Project ASTRO/ProjectASTRO/budget/Project_ASTRO_Control_Workbook_R0_1.xlsx",
+    "source_sha256": "c1a056a982336ca925523f08bc230348320869ad49810847d5add681ef532bd6",
+    "read_only": true,
+    "lines": [
+      {
+        "row": 6,
+        "id": "B-01",
+        "subsystem": "Ten lower-body actuator assemblies",
+        "quantity": 10,
+        "unit_allowance": 300,
+        "total_formula": "=IF(COUNT(C6:D6)=2,C6*D6,\"MISSING INPUT\")",
+        "cached_total": 3000,
+        "basis": "Derived affordability ceiling per assembly, not a vendor quote",
+        "gate": "G3"
+      },
+      {
+        "row": 7,
+        "id": "B-02",
+        "subsystem": "Structure and qualified fabrication",
+        "quantity": 1,
+        "unit_allowance": 650,
+        "total_formula": "=IF(COUNT(C7:D7)=2,C7*D7,\"MISSING INPUT\")",
+        "cached_total": 650,
+        "basis": "Unquoted allowance",
+        "gate": "G4"
+      },
+      {
+        "row": 8,
+        "id": "B-03",
+        "subsystem": "Feet and contact sensors",
+        "quantity": 1,
+        "unit_allowance": 180,
+        "total_formula": "=IF(COUNT(C8:D8)=2,C8*D8,\"MISSING INPUT\")",
+        "cached_total": 180,
+        "basis": "Unquoted allowance",
+        "gate": "G3"
+      },
+      {
+        "row": 9,
+        "id": "B-04",
+        "subsystem": "Battery charger and power distribution",
+        "quantity": 1,
+        "unit_allowance": 650,
+        "total_formula": "=IF(COUNT(C9:D9)=2,C9*D9,\"MISSING INPUT\")",
+        "cached_total": 650,
+        "basis": "Unquoted allowance",
+        "gate": "G3"
+      },
+      {
+        "row": 10,
+        "id": "B-05",
+        "subsystem": "Independent safety hardware",
+        "quantity": 1,
+        "unit_allowance": 450,
+        "total_formula": "=IF(COUNT(C10:D10)=2,C10*D10,\"MISSING INPUT\")",
+        "cached_total": 450,
+        "basis": "Unquoted allowance; performance level not established",
+        "gate": "G3"
+      },
+      {
+        "row": 11,
+        "id": "B-06",
+        "subsystem": "Compute perception audio and display",
+        "quantity": 1,
+        "unit_allowance": 500,
+        "total_formula": "=IF(COUNT(C11:D11)=2,C11*D11,\"MISSING INPUT\")",
+        "cached_total": 500,
+        "basis": "Assumes modest/reused laptop capability; ownership unconfirmed",
+        "gate": "G1"
+      },
+      {
+        "row": 12,
+        "id": "B-07",
+        "subsystem": "Plastic panels and mounts",
+        "quantity": 1,
+        "unit_allowance": 550,
+        "total_formula": "=IF(COUNT(C12:D12)=2,C12*D12,\"MISSING INPUT\")",
+        "cached_total": 550,
+        "basis": "Unquoted allowance",
+        "gate": "G4"
+      },
+      {
+        "row": 13,
+        "id": "B-08",
+        "subsystem": "Supported handling module",
+        "quantity": 1,
+        "unit_allowance": 350,
+        "total_formula": "=IF(COUNT(C13:D13)=2,C13*D13,\"MISSING INPUT\")",
+        "cached_total": 350,
+        "basis": "Unquoted allowance",
+        "gate": "G3"
+      },
+      {
+        "row": 14,
+        "id": "B-09",
+        "subsystem": "Rated robot fall protection and anchorage access",
+        "quantity": 1,
+        "unit_allowance": 1000,
+        "total_formula": "=IF(COUNT(C14:D14)=2,C14*D14,\"MISSING INPUT\")",
+        "cached_total": 1000,
+        "basis": "Rental/access allowance; no facility or equipment confirmed",
+        "gate": "G2"
+      },
+      {
+        "row": 15,
+        "id": "B-10",
+        "subsystem": "Fixtures tools and inspection equipment access",
+        "quantity": 1,
+        "unit_allowance": 500,
+        "total_formula": "=IF(COUNT(C15:D15)=2,C15*D15,\"MISSING INPUT\")",
+        "cached_total": 500,
+        "basis": "Access allowance; no equipment confirmed",
+        "gate": "G2"
+      },
+      {
+        "row": 16,
+        "id": "B-11",
+        "subsystem": "Qualified independent engineering review",
+        "quantity": 1,
+        "unit_allowance": 600,
+        "total_formula": "=IF(COUNT(C16:D16)=2,C16*D16,\"MISSING INPUT\")",
+        "cached_total": 600,
+        "basis": "Unquoted limited review allowance; sufficient hours unknown",
+        "gate": "G2"
+      },
+      {
+        "row": 17,
+        "id": "B-12",
+        "subsystem": "Software communication and content licenses",
+        "quantity": 1,
+        "unit_allowance": 120,
+        "total_formula": "=IF(COUNT(C17:D17)=2,C17*D17,\"MISSING INPUT\")",
+        "cached_total": 120,
+        "basis": "Local-first allocation",
+        "gate": "G1"
+      },
+      {
+        "row": 18,
+        "id": "B-13",
+        "subsystem": "Freight taxes duties and standards access",
+        "quantity": 1,
+        "unit_allowance": 650,
+        "total_formula": "=IF(COUNT(C18:D18)=2,C18*D18,\"MISSING INPUT\")",
+        "cached_total": 650,
+        "basis": "Provisional combined allowance; jurisdiction unknown",
+        "gate": "G3"
+      },
+      {
+        "row": 19,
+        "id": "B-14",
+        "subsystem": "Spares and uncommitted contingency",
+        "quantity": 1,
+        "unit_allowance": 800,
+        "total_formula": "=IF(COUNT(C19:D19)=2,C19*D19,\"MISSING INPUT\")",
+        "cached_total": 800,
+        "basis": "Reserve, not available to disguise known overruns",
+        "gate": "G3"
+      }
+    ],
+    "summary": [
+      {
+        "row": 21,
+        "label": "Total ceiling allocation",
+        "formula_or_value": "=IF(COUNT(E6:E19)=14,SUM(E6:E19),\"MISSING INPUT\")",
+        "cached_result": 10000
+      },
+      {
+        "row": 22,
+        "label": "Maximum cash budget",
+        "formula_or_value": 10000,
+        "cached_result": 10000
+      },
+      {
+        "row": 23,
+        "label": "Allocation over cap",
+        "formula_or_value": "=IF(COUNT(E21:E22)=2,E21-E22,\"MISSING INPUT\")",
+        "cached_result": 0
+      },
+      {
+        "row": 25,
+        "label": "Non-actuator allowances",
+        "formula_or_value": "=IF(COUNT(E7:E19)=13,SUM(E7:E19),\"MISSING INPUT\")",
+        "cached_result": 7000
+      },
+      {
+        "row": 26,
+        "label": "Reference actuator starting price",
+        "formula_or_value": 889.9,
+        "cached_result": 889.9
+      },
+      {
+        "row": 27,
+        "label": "Ten reference actuators",
+        "formula_or_value": "=IF(COUNT(C6,E26)=2,C6*E26,\"MISSING INPUT\")",
+        "cached_result": 8899
+      },
+      {
+        "row": 28,
+        "label": "Reference project total",
+        "formula_or_value": "=IF(COUNT(E25,E27)=2,E25+E27,\"MISSING INPUT\")",
+        "cached_result": 15899
+      },
+      {
+        "row": 29,
+        "label": "Reference excess over cap",
+        "formula_or_value": "=IF(COUNT(E28,E22)=2,E28-E22,\"MISSING INPUT\")",
+        "cached_result": 5899
+      },
+      {
+        "row": 30,
+        "label": "Affordable unit allowance",
+        "formula_or_value": "=IF(AND(COUNT(E22,E25,C6)=3,C6>0),(E22-E25)/C6,\"MISSING INPUT\")",
+        "cached_result": 300
+      },
+      {
+        "row": 31,
+        "label": "Procurement disposition",
+        "formula_or_value": "=IF(ISNUMBER(E29),IF(E29>0,\"BLOCKED COST\",\"REWORK QUALIFICATION\"),\"MISSING INPUT\")",
+        "cached_result": "BLOCKED COST"
+      }
+    ]
+  },
+  "owner_scenario_disposition": {
+    "decision_id": "D-01",
+    "record_revision": "R0.2",
+    "date": "2026-10-27",
+    "owner": "Faisal Farouq",
+    "prepared_by": "Project documentation record",
+    "previous_baseline": {
+      "revision": "R0.1",
+      "cash_limit_usd": 10000,
+      "state": "Preserved original source; no new ceiling recorded"
+    },
+    "owner_initial_statement": "the budget is flexibile to at least 15k",
+    "owner_confirmed_disposition": "Keep $15,000 as a scenario; the final ceiling is undecided",
+    "scenario_amount_usd": 15000,
+    "scenario_increase_over_r01_usd": 5000,
+    "approved_new_ceiling_usd": null,
+    "ceiling_increase_approved": false,
+    "funding_source": "UNCONFIRMED",
+    "cash_available": "UNCONFIRMED",
+    "prior_spending": "UNCONFIRMED",
+    "reason": "Owner reported additional budget flexibility and chose to analyze USD 15,000 as a scenario only.",
+    "schedule_impact": "UNASSESSED; extension is one option, not adopted by this record.",
+    "options": [
+      "Documented reuse or sponsorship",
+      "Redesign within an explicitly chosen ceiling",
+      "Extend the schedule with a recorded milestone/funding review"
+    ],
+    "selected_route": null,
+    "procurement_release": "BLOCKED; no new order authority",
+    "calculations": {
+      "non_actuator_allowances_usd": "7000",
+      "actuator_count": 10,
+      "original_limit_usd": "10000",
+      "original_actuator_pool_usd": "3000",
+      "original_unit_allowance_usd": "300",
+      "r01_reference_unit_usd": "889.9",
+      "r01_reference_actuators_usd": "8899.0",
+      "r01_reference_total_usd": "15899.0",
+      "r01_excess_over_original_usd": "5899.0",
+      "scenario_amount_usd": "15000",
+      "scenario_actuator_pool_usd": "8000",
+      "scenario_unit_allowance_usd": "800",
+      "r01_excess_over_scenario_usd": "899.0",
+      "scenario_increase_over_original_usd": "5000"
+    },
+    "price_status": "UNQUOTED; R0.1 historic starting-price reference, not current vendor quotes",
+    "next_action": "Choose the final ceiling and fundable route after actual resources, whole-system quotes and technical evidence are reconciled."
+  },
+  "document": {
+    "path": "requirements/day_005_D01_budget_options.md",
+    "sha256": "f54c19778ff645bd4c567e9442491b40a3b1932b158f48ec065a5d4570b5c96c"
+  },
+  "limitations": [
+    "Prices/allowances are unquoted and hardware suitability is unproven.",
+    "Final funding ceiling, funding source and prior spending remain undecided/unconfirmed.",
+    "Specialist roles remain UNASSIGNED; no resource availability or approval inferred."
+  ],
+  "engineering_gates_released": [],
+  "pdf": {
+    "path": "requirements/day_005_D01_budget_options.pdf",
+    "pages": 2,
+    "sha256": "422c863d1d445be63d6fbdcc426e881bd4b5aff5cc05911d6baf6b7ab157cb5f",
+    "style": "Approved ASTRO notebook style, with calculator doodle, cream, mint/blush and handwritten headings."
+  },
+  "filesystem_authorization": {
+    "path": "/Users/sudadabdulrazak/BerkeleyProjects/Project ASTRO/ProjectASTRO",
+    "source": "App filesystem write grant during this Day 5 turn",
+    "scope": "turn; documentation only"
+  },
+  "presentation_edit_history": [
+    {
+      "date": "2026-10-27",
+      "request": "Remove authoring/time footer wording and apply a standing presentation preference",
+      "previous_pdf_sha256": "c8cbbe4f7e3d6ff470728e4411b52cf8ca0c7249b4a054c34039d4eed3ab51cc",
+      "new_pdf_sha256": "422c863d1d445be63d6fbdcc426e881bd4b5aff5cc05911d6baf6b7ab157cb5f",
+      "previous_markdown_sha256": "6c2866a07f4787d62591ba00dd53a841fc9cf8a8b593e46fd23646feb7ce38f2",
+      "new_markdown_sha256": "f54c19778ff645bd4c567e9442491b40a3b1932b158f48ec065a5d4570b5c96c",
+      "visual_review": "Both revised pages rendered with PDFium and visually checked; no layout defects."
+    }
+  ],
+  "presentation_preference_record": "revision_history/day_005_document_presentation_notes.md"
+}

@@ -1,0 +1,13 @@
+ID,Subject,Provisional assumption,Limitation or unknown,Resolve by
+A-01,Geometry,0.43 m thigh and shank; 0.32 x 0.22 m feet; 0.34 m nominal foot center spacing,"Provisional envelope, no collision or stability proof",G2
+A-02,Joint topology,"Hip roll/pitch, knee pitch, ankle pitch/roll per leg; no hip yaw",Straight-line tethered research only; owner must accept before freeze,G2
+A-03,Mass,47.8 kg component allocation plus 7.2 kg growth reserve,No measured or CAD-derived mass yet,G2
+A-04,Power,48 V 8 Ah; 0.80 usable fraction; 0.60 electromechanical efficiency; 60 W electronics,Energy example only; pack chemistry and driver compatibility unknown,G3
+A-05,Facility,Controlled flat indoor area and independently rated robot arrest can be obtained,"No facility, anchors, clearance or access confirmed",G2
+A-06,People,Owner coordinates; specialized reviews/fabrication assigned only to named qualified people,No professional sign-off or labor availability established,G0
+A-07,Budget,Non-actuator allowances total USD 7000 with volunteer engineering labor and no facility construction,Unquoted and may be insufficient; full economic cost unknown,G3
+A-08,Payload,2 kg inert test object; module mass 3 kg included onboard; fixture external,Support method and reach require owner decision and engineering review,G2
+A-09,Data,All identities records and measurements fictional; local-first mock receiver,No recipient approved and no communication credentials provided,G1
+A-10,Calendar,Month 1 begins after baseline acceptance; indicative 2 Nov 2026 to 1 Nov 2027,"Dates shift with approval, quotes, fabrication and staffing",G0
+A-11,Appearance,Written fallback description is visual baseline,Concept image absent; no invented image details,G0
+A-12,Research protocol,Adult scripted testers first; no real patients/minors as study participants,Human-subject and institutional requirements require separate review,G1

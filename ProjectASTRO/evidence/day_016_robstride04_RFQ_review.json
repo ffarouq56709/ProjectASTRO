@@ -1,0 +1,85 @@
+{
+  "day": 16,
+  "date": "2026-11-05",
+  "baseline_target_date": "2026-11-08",
+  "owner": "Faisal Farouq",
+  "result": "PASS (identical RFQ package complete; dispatch not claimed)",
+  "owner_hours": 2,
+  "request": {
+    "model": "RobStride 04",
+    "quantity": 11,
+    "robot_units": 10,
+    "bench_spare_units": 1,
+    "numbered_response_items": 30,
+    "identical_questions_for_all_routes": true
+  },
+  "dispatch": {
+    "real_vendor_routes_identified": 3,
+    "rfq_copies_prepared": 3,
+    "requests_sent": 0,
+    "vendor_receipts_recorded": 0,
+    "vendor_replies_received": 0,
+    "status": "UNSENT - OWNER TO SEND",
+    "blocker": "Owner will perform outreach; no sent message, form receipt or vendor reply is recorded"
+  },
+  "vendor_routes": [
+    {
+      "vendor": "RobStride Dynamics Co., Ltd.",
+      "contact": "zhaoyuan@robstride.com",
+      "source": "https://robstride.com/about-us",
+      "product": "https://www.robstride.com/products/robStride04",
+      "listing_reference": "USD 255 retail display",
+      "listing_status": "LISTING - UNQUOTED"
+    },
+    {
+      "vendor": "OpenELAB Technology Ltd.",
+      "contact": "info@openelab.io and product RFQ form",
+      "source": "https://openelab.io/products/robstride04-qdd-120n-m-integrated-joint-motor-module",
+      "listing_reference": "EUR 267.49 motor-variant display",
+      "listing_status": "LISTING - UNQUOTED"
+    },
+    {
+      "vendor": "RCDrone / Shenzhen Baichen Trading Co., Ltd.",
+      "contact": "https://rcdrone.top/pages/contact",
+      "source": "https://rcdrone.top/products/robstride-04-qdd-120n-m-integrated-actuator-module-48v-9-1-ratio-dual-magnetic-encoder-ip52-700w-output",
+      "listing_reference": "from USD 319",
+      "listing_status": "LISTING - UNQUOTED"
+    }
+  ],
+  "arithmetic_reference": {
+    "formula": "11 x USD 319",
+    "amount_USD": 3509,
+    "excludes": ["freight", "insurance", "tax", "tariff or duty", "cables", "interfaces", "spares"],
+    "classification": "LISTING ARITHMETIC - NOT A QUOTE"
+  },
+  "procurement_boundary": {
+    "formal_quotes_received": 0,
+    "seller_selected": false,
+    "purchase_authorized": false,
+    "order_placed": false,
+    "payment_credentials_recorded": false,
+    "day_20_status": "BLOCKED pending revision-specific landed quote, acceptable Day 19 permit and exact written owner authorization"
+  },
+  "acceptance": {
+    "quantity_and_model_present": true,
+    "landed_cost_and_technical_questions_identical": true,
+    "listing_prices_marked_unquoted": true,
+    "unsent_routes_have_exact_blocker": true,
+    "no_order_claimed": true
+  },
+  "robot_tests_executed": 0,
+  "powered_commands_sent": 0,
+  "output": "procurement/day_016_robstride04_RFQ.md",
+  "output_sha256": "0e5569ae436a8a9ea632dac4ffc45d086e0ae13a88f8cf7b9e0bf679dcab7c5e",
+  "workbook_companion": "../outputs/01a1a980-9684-7bc2-97c8-bf8b831cf815/day_016_robstride04_RFQ.xlsx",
+  "workbook_sha256": "fcdfbb70f49d43d2866595dc6268e83e23606ba04d427fb2eb991fc182f2ea90",
+  "progress_backup": "../Website/ASTRO_365_Progress_Days_001-016.json",
+  "progress_backup_sha256": "2ccf6149caaa7c6769501954e3b122103733dfa49dca36de9de95965d1b1cd2d",
+  "input_sha256": {
+    "procurement/11_make_versus_buy.md": "325d6c57a3881ea080c183c6760602dedac098bd2ace55fd48ca48b7c7ae3dfa",
+    "requirements/day_006_D03_D04_configuration.md": "0ffd13d8e5d2b00d9315313061dba6aca34ef4937417db0e7aa2543946d6f309",
+    "software/day_015_bench_care_boundary.md": "5315f4acf2dc2ef5d804e97c5ff6bf959c2e6aa29b700db3951a6aafb85e597e"
+  },
+  "owner_role": "Owner; responsible for vendor dispatch and any later exact purchase authorization",
+  "preparer_role": "Project documentation record; not a procurement authority, vendor representative or engineering reviewer"
+}

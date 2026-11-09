@@ -1,6 +1,6 @@
 from plan_model import W, d, O
 
-R = "JacobsBaymax/"
+R = "ProjectASTRO/"
 
 # REPLACED DAYS: 43-84. One-leg rig, measured simulation, LLM/speech
 # evaluation and two-leg hanging milestone, 2026-11-05.

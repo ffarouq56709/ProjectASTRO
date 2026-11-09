@@ -1,7 +1,7 @@
 from plan_model import W, d, O
 
-R = "JacobsBaymax/"
-PHOTO = R + "cad_specifications/reference/baymax-rigid-panel-concept-v1.png"
+R = "ProjectASTRO/"
+PHOTO = R + "cad_specifications/reference/astro-rigid-panel-concept-v1.png"
 
 # ---------------------------------------------------------------- Week 13
 W(13)
@@ -65,7 +65,7 @@ d(91, "Review the geometry conflicts",
   st=[(40, "Compare envelopes with mass allocation, joint ranges, feet, access and the photo."),
       (40, "Save annotated views; list each conflict with owner decision."),
       (20, "Update the shell-mass risk with the real CAD area."),
-      (10, "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/.")],
+      (10, "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/.")],
   calc="Shell mass from CAD vs 5.2 kg; difference added to the risk line.",
   chk=["Conflict list has decisions or owners.", "Shell risk updated.", "Nothing labelled fabrication-ready."])
 
@@ -197,7 +197,7 @@ d(105, "Review mass evidence and missing inputs",
   st=[(40, "Reconcile CAD, datasheet and allowance values."),
       (30, "List the five biggest unknowns by kg."),
       (30, "Update the workbook copy and assumptions."),
-      (10, "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/.")],
+      (10, "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/.")],
   calc="If projection > 65 kg: stop and hold a major review.",
   chk=["Mass and cost use the same configuration.", "Top 5 unknowns listed.", "No as-built claim."])
 
@@ -329,7 +329,7 @@ d(119, "Review foot feasibility",
   st=[(40, "Reconcile foot mass, clearance, sensing and floor."),
       (30, "List questions for the reviewer (ankle moments, sole swap, trip risk)."),
       (20, "Change drawings if needed."),
-      (10, "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/.")],
+      (10, "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/.")],
   calc="Foot mass vs M-03 2.5 kg.",
   chk=["Questions listed.", "Drawings updated.", "No stability claim from appearance."])
 
@@ -394,8 +394,8 @@ d(126, "Review power and thermal feasibility",
   inp=[O(120), O(121), O(122), O(123), O(124), O(125)],
   st=[(40, "Reconcile pack mass, energy, voltage, duty, cooling, cost."),
       (40, "Send the block diagram and questions to an electrical reviewer."),
-      (20, "Update hazards JB-H-04, 17."),
-      (10, "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/.")],
+      (20, "Update hazards ASTRO-H-04, 17."),
+      (10, "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/.")],
   calc="Pack mass vs M-04 3.5 kg.",
   chk=["Reviewer request recorded.", "Missing data blocks G3.", "Hazards updated."],
   help="An electrical engineer or experienced EV/robotics technician. Get: marked-up block diagram with name and date.")
@@ -463,7 +463,7 @@ d(133, "Review safety architecture and authority",
   st=[(40, "Collect reviewer comments; update documents."),
       (40, "Write who signs each future stage permit (named reviewer or pending)."),
       (20, "Keep G2/G3 blockers."),
-      (10, "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/.")],
+      (10, "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/.")],
   calc="Open safety decisions count.",
   chk=["No certification claimed.", "Permit authority recorded or pending.", "Blockers kept."],
   help="Same reviewer as Day 129.")
@@ -532,6 +532,6 @@ d(140, "Review facility readiness and cost",
   st=[(40, "Add up access, rigging, instruments, review and freight vs B-09 to B-13."),
       (40, "Record D-02: site confirmed / candidate / none."),
       (20, "Physical tests remain blocked until site and ratings are real."),
-      (10, "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/.")],
+      (10, "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/.")],
   calc="B-09 + B-10 + B-11 + B-13 = 1,000 + 500 + 600 + 650 = USD 2,750 allowance.",
   chk=["D-02 updated with evidence.", "Costs compared.", "No physical release."])

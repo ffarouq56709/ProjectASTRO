@@ -1,0 +1,9 @@
+Source ID,Title,Location,Type,Checked date,Use and limitation
+SRC-01,Owner brief,Pasted text supplied in this chat,User input,2026-10-23,Source of project limits; no concept image supplied.
+SRC-02,CubeMars AK80-64 manufacturer page,https://www.cubemars.com/goods.php?id=1143,Manufacturer listing,2026-10-23,"Displayed starting price USD 889.90; 48 N m rated, 120 N m peak, 0.85 kg. Driver configuration, duty conditions and landed price require a written quote."
+SRC-03,ISO 13482 official scope,https://www.iso.org/standard/53820.html,Standards publisher,2026-10-23,Personal care robot safety reference; medical device robots outside this published scope. Edition applicability and full text review remain open.
+SRC-04,ISO 13850 official scope,https://www.iso.org/standard/59970.html,Standards publisher,2026-10-23,"Emergency stop design reference; not a brake, fall-arrest or complete functional-safety design."
+SRC-05,MuJoCo modeling documentation,https://mujoco.readthedocs.io/en/latest/modeling.html,Official documentation,2026-10-23,Model force and control clamping; version must be pinned before model implementation.
+SRC-06,FHIR R4 Observation,https://hl7.org/fhir/R4/observation.html,HL7 specification,2026-10-23,Reference for local mock observations; no conformance or live interoperability claim.
+SRC-07,FHIR R4 AuditEvent,https://hl7.org/fhir/R4/auditevent.html,HL7 specification,2026-10-23,Reference for access and security-event records.
+SRC-08,FHIR R4 Provenance,https://hl7.org/fhir/R4/provenance.html,HL7 specification,2026-10-23,Reference for record origin and revision history.

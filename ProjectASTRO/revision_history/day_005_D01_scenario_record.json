@@ -1,0 +1,48 @@
+{
+  "decision_id": "D-01",
+  "record_revision": "R0.2",
+  "date": "2026-10-27",
+  "owner": "Faisal Farouq",
+  "prepared_by": "Project documentation record",
+  "previous_baseline": {
+    "revision": "R0.1",
+    "cash_limit_usd": 10000,
+    "state": "Preserved original source; no new ceiling recorded"
+  },
+  "owner_initial_statement": "the budget is flexibile to at least 15k",
+  "owner_confirmed_disposition": "Keep $15,000 as a scenario; the final ceiling is undecided",
+  "scenario_amount_usd": 15000,
+  "scenario_increase_over_r01_usd": 5000,
+  "approved_new_ceiling_usd": null,
+  "ceiling_increase_approved": false,
+  "funding_source": "UNCONFIRMED",
+  "cash_available": "UNCONFIRMED",
+  "prior_spending": "UNCONFIRMED",
+  "reason": "Owner reported additional budget flexibility and chose to analyze USD 15,000 as a scenario only.",
+  "schedule_impact": "UNASSESSED; extension is one option, not adopted by this record.",
+  "options": [
+    "Documented reuse or sponsorship",
+    "Redesign within an explicitly chosen ceiling",
+    "Extend the schedule with a recorded milestone/funding review"
+  ],
+  "selected_route": null,
+  "procurement_release": "BLOCKED; no new order authority",
+  "calculations": {
+    "non_actuator_allowances_usd": "7000",
+    "actuator_count": 10,
+    "original_limit_usd": "10000",
+    "original_actuator_pool_usd": "3000",
+    "original_unit_allowance_usd": "300",
+    "r01_reference_unit_usd": "889.9",
+    "r01_reference_actuators_usd": "8899.0",
+    "r01_reference_total_usd": "15899.0",
+    "r01_excess_over_original_usd": "5899.0",
+    "scenario_amount_usd": "15000",
+    "scenario_actuator_pool_usd": "8000",
+    "scenario_unit_allowance_usd": "800",
+    "r01_excess_over_scenario_usd": "899.0",
+    "scenario_increase_over_original_usd": "5000"
+  },
+  "price_status": "UNQUOTED; R0.1 historic starting-price reference, not current vendor quotes",
+  "next_action": "Choose the final ceiling and fundable route after actual resources, whole-system quotes and technical evidence are reconciled."
+}

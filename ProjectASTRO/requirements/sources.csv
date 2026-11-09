@@ -1,0 +1,15 @@
+Source ID,Title,Location,Type,Checked date,Use and limitation
+SRC-01,Owner brief,Pasted text supplied in this chat,User input,2026-10-23,Source of project limits; no concept image supplied.
+SRC-02,CubeMars AK80-64 manufacturer page,https://www.cubemars.com/goods.php?id=1143,Manufacturer listing,2026-10-23,"Displayed starting price USD 889.90; 48 N m rated, 120 N m peak, 0.85 kg. Driver configuration, duty conditions and landed price require a written quote."
+SRC-03,ISO 13482 official scope,https://www.iso.org/standard/53820.html,Standards publisher,2026-10-23,Personal care robot safety reference; medical device robots outside this published scope. Edition applicability and full text review remain open.
+SRC-04,ISO 13850 official scope,https://www.iso.org/standard/59970.html,Standards publisher,2026-10-23,"Emergency stop design reference; not a brake, fall-arrest or complete functional-safety design."
+SRC-05,MuJoCo modeling documentation,https://mujoco.readthedocs.io/en/latest/modeling.html,Official documentation,2026-10-23,Model force and control clamping; version must be pinned before model implementation.
+SRC-06,FHIR R4 Observation,https://hl7.org/fhir/R4/observation.html,HL7 specification,2026-10-23,Reference for local mock observations; no conformance or live interoperability claim.
+SRC-07,FHIR R4 AuditEvent,https://hl7.org/fhir/R4/auditevent.html,HL7 specification,2026-10-23,Reference for access and security-event records.
+SRC-08,FHIR R4 Provenance,https://hl7.org/fhir/R4/provenance.html,HL7 specification,2026-10-23,Reference for record origin and revision history.
+SRC-09,Kajita et al. ZMP preview control (ICRA 2003),doi:10.1109/ROBOT.2003.1241826,Peer-reviewed paper,2026-10-28,Gait pattern method for Days 155-166; not a result for this robot.
+SRC-10,Vukobratovic and Borovac ZMP review (IJHR 2004),doi:10.1142/S0219843604000083,Peer-reviewed paper,2026-10-28,ZMP definition and limits; background only.
+SRC-11,Unitree H1 / H1-2 specification page,https://www.unitree.com/h1,Manufacturer page,2026-10-28,"H1: 5 leg joints incl. 1 ankle; H1-2: 2 ankle joints per leg. Design data point, not a validation."
+SRC-12,RobStride 04 listings and guide,https://aifitlab.com/products/robstride-04-motor ; https://rcdrone.top/collections/robstride ; https://openelab.io/blogs/learn/what-is-robstride04-120nm-qdd-high-torque-robot-joints,Reseller listings,2026-10-28,"USD 255 / from USD 319; 40 N m rated (large heat sink), 120 N m peak, 1.42 kg. Not quotes."
+SRC-13,CubeMars AK80-64 RobotShop listing,https://www.robotshop.com/products/cubemars-ak80-64-kv80-ak-series-robotic-actuator,Reseller listing,2026-10-28,USD 1150.76; 48/120 N m. Not a quote; supersedes nothing in R0.1.
+SRC-14,ISO 13849-1:2023,https://www.iso.org/standard/73481.html,Standards publisher,2026-10-28,Safety-related control parts; for the Day 129 reviewer. Full text not reviewed.

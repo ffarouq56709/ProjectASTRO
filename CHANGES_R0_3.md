@@ -1,11 +1,11 @@
-# ProjectBayMax · R0.3 changes (28 October 2026)
+# Project ASTRO · R0.3 changes (28 October 2026)
 
 ## Description (92 words)
 See PROJECT_DESCRIPTION.txt.
 
 ## What changed
 - **Day 6 rewritten** (requirements/day_006_D03_D04_configuration.md + PDF). Keeps 10 leg joints with no hip yaw. Adds load, gait, drive, cost and mass screens (architecture/day_006_joint_load_screen.py). Recommends hip-roll axes 0.30 m apart under wide thigh shells, a 3:1 stage on hip roll and 2:1 on knee, pinned arms during gait, fixed hands, and a bought guided linear actuator on its own stand for handling. Mass 48.5 kg + 6.5 kg reserve (shell +1.6 kg risk). Actuator line USD 2,841–3,481 from dated listings, not quotes.
-- **Reference photo** saved at cad_specifications/reference/baymax-rigid-panel-concept-v1.png and used on Days 6, 86–91, 309, 314, 362.
+- **Reference photo** saved at cad_specifications/reference/astro-rigid-panel-concept-v1.png and used on Days 6, 86–91, 309, 314, 362.
 - **All 365 days rewritten**: goal, inputs (with links to earlier days), timed steps, numbers, output file, checks, outside help. Day numbers, weeks, output paths, gates and stages unchanged. Planned time ~669 h (90–135 min/day).
 - **Website**: cream/mint/blush notebook style, 16 px body text, separate planned date / task record / hardware result, project-file records shown for Days 1–6, R0.2 progress migrates automatically.
 - New working files: revision_history/decision_log_R0_3.csv, evidence/day_006_configuration_review_R0_3.json; CHANGELOG and sources.csv appended.

@@ -1,8 +1,8 @@
 from plan_model import W, d, O
 
-R = "JacobsBaymax/"
+R = "ProjectASTRO/"
 SIMSTOP = "Stop a success claim if it relies on a hidden fixed base, unlimited torque, missing logs or tether pulling."
-BACKUP = "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/."
+BACKUP = "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/."
 
 # ---------------------------------------------------------------- Week 21
 W(21)
@@ -19,7 +19,7 @@ d(141, "Set up a versioned simulation project",
 d(142, "Build the free base and link tree",
   goal="An MJCF model with a free-floating pelvis and exactly the 10 named leg joints.",
   inp=[O(92), O(96)],
-  st=[(50, "Write model/baymax.xml: a pelvis body with <freejoint/>, two legs with hinge joints named exactly as in the Day 92 register, axes and offsets from the Day 96 worksheet."),
+  st=[(50, "Write model/astro.xml: a pelvis body with <freejoint/>, two legs with hinge joints named exactly as in the Day 92 register, axes and offsets from the Day 96 worksheet."),
       (40, "Use capsules and boxes for collision geometry; put the shell in a visual-only group (contype=0 conaffinity=0)."),
       (30, "Write tests/test_tree.py: load the model, assert model.nq == 17 (7 free + 10 hinge) and that the 10 joint names match the register.")],
   calc="nq = 7 + 10 = 17; nv = 6 + 10 = 16.",
@@ -71,7 +71,7 @@ d(147, "Validate simple model cases",
   inp=[O(143), O(108)],
   st=[(40, "Hold the model in a static single-support pose with inverse dynamics (`mj_inverse`) and read joint torques."),
       (40, "Compare hip roll and knee torques with Day 108; write the % difference for each."),
-      (30, "Save model hash (`sha256sum model/baymax.xml`), timestep, seed and the replay command in logs/baseline_R0_3.md.")],
+      (30, "Save model hash (`sha256sum model/astro.xml`), timestep, seed and the replay command in logs/baseline_R0_3.md.")],
   calc="Difference % = (model − hand) / hand × 100 for hip roll and knee.",
   chk=["Differences over 15% are explained or logged as REWORK.", "Replay command reproduces the numbers.", "Hashes saved."],
   kind="simulation")
@@ -358,7 +358,7 @@ d(175, "Review the simulation evidence release",
   goal="Close the simulation phase with conclusions you can defend.",
   inp=[O(169), O(170), O(171), O(172), O(173), O(174)],
   st=[(40, "Write the summary: model version, convergence, cases run vs planned, failures, open gaps."),
-      (40, "Add simulation evidence references to JB-V-04 and JB-V-05 in the working verification matrix, labelled analysis only."),
+      (40, "Add simulation evidence references to ASTRO-V-04 and ASTRO-V-05 in the working verification matrix, labelled analysis only."),
       (20, BACKUP)],
   calc="Cases run / cases planned.",
   chk=["Every conclusion has a run ID.", "Matrix updated with analysis-only labels.", "Physical walking tests still 0."],

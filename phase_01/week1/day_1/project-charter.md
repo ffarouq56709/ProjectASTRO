@@ -1,4 +1,4 @@
-# Jacobs Baymax Caregiver-Support Robot — Project Charter
+# Project ASTRO Caregiver-Support Robot — Project Charter
 
 Day: 1  
 Phase: 1  
@@ -10,7 +10,7 @@ Previous accepted input: Project charter v0.1
 
 ## Project purpose
 
-Design and build a life-size Baymax-style robot that explores how robotics can support caregivers and help people through friendly interaction, health-data collection, secure notifications and controlled object handling.
+Design and build a life-size ASTRO-style robot that explores how robotics can support caregivers and help people through friendly interaction, health-data collection, secure notifications and controlled object handling.
 
 The project is a research prototype. It will support—not replace—caregivers and medical professionals.
 

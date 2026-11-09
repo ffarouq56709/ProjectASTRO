@@ -1,0 +1,260 @@
+{
+  "revision": "R0.2",
+  "date": "2026-10-27",
+  "owner": "Faisal Farouq",
+  "preparer": "Project documentation record",
+  "day_task_result": "PASS - checklist coverage only",
+  "installation_status": "VERIFIED AT ACTUAL PROJECT PATH",
+  "result_scope": "Day 3 measurable success checklist. It does not release a gate, certify safety or prove the robot works.",
+  "user_reported_time": {
+    "reported_text": "2 hrs",
+    "hours": 2,
+    "minutes": 120,
+    "scope": "Day 3 total, not per row; separate from Day 2"
+  },
+  "csv": {
+    "path": "requirements/day_003_year_one_success.csv",
+    "sha256": "bdc558d38a46626edd4eb76ac88334d382345ebfb270af92e9c6f3ee5a503066",
+    "rows": 10,
+    "columns": 22
+  },
+  "checks": [
+    {
+      "check": "required row count",
+      "result": "PASS",
+      "observation": "10 metric records cover the six requested subjects and the two mass-review triggers."
+    },
+    {
+      "check": "all targets have numbers, units/counts and measurement methods",
+      "result": "PASS",
+      "observation": "10/10 records contain a numeric target, units or count, method and evidence needed."
+    },
+    {
+      "check": "target and tested result separated",
+      "result": "PASS",
+      "observation": "No physical result or test evidence invented."
+    },
+    {
+      "check": "three alternating steps in two separate trials",
+      "result": "PASS",
+      "observation": "3 steps per trial and 2 trials are separate count records; alternation is explicit."
+    },
+    {
+      "check": "supported 2 kg object and ten supervised repetitions",
+      "result": "PASS",
+      "observation": "Payload mass, stationary support and supervision are explicit."
+    },
+    {
+      "check": "speed range retained",
+      "result": "PASS",
+      "observation": "Target range is 0.10-0.15 m/s; neither endpoint is a measured result."
+    },
+    {
+      "check": "required metadata present",
+      "result": "PASS",
+      "observation": "Revision, actual date, owner, actual role, sources, limitations and user-reported 2-hour session total present on every row."
+    },
+    {
+      "check": "unique metric records",
+      "result": "PASS",
+      "observation": "Requirement IDs may repeat for separate metrics. Requirement ID plus metric is unique."
+    },
+    {
+      "check": "authored cell values retained",
+      "result": "PASS",
+      "observation": "Artifact Tool cell values match the intended table, including blank optional upper bounds."
+    },
+    {
+      "check": "independent CSV parse at installed path",
+      "result": "PASS",
+      "observation": "10 rows and 22 columns. All measurement methods, units/counts, metadata and unexecuted test states retained."
+    },
+    {
+      "check": "PDF visual review",
+      "result": "PASS",
+      "observation": "Both pages rendered with PDFium and visually inspected. Text/tables/footer legible without clipping or overlap. Poppler preview was replaced due to local font configuration failure."
+    },
+    {
+      "check": "original source preservation",
+      "result": "PASS",
+      "observation": "All 9 source fingerprints unchanged after installation."
+    }
+  ],
+  "sources": [
+    {
+      "path": "requirements/requirements.csv",
+      "sha256": "efb250bc3af67225c06c2dc2b6d72b3b927071b0d596abb6b8b777edd31678b1"
+    },
+    {
+      "path": "tests/verification_matrix.csv",
+      "sha256": "60bbc9f22aeaa26324e83b0578eaf76ecca6d3b4b3efab7d0080076527b5848b"
+    },
+    {
+      "path": "revision_history/decisions.csv",
+      "sha256": "1a43c82dee19b4e041b8dd933711f20b79411fccea6574453ca7fca9e8de92c9"
+    },
+    {
+      "path": "requirements/day_001_mission_acceptance.md",
+      "sha256": "52e3082d717fe10c94fa97611335c747fe2ee1f2d3715c08dee3e1a525b8f460"
+    },
+    {
+      "path": "requirements/day_002_folder_index.md",
+      "sha256": "1123e8f24326f670afc3f68984542b690b7b77e88c07b20733aac9ffe0405572"
+    },
+    {
+      "path": "evidence/day_002_folder_setup.json",
+      "sha256": "3c7d29179f8b9bd8939ceb4ee72c5297cf898a4e4a4ef671ed01cae14ddff011"
+    },
+    {
+      "path": "requirements/Project_ASTRO_Mission_R0_1.pdf",
+      "sha256": "3eff42766d70a967ffd50304a09e4594a3112766463fd0382dcc0ccd2e2a1c32"
+    },
+    {
+      "path": "budget/Project_ASTRO_Control_Workbook_R0_1.xlsx",
+      "sha256": "c1a056a982336ca925523f08bc230348320869ad49810847d5add681ef532bd6"
+    },
+    {
+      "path": "release_archive/R0_1/Project_ASTRO_Engineering_Baseline_R0_1.pdf",
+      "sha256": "55672646357306ada0ffd99a9e58257a030cb9038ef01b30e6da63cace83a441"
+    }
+  ],
+  "decisions_carried_forward": [
+    {
+      "Decision ID": "D-01",
+      "Topic": "Budget and walking feasibility",
+      "Proposed disposition": "Retain USD 10000 cap; authorize quotation and no-spend engineering only; require credible whole-system route before actuator commitment.",
+      "Numerical or scope consequence": "USD 300 per complete lower-body assembly affordable under current allowances versus USD 889.90 displayed starting-price reference.",
+      "Status": "BLOCKED pending owner decision",
+      "Gate": "G0 to G3"
+    },
+    {
+      "Decision ID": "D-02",
+      "Topic": "Facilities and accountable qualified people",
+      "Proposed disposition": "Name test director, controls/electrical/mechanical reviewers, rigging provider and fabricator; confirm controlled facility and access costs.",
+      "Numerical or scope consequence": "No walking or load testing can be released without these roles and a reviewed power-independent support system.",
+      "Status": "BLOCKED pending appointments",
+      "Gate": "G0 to G2"
+    },
+    {
+      "Decision ID": "D-03",
+      "Topic": "Ten-joint topology and motion scope",
+      "Proposed disposition": "Accept the proposed five joints per leg with no hip yaw for straight-line tethered steps, or request architecture rework.",
+      "Numerical or scope consequence": "Adding hip yaw while retaining both ankle axes creates 12 lower-body joints; dropping ankle roll changes balance control.",
+      "Status": "REWORK pending topology decision",
+      "Gate": "G2"
+    },
+    {
+      "Decision ID": "D-04",
+      "Topic": "Handling arrangement and reach",
+      "Proposed disposition": "Choose a stationary counterbalanced or detachable supported module; use provisional 0.30 m horizontal reach and 0.10 m vertical travel for analysis.",
+      "Numerical or scope consequence": "2 kg at 0.30 m adds 5.89 N m before arm self-weight, acceleration, friction or margin; 5 kg adds 14.72 N m.",
+      "Status": "REWORK pending handling decision",
+      "Gate": "G2"
+    },
+    {
+      "Decision ID": "D-05",
+      "Topic": "Software scope consent and approved recipient",
+      "Proposed disposition": "Name one consenting test recipient and choose local mock communication, five interface presets and fictional fixtures; approve retention/recording policy.",
+      "Numerical or scope consequence": "No actual recipient message is authorized by this package; allowlist and per-report confirmation remain required.",
+      "Status": "REWORK pending workflow decision",
+      "Gate": "G1"
+    }
+  ],
+  "day_002_result": "PASS",
+  "day_001_state": "Prior record still says REWORK with owner review/time pending; no update made by Day 3.",
+  "limitations": [
+    "All hardware measurements and functional tests remain unexecuted.",
+    "Height tolerance, topology, facility, qualified roles and handling envelope remain unresolved.",
+    "User time is a self-reported session total, repeated in CSV metadata and not additive across rows."
+  ],
+  "website_plan": {
+    "meta": {
+      "owner": "Faisal Farouq",
+      "revision": "R0.2",
+      "date": "2026-10-24",
+      "baselineRevision": "R0.1",
+      "defaultStart": "2026-10-24",
+      "days": 365,
+      "ownerHours": 886,
+      "note": "Provisional dependency plan; physical completion and budget feasibility are unproven. Progress is browser-local and is not a safety approval."
+    },
+    "day": {
+      "id": 3,
+      "week": 1,
+      "weekDay": 3,
+      "title": "Write the measurable success checklist",
+      "weekTitle": "Set the project boundaries",
+      "phase": "Foundation",
+      "mode": "Desk work",
+      "minutes": 150,
+      "objective": "Complete write the measurable success checklist and produce year_one_success.csv with traceable evidence.",
+      "inputs": [
+        "R0.1 one-page mission, engineering baseline and Decisions tab.",
+        "Review Day 002's output and unresolved items. If unavailable, identify the missing input rather than inventing it."
+      ],
+      "steps": [
+        "Open the required inputs listed below. Check the exact revision and identify unresolved decisions for 'write the measurable success checklist'. Do not assume equipment, approval or test results exist.",
+        "Make a table with requirement ID, target, measurement method and evidence needed for height, mass, joint count, speed, step sequences and payload repetitions.",
+        "State that three alternating steps must occur twice and handling must be stationary with a 2 kg inert object for 10 supervised repetitions.",
+        "Perform this completion check and save the actual observations: Check that every target has a unit or count and no empty measurement method; distinguish target from tested result.",
+        "Save the deliverable as ProjectASTRO/requirements/day_003_year_one_success.csv. Include revision R0.2, actual date, accountable owner Faisal Farouq, your actual role, source references, results and unresolved limitations. Preserve prior evidence.",
+        "Record PASS, REWORK or BLOCKED for this day with the actual evidence reference and time spent. PASS means the stated task was evidenced; it does not release a gate, certify safety or prove the whole robot works."
+      ],
+      "stepMinutes": [
+        15,
+        50,
+        40,
+        30,
+        10,
+        5
+      ],
+      "acceptance": [
+        "Check that every target has a unit or count and no empty measurement method; distinguish target from tested result.",
+        "The named deliverable contains actual evidence, source/revision/date/owner and limitations.",
+        "Required permissions and prior releases are evidenced; unknown, failed and unexecuted results stay visible."
+      ],
+      "output": "ProjectASTRO/requirements/day_003_year_one_success.csv",
+      "calculation": "Target 1.829 m; robot mass <=55 kg; >65 kg major review; 10 lower-body joints; USD 10000 cap.",
+      "stop": "Stop if the requested scope introduces real patient data, clinical authority, unapproved spending or powered motion.",
+      "gates": [],
+      "stages": [],
+      "requirements": [
+        "ASTRO-R-001",
+        "ASTRO-R-002",
+        "ASTRO-R-003",
+        "ASTRO-R-004",
+        "ASTRO-R-005",
+        "ASTRO-R-009",
+        "ASTRO-R-044"
+      ],
+      "alternative": [
+        "Inspect the named input documents and list missing evidence for this exact daily objective.",
+        "Complete only the safe reversible analysis or fictional software case possible with confirmed available inputs.",
+        "Record the blocker, required decision/reviewer, next action and follow-up date without claiming the original task passed."
+      ],
+      "alternativeOutput": "ProjectASTRO/revision_history/day_003_blocked_work.md",
+      "dependencyDays": [
+        2
+      ],
+      "next": "Day 004: Assign people without inventing qualifications"
+    },
+    "source_sha256": "0a5c6e75bbd23e4baad8286a7303714b7e2f7390196d6f8f79c5b2125f7924db"
+  },
+  "new_spend_usd": 0,
+  "physical_work": "NONE",
+  "engineering_gates_released": [],
+  "stop_conditions": "Stop if the requested scope introduces real patient data, clinical authority, unapproved spending or powered motion.",
+  "next": "Day 004: Assign people without inventing qualifications",
+  "filesystem_authorization": {
+    "path": "/Users/sudadabdulrazak/BerkeleyProjects/Project ASTRO/ProjectASTRO",
+    "source": "App folder write grant during the current Day 3 turn",
+    "scope": "turn"
+  },
+  "pdf": {
+    "path": "requirements/day_003_year_one_success.pdf",
+    "pages": 2,
+    "sha256": "06db3a2f8006090d02fdc87efb9a83b54c5b8e1fdd6954cfabae45e6737c0df3",
+    "style": "human-support robot rounded face, white/charcoal and soft teal"
+  },
+  "style_preference_record": "revision_history/document_style_R0_2.md"
+}

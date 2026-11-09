@@ -1,0 +1,929 @@
+{
+  "date": "2026-10-25",
+  "revision": "R0.2",
+  "owner": "Faisal Farouq",
+  "executor": "Project file-organization record",
+  "result": "PASS",
+  "user_time": {
+    "reported_text": "1.5 hrs",
+    "hours": 1.5,
+    "minutes": 90,
+    "basis": "User self-report in current Day 2 chat"
+  },
+  "preflight": {
+    "root": "/Users/sudadabdulrazak/BerkeleyProjects/Project ASTRO",
+    "base": "/Users/sudadabdulrazak/BerkeleyProjects/Project ASTRO/ProjectASTRO",
+    "folders": [
+      "requirements",
+      "architecture",
+      "cad_specifications",
+      "simulation",
+      "software",
+      "tests",
+      "evidence",
+      "budget",
+      "procurement",
+      "risk_records",
+      "caregiver_workflows",
+      "simulated_patient_data",
+      "revision_history",
+      "release_archive"
+    ],
+    "zip_path": "legacy source archive (path removed)",
+    "zip_sha256": "1d1bc2b53f0be81888a858ca373776adbae6911928fbc8779ad3f35c30e80a85",
+    "archive_file_count": 45,
+    "verified_manifest_file_count": 44,
+    "release_checks": [
+      {
+        "path": "Project_ASTRO_Control_Workbook_R0_1.xlsx",
+        "sha256": "c1a056a982336ca925523f08bc230348320869ad49810847d5add681ef532bd6"
+      },
+      {
+        "path": "Project_ASTRO_Engineering_Baseline_R0_1.docx",
+        "sha256": "f3a843b35456378622007aa371a95e1e1adc63bfb5929615671aa3dadf3881aa"
+      },
+      {
+        "path": "Project_ASTRO_Engineering_Baseline_R0_1.pdf",
+        "sha256": "55672646357306ada0ffd99a9e58257a030cb9038ef01b30e6da63cace83a441"
+      },
+      {
+        "path": "Project_ASTRO_Mission_R0_1.pdf",
+        "sha256": "3eff42766d70a967ffd50304a09e4594a3112766463fd0382dcc0ccd2e2a1c32"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/README.md",
+        "sha256": "edd6a2dda9f16d18dc364819ee21581bf7b612987216d2160ad515de2e8a775a"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/architecture/02_system_architecture.md",
+        "sha256": "174de8eded385616ad067f8fcda002974686be0c5f9f4ea2ace638433d6bf96f"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/architecture/access_authorization.csv",
+        "sha256": "d14f2b16f55abe181d294a6813c9c579898e35922201b7c59aabb33fe1c5c705"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/architecture/system_architecture.mmd",
+        "sha256": "d77dd63289151c4619c21feb665d5d2c7ffac06d2145ea1c9bc3e535f6f32d55"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/architecture/system_architecture.png",
+        "sha256": "c2d868232d7c9b6d9b869e357d864f0fbd5813a7d5c409337d0523210d439e9b"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/budget/06_mass_budget.md",
+        "sha256": "341db1d3d485874ac44d1c74f2792399f841563fb04f1f3396b62e9490a5514d"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/budget/07_financial_budget.md",
+        "sha256": "f4fa0c87d531c70f1d33b93b14c04a4cd04080a998569539d4fbaba86d5f400f"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/budget/financial_budget.csv",
+        "sha256": "9e6eb4f2b5ec8ca1f12dd12a031f5f6b6fa707a268d063c1309ab0b6992b368e"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/budget/mass_budget.csv",
+        "sha256": "2dc72354a31e8ca4060fa9826f688a06066f37f530f05a9e78e06dec369b404d"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/cad_specifications/README.md",
+        "sha256": "b37e32bb0677b6694a3ec297820aaf564870213f2ee85583def7b2d32a95737e"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/cad_specifications/candidate_joints.csv",
+        "sha256": "7807852d921a7393a1507349a2485ea8e067a77435e860693932b6161c7260fe"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/cad_specifications/parameters.json",
+        "sha256": "925b303a610dc72987dd867f04ab59badbf97eeaea7d12f7699a40aac4929a3c"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/caregiver_workflows/04_caregiver_workflows.md",
+        "sha256": "efca95128a60d07c6cf98fbe6a7f49357856ec12e61e4ba45c78a6e2cc08acd9"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/evidence/README.md",
+        "sha256": "4fcb34213df98479f3db4d71b1014097b9b0b005a68b7f5471ae7dd384cc3de7"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/evidence/document_qa.json",
+        "sha256": "9c3fee4bb74d58b980582c737a98baefd3b4b8f2a664e5b96714df039a58f3a3"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/evidence/evidence_record_template.json",
+        "sha256": "98b2f3a6925e08c1ae48fa127e83ded6b26704e1e4e7806851a322ff3dffe414"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/procurement/11_make_versus_buy.md",
+        "sha256": "325d6c57a3881ea080c183c6760602dedac098bd2ace55fd48ca48b7c7ae3dfa"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/procurement/make_vs_buy.csv",
+        "sha256": "beb54084f1f8dac69aab2464fd9cc6f1aeff1c0c0b3e2357e060f5bd8caddde7"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/release_archive/README.md",
+        "sha256": "983e75fd4568a5f34e973c0645f9a85101ac89e2e0570cdbd3318f990a0e8051"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/requirements/01_mission_and_scope.md",
+        "sha256": "d11f0b7ae99b8ca41455a2a273bfb5ccb096deb711fc3a287b27256f247a0b49"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/requirements/03_requirement_matrix.md",
+        "sha256": "e886de873be4e657a3283140135f4ed0c90d6d4325bdc61cf1f82140748c5fee"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/requirements/08_feature_backlog.md",
+        "sha256": "5f243e2a4d96305caac285ef9a449cfe9c86ddb0dc2bc8e9d189728615a63ebf"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/requirements/feature_backlog.csv",
+        "sha256": "6087c64c64806f629fe513dea661382687a46b781eca9e1adda2acb4864445c5"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/requirements/requirements.csv",
+        "sha256": "efb250bc3af67225c06c2dc2b6d72b3b927071b0d596abb6b8b777edd31678b1"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/requirements/sources.csv",
+        "sha256": "120a5c58aabe58ff5143915484d58ce54df1faf15e081ca3eafe7073d477ed41"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/revision_history/12_one_year_roadmap.md",
+        "sha256": "31f624d6ee9ba22fe69bf57b6b26eb37e511d0702be6fac103b84f10ae306d62"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/revision_history/CHANGELOG.md",
+        "sha256": "7a72e2a1b4fe8e799cb10a4584b14f62e78e8491ba9b71a41e376f86f93ceec4"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/revision_history/decisions.csv",
+        "sha256": "1a43c82dee19b4e041b8dd933711f20b79411fccea6574453ca7fca9e8de92c9"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/revision_history/gates.csv",
+        "sha256": "e2202b6a111f5d9459f64cfd60f8ca7c5caf5ec685de8e1229321d45e76a920d"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/risk_records/09_hazard_and_ethical_risk_register.md",
+        "sha256": "feec3dac77e969c940f47ffc037bfb75a5732f7fa0728773f258d5c54fc2056f"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/risk_records/assumptions.csv",
+        "sha256": "b07e0c3857c1ab578df5edb51127515b10826fa3654907a47b64f8f116e17729"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/risk_records/excluded_claims.md",
+        "sha256": "6a3b457418319121b4b4220f07824f8226e0f865f71ce81fdeb84cc885effe06"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/risk_records/hazards.csv",
+        "sha256": "117f1fa2585c61e2de30f4498d555066733500b3e78268afdf69e2c0f5193061"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/simulated_patient_data/fictional_fixture.json",
+        "sha256": "869a2f08b64394320a31b8456f5cc4d2076527758e95c2fd5454c5170553e245"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/simulation/README.md",
+        "sha256": "a3e7709af1e8b3a64ca46be2079e7a2b64ad435eaa5380f591568304656e9af0"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/software/README.md",
+        "sha256": "e9dd35a1388cafbbe2395bf0e5710cdb7bbc1fbf253e0042eaa580f111b1bf66"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/tests/05_demonstration_script.md",
+        "sha256": "a4064ec58cbb35d306f93abe7f5a663db441f22c7a0b78e8f9b4c733268ff924"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/tests/10_verification_matrix.md",
+        "sha256": "1c8c142c0bef2459a31630a1108f2a26ec6aa83ff9c64b137ca2c8a5e99ace92"
+      },
+      {
+        "path": "Project_ASTRO_R0_1/tests/verification_matrix.csv",
+        "sha256": "60bbc9f22aeaa26324e83b0578eaf76ecca6d3b4b3efab7d0080076527b5848b"
+      },
+      {
+        "path": "START_HERE.md",
+        "sha256": "49a2915e5126722f468c775240153ab27445d913f2ef285b657d115fb45ce190"
+      }
+    ],
+    "preexisting": {
+      "ProjectASTRO/README.md": "37ec0a13b5c5e628ec532168c0749020416f048fab168f7ed8d00c1d5b8ba595",
+      "ProjectASTRO/SOURCE_MANIFEST_SHA256.txt": "adc8238fa8b9542a9f59fab7c646108b0fdcaaeeefdd1e645c1ffd0bc991b231",
+      "ProjectASTRO/requirements/day_001_mission_acceptance.md": "52e3082d717fe10c94fa97611335c747fe2ee1f2d3715c08dee3e1a525b8f460",
+      "ProjectASTRO/reference_baseline/R0.2/day_001_plan_excerpt.json": "48a899dbd73be752a229ff7469d200455b668f8a18a6e997d19245ea545e6cdb",
+      "ProjectASTRO/reference_baseline/R0.1/Project_ASTRO_Control_Workbook_R0_1.xlsx": "c1a056a982336ca925523f08bc230348320869ad49810847d5add681ef532bd6",
+      "ProjectASTRO/reference_baseline/R0.1/Project_ASTRO_Mission_R0_1.pdf": "3eff42766d70a967ffd50304a09e4594a3112766463fd0382dcc0ccd2e2a1c32",
+      "ProjectASTRO/reference_baseline/R0.1/decisions.csv": "1a43c82dee19b4e041b8dd933711f20b79411fccea6574453ca7fca9e8de92c9",
+      "ProjectASTRO/reference_baseline/R0.1/requirements.csv": "efb250bc3af67225c06c2dc2b6d72b3b927071b0d596abb6b8b777edd31678b1",
+      "ProjectASTRO/reference_baseline/R0.1/Project_ASTRO_Engineering_Baseline_R0_1.pdf": "55672646357306ada0ffd99a9e58257a030cb9038ef01b30e6da63cace83a441",
+      "phase_01/week1/day_3/project_charter.md": "340d5e7c1942ae2bf4d96085fb7a65aad5ccc357225b52d813c1b0234651220f",
+      "phase_01/week1/day_2/project-chart.md": "04c73339f0efd428c5ff5396342faa3b758e7adbd86687200538cb7fbf731058",
+      "phase_01/week1/day_1/project-charter.md": "0d58112ffc182d6f215ed26146b3cf4aa00b0fe77b5f87f6b011f2dbfc3ea173"
+    }
+  },
+  "input_review": {
+    "Project_ASTRO_Mission_R0_1.pdf": {
+      "pages": 1,
+      "R0.1_header": true,
+      "date_header": true,
+      "owner_header": true,
+      "header_excerpt": "ASTRO-A-01 | R0.1 | Faisal Farouq | 2026-10-23\n1\nProject ASTRO Caregiver Support Robot\nMission and first year scope | R0.1 | 23 October 2026\nAccountable owner Fais"
+    },
+    "Project_ASTRO_Engineering_Baseline_R0_1.pdf": {
+      "pages": 21,
+      "R0.1_header": true,
+      "date_header": true,
+      "owner_header": true,
+      "header_excerpt": "PROJECT ASTRO | CONTROLLED RESEARCH PLANNING\nR0.1 | 2026-10-23 | Faisal Farouq\nProject ASTRO Caregiver Support Robot\nEngineering baseline and first year"
+    },
+    "workbook": {
+      "worksheets": [
+        "Overview",
+        "Mass",
+        "Budget",
+        "Engineering",
+        "Requirements",
+        "Verification",
+        "Hazards",
+        "Backlog",
+        "Make Buy",
+        "Roadmap",
+        "Assumptions",
+        "Decisions",
+        "Access"
+      ],
+      "decision_rows": [
+        {
+          "id": "D-01",
+          "topic": "Budget and walking feasibility",
+          "status": "BLOCKED pending owner decision"
+        },
+        {
+          "id": "D-02",
+          "topic": "Facilities and accountable qualified people",
+          "status": "BLOCKED pending appointments"
+        },
+        {
+          "id": "D-03",
+          "topic": "Ten-joint topology and motion scope",
+          "status": "REWORK pending topology decision"
+        },
+        {
+          "id": "D-04",
+          "topic": "Handling arrangement and reach",
+          "status": "REWORK pending handling decision"
+        },
+        {
+          "id": "D-05",
+          "topic": "Software scope consent and approved recipient",
+          "status": "REWORK pending workflow decision"
+        }
+      ]
+    },
+    "requirements/requirements.csv": {
+      "rows": 64,
+      "columns": [
+        "Requirement ID",
+        "Phase",
+        "Requirement",
+        "Verification ID",
+        "Hazard IDs",
+        "Evidence status",
+        "Owner",
+        "Revision",
+        "Date"
+      ]
+    },
+    "risk_records/hazards.csv": {
+      "rows": 20,
+      "columns": [
+        "Hazard ID",
+        "Hazard or ethical issue",
+        "Credible harm",
+        "Severity 1-4",
+        "Release priority",
+        "Context",
+        "Controls",
+        "Requirement IDs",
+        "Verification IDs",
+        "Specialist reviewer",
+        "Likelihood",
+        "Residual risk",
+        "Acceptance",
+        "Accountable owner",
+        "Revision",
+        "Date"
+      ]
+    },
+    "tests/verification_matrix.csv": {
+      "rows": 26,
+      "columns": [
+        "Verification ID",
+        "Purpose",
+        "Method",
+        "Acceptance criterion",
+        "Prerequisites",
+        "Current blocker",
+        "Requirement IDs",
+        "Result",
+        "Evidence",
+        "Accountable owner",
+        "Reviewer",
+        "Revision",
+        "Date"
+      ]
+    }
+  },
+  "working_copy_map": [
+    {
+      "working_path": "architecture/02_system_architecture.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/architecture/02_system_architecture.md",
+      "sha256": "174de8eded385616ad067f8fcda002974686be0c5f9f4ea2ace638433d6bf96f"
+    },
+    {
+      "working_path": "architecture/access_authorization.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/architecture/access_authorization.csv",
+      "sha256": "d14f2b16f55abe181d294a6813c9c579898e35922201b7c59aabb33fe1c5c705"
+    },
+    {
+      "working_path": "architecture/system_architecture.mmd",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/architecture/system_architecture.mmd",
+      "sha256": "d77dd63289151c4619c21feb665d5d2c7ffac06d2145ea1c9bc3e535f6f32d55"
+    },
+    {
+      "working_path": "architecture/system_architecture.png",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/architecture/system_architecture.png",
+      "sha256": "c2d868232d7c9b6d9b869e357d864f0fbd5813a7d5c409337d0523210d439e9b"
+    },
+    {
+      "working_path": "budget/06_mass_budget.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/budget/06_mass_budget.md",
+      "sha256": "341db1d3d485874ac44d1c74f2792399f841563fb04f1f3396b62e9490a5514d"
+    },
+    {
+      "working_path": "budget/07_financial_budget.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/budget/07_financial_budget.md",
+      "sha256": "f4fa0c87d531c70f1d33b93b14c04a4cd04080a998569539d4fbaba86d5f400f"
+    },
+    {
+      "working_path": "budget/financial_budget.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/budget/financial_budget.csv",
+      "sha256": "9e6eb4f2b5ec8ca1f12dd12a031f5f6b6fa707a268d063c1309ab0b6992b368e"
+    },
+    {
+      "working_path": "budget/mass_budget.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/budget/mass_budget.csv",
+      "sha256": "2dc72354a31e8ca4060fa9826f688a06066f37f530f05a9e78e06dec369b404d"
+    },
+    {
+      "working_path": "cad_specifications/README.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/cad_specifications/README.md",
+      "sha256": "b37e32bb0677b6694a3ec297820aaf564870213f2ee85583def7b2d32a95737e"
+    },
+    {
+      "working_path": "cad_specifications/candidate_joints.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/cad_specifications/candidate_joints.csv",
+      "sha256": "7807852d921a7393a1507349a2485ea8e067a77435e860693932b6161c7260fe"
+    },
+    {
+      "working_path": "cad_specifications/parameters.json",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/cad_specifications/parameters.json",
+      "sha256": "925b303a610dc72987dd867f04ab59badbf97eeaea7d12f7699a40aac4929a3c"
+    },
+    {
+      "working_path": "caregiver_workflows/04_caregiver_workflows.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/caregiver_workflows/04_caregiver_workflows.md",
+      "sha256": "efca95128a60d07c6cf98fbe6a7f49357856ec12e61e4ba45c78a6e2cc08acd9"
+    },
+    {
+      "working_path": "evidence/README.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/evidence/README.md",
+      "sha256": "4fcb34213df98479f3db4d71b1014097b9b0b005a68b7f5471ae7dd384cc3de7"
+    },
+    {
+      "working_path": "evidence/evidence_record_template.json",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/evidence/evidence_record_template.json",
+      "sha256": "98b2f3a6925e08c1ae48fa127e83ded6b26704e1e4e7806851a322ff3dffe414"
+    },
+    {
+      "working_path": "procurement/11_make_versus_buy.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/procurement/11_make_versus_buy.md",
+      "sha256": "325d6c57a3881ea080c183c6760602dedac098bd2ace55fd48ca48b7c7ae3dfa"
+    },
+    {
+      "working_path": "procurement/make_vs_buy.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/procurement/make_vs_buy.csv",
+      "sha256": "beb54084f1f8dac69aab2464fd9cc6f1aeff1c0c0b3e2357e060f5bd8caddde7"
+    },
+    {
+      "working_path": "requirements/01_mission_and_scope.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/requirements/01_mission_and_scope.md",
+      "sha256": "d11f0b7ae99b8ca41455a2a273bfb5ccb096deb711fc3a287b27256f247a0b49"
+    },
+    {
+      "working_path": "requirements/03_requirement_matrix.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/requirements/03_requirement_matrix.md",
+      "sha256": "e886de873be4e657a3283140135f4ed0c90d6d4325bdc61cf1f82140748c5fee"
+    },
+    {
+      "working_path": "requirements/08_feature_backlog.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/requirements/08_feature_backlog.md",
+      "sha256": "5f243e2a4d96305caac285ef9a449cfe9c86ddb0dc2bc8e9d189728615a63ebf"
+    },
+    {
+      "working_path": "requirements/feature_backlog.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/requirements/feature_backlog.csv",
+      "sha256": "6087c64c64806f629fe513dea661382687a46b781eca9e1adda2acb4864445c5"
+    },
+    {
+      "working_path": "requirements/requirements.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/requirements/requirements.csv",
+      "sha256": "efb250bc3af67225c06c2dc2b6d72b3b927071b0d596abb6b8b777edd31678b1"
+    },
+    {
+      "working_path": "requirements/sources.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/requirements/sources.csv",
+      "sha256": "120a5c58aabe58ff5143915484d58ce54df1faf15e081ca3eafe7073d477ed41"
+    },
+    {
+      "working_path": "revision_history/12_one_year_roadmap.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/revision_history/12_one_year_roadmap.md",
+      "sha256": "31f624d6ee9ba22fe69bf57b6b26eb37e511d0702be6fac103b84f10ae306d62"
+    },
+    {
+      "working_path": "revision_history/CHANGELOG.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/revision_history/CHANGELOG.md",
+      "sha256": "7a72e2a1b4fe8e799cb10a4584b14f62e78e8491ba9b71a41e376f86f93ceec4"
+    },
+    {
+      "working_path": "revision_history/decisions.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/revision_history/decisions.csv",
+      "sha256": "1a43c82dee19b4e041b8dd933711f20b79411fccea6574453ca7fca9e8de92c9"
+    },
+    {
+      "working_path": "revision_history/gates.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/revision_history/gates.csv",
+      "sha256": "e2202b6a111f5d9459f64cfd60f8ca7c5caf5ec685de8e1229321d45e76a920d"
+    },
+    {
+      "working_path": "risk_records/09_hazard_and_ethical_risk_register.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/risk_records/09_hazard_and_ethical_risk_register.md",
+      "sha256": "feec3dac77e969c940f47ffc037bfb75a5732f7fa0728773f258d5c54fc2056f"
+    },
+    {
+      "working_path": "risk_records/assumptions.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/risk_records/assumptions.csv",
+      "sha256": "b07e0c3857c1ab578df5edb51127515b10826fa3654907a47b64f8f116e17729"
+    },
+    {
+      "working_path": "risk_records/excluded_claims.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/risk_records/excluded_claims.md",
+      "sha256": "6a3b457418319121b4b4220f07824f8226e0f865f71ce81fdeb84cc885effe06"
+    },
+    {
+      "working_path": "risk_records/hazards.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/risk_records/hazards.csv",
+      "sha256": "117f1fa2585c61e2de30f4498d555066733500b3e78268afdf69e2c0f5193061"
+    },
+    {
+      "working_path": "simulated_patient_data/fictional_fixture.json",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/simulated_patient_data/fictional_fixture.json",
+      "sha256": "869a2f08b64394320a31b8456f5cc4d2076527758e95c2fd5454c5170553e245"
+    },
+    {
+      "working_path": "simulation/README.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/simulation/README.md",
+      "sha256": "a3e7709af1e8b3a64ca46be2079e7a2b64ad435eaa5380f591568304656e9af0"
+    },
+    {
+      "working_path": "software/README.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/software/README.md",
+      "sha256": "e9dd35a1388cafbbe2395bf0e5710cdb7bbc1fbf253e0042eaa580f111b1bf66"
+    },
+    {
+      "working_path": "tests/05_demonstration_script.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/tests/05_demonstration_script.md",
+      "sha256": "a4064ec58cbb35d306f93abe7f5a663db441f22c7a0b78e8f9b4c733268ff924"
+    },
+    {
+      "working_path": "tests/10_verification_matrix.md",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/tests/10_verification_matrix.md",
+      "sha256": "1c8c142c0bef2459a31630a1108f2a26ec6aa83ff9c64b137ca2c8a5e99ace92"
+    },
+    {
+      "working_path": "tests/verification_matrix.csv",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_R0_1/tests/verification_matrix.csv",
+      "sha256": "60bbc9f22aeaa26324e83b0578eaf76ecca6d3b4b3efab7d0080076527b5848b"
+    },
+    {
+      "working_path": "requirements/Project_ASTRO_Mission_R0_1.pdf",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_Mission_R0_1.pdf",
+      "sha256": "3eff42766d70a967ffd50304a09e4594a3112766463fd0382dcc0ccd2e2a1c32"
+    },
+    {
+      "working_path": "budget/Project_ASTRO_Control_Workbook_R0_1.xlsx",
+      "archive_path": "release_archive/R0_1/Project_ASTRO_Control_Workbook_R0_1.xlsx",
+      "sha256": "c1a056a982336ca925523f08bc230348320869ad49810847d5add681ef532bd6"
+    }
+  ],
+  "website_plan_excerpt": {
+    "meta": {
+      "owner": "Faisal Farouq",
+      "revision": "R0.2",
+      "date": "2026-10-24",
+      "baselineRevision": "R0.1",
+      "defaultStart": "2026-10-24",
+      "days": 365,
+      "ownerHours": 886.0,
+      "note": "Provisional dependency plan; physical completion and budget feasibility are unproven. Progress is browser-local and is not a safety approval."
+    },
+    "day": {
+      "id": 2,
+      "week": 1,
+      "weekDay": 2,
+      "title": "Create the working folders",
+      "weekTitle": "Set the project boundaries",
+      "phase": "Foundation",
+      "mode": "Desk work",
+      "minutes": 150,
+      "objective": "Complete create the working folders and produce folder_index.md with traceable evidence.",
+      "inputs": [
+        "R0.1 one-page mission, engineering baseline and Decisions tab.",
+        "Review Day 001's output and unresolved items. If unavailable, identify the missing input rather than inventing it."
+      ],
+      "steps": [
+        "Open the required inputs listed below. Check the exact revision and identify unresolved decisions for 'create the working folders'. Do not assume equipment, approval or test results exist.",
+        "Create ProjectASTRO with requirements, architecture, cad_specifications, simulation, software, tests, evidence, budget, procurement, risk_records, caregiver_workflows, simulated_patient_data, revision_history and release_archive folders.",
+        "Unpack the R0.1 package into release_archive/R0_1; copy the active registers into the matching working folders and keep the release originals unchanged.",
+        "Perform this completion check and save the actual observations: Locate the mission, requirements CSV, hazard CSV, verification CSV and budget workbook without using a search tool.",
+        "Save the deliverable as ProjectASTRO/requirements/day_002_folder_index.md. Include revision R0.2, actual date, accountable owner Faisal Farouq, your actual role, source references, results and unresolved limitations. Preserve prior evidence.",
+        "Record PASS, REWORK or BLOCKED for this day with the actual evidence reference and time spent. PASS means the stated task was evidenced; it does not release a gate, certify safety or prove the whole robot works."
+      ],
+      "stepMinutes": [
+        15,
+        50,
+        40,
+        30,
+        10,
+        5
+      ],
+      "acceptance": [
+        "Locate the mission, requirements CSV, hazard CSV, verification CSV and budget workbook without using a search tool.",
+        "The named deliverable contains actual evidence, source/revision/date/owner and limitations.",
+        "Required permissions and prior releases are evidenced; unknown, failed and unexecuted results stay visible."
+      ],
+      "output": "ProjectASTRO/requirements/day_002_folder_index.md",
+      "calculation": "Target 1.829 m; robot mass <=55 kg; >65 kg major review; 10 lower-body joints; USD 10000 cap.",
+      "stop": "Stop if the requested scope introduces real patient data, clinical authority, unapproved spending or powered motion.",
+      "gates": [],
+      "stages": [],
+      "requirements": [
+        "ASTRO-R-001",
+        "ASTRO-R-002",
+        "ASTRO-R-003",
+        "ASTRO-R-004",
+        "ASTRO-R-005",
+        "ASTRO-R-009",
+        "ASTRO-R-044"
+      ],
+      "alternative": [
+        "Inspect the named input documents and list missing evidence for this exact daily objective.",
+        "Complete only the safe reversible analysis or fictional software case possible with confirmed available inputs.",
+        "Record the blocker, required decision/reviewer, next action and follow-up date without claiming the original task passed."
+      ],
+      "alternativeOutput": "ProjectASTRO/revision_history/day_002_blocked_work.md",
+      "dependencyDays": [
+        1
+      ],
+      "next": "Day 003: Write the measurable success checklist"
+    },
+    "source_sha256": "0a5c6e75bbd23e4baad8286a7303714b7e2f7390196d6f8f79c5b2125f7924db"
+  },
+  "checks": [
+    {
+      "check": "required_folders",
+      "result": "PASS",
+      "observation": {
+        "count": 14,
+        "folders": [
+          "requirements",
+          "architecture",
+          "cad_specifications",
+          "simulation",
+          "software",
+          "tests",
+          "evidence",
+          "budget",
+          "procurement",
+          "risk_records",
+          "caregiver_workflows",
+          "simulated_patient_data",
+          "revision_history",
+          "release_archive"
+        ]
+      }
+    },
+    {
+      "check": "archive_matches_extracted_source",
+      "result": "PASS",
+      "observation": {
+        "identical_files": 45
+      }
+    },
+    {
+      "check": "archive_original_manifest",
+      "result": "PASS",
+      "observation": {
+        "covered_files_verified": 44
+      }
+    },
+    {
+      "check": "original_zip_copy",
+      "result": "PASS",
+      "observation": {
+        "sha256": "1d1bc2b53f0be81888a858ca373776adbae6911928fbc8779ad3f35c30e80a85"
+      }
+    },
+    {
+      "check": "working_copies_match_archive",
+      "result": "PASS",
+      "observation": {
+        "identical_working_files": 38
+      }
+    },
+    {
+      "check": "direct_mission_open",
+      "result": "PASS",
+      "observation": {
+        "path": "requirements/Project_ASTRO_Mission_R0_1.pdf",
+        "pages": 1,
+        "revision": "R0.1"
+      }
+    },
+    {
+      "check": "direct_requirements_open",
+      "result": "PASS",
+      "observation": {
+        "path": "requirements/requirements.csv",
+        "rows": 64,
+        "id_column": "Requirement ID"
+      }
+    },
+    {
+      "check": "direct_hazards_open",
+      "result": "PASS",
+      "observation": {
+        "path": "risk_records/hazards.csv",
+        "rows": 20,
+        "id_column": "Hazard ID"
+      }
+    },
+    {
+      "check": "direct_verification_open",
+      "result": "PASS",
+      "observation": {
+        "path": "tests/verification_matrix.csv",
+        "rows": 26,
+        "id_column": "Verification ID"
+      }
+    },
+    {
+      "check": "direct_budget_workbook_open",
+      "result": "PASS",
+      "observation": {
+        "path": "budget/Project_ASTRO_Control_Workbook_R0_1.xlsx",
+        "worksheets": 13,
+        "tabs_checked": [
+          "Budget",
+          "Mass",
+          "Decisions"
+        ],
+        "revision": "R0.1",
+        "editing": "NONE"
+      }
+    },
+    {
+      "check": "previous_evidence_preserved",
+      "result": "PASS",
+      "observation": {
+        "unchanged_preexisting_files": 12
+      }
+    },
+    {
+      "check": "index_links",
+      "result": "PASS",
+      "observation": {
+        "all_index_file_links_resolve": true
+      }
+    }
+  ],
+  "limitations": [
+    "No robot, software-feature, simulation, fabrication or payload test performed.",
+    "Prior Day 1 review/time entries and scope differences remain unresolved.",
+    "User time is a self-report; assistant file checks do not establish user navigation or engineering competence."
+  ],
+  "result_scope": "Day 002 working folder setup, release preservation, working copy seeding and direct-path document opening only.",
+  "completion_check_used_search": false,
+  "archive_actual_hashes": [
+    {
+      "path": "Project_ASTRO_Control_Workbook_R0_1.xlsx",
+      "sha256": "c1a056a982336ca925523f08bc230348320869ad49810847d5add681ef532bd6"
+    },
+    {
+      "path": "Project_ASTRO_Engineering_Baseline_R0_1.docx",
+      "sha256": "f3a843b35456378622007aa371a95e1e1adc63bfb5929615671aa3dadf3881aa"
+    },
+    {
+      "path": "Project_ASTRO_Engineering_Baseline_R0_1.pdf",
+      "sha256": "55672646357306ada0ffd99a9e58257a030cb9038ef01b30e6da63cace83a441"
+    },
+    {
+      "path": "Project_ASTRO_Mission_R0_1.pdf",
+      "sha256": "3eff42766d70a967ffd50304a09e4594a3112766463fd0382dcc0ccd2e2a1c32"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/README.md",
+      "sha256": "edd6a2dda9f16d18dc364819ee21581bf7b612987216d2160ad515de2e8a775a"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/architecture/02_system_architecture.md",
+      "sha256": "174de8eded385616ad067f8fcda002974686be0c5f9f4ea2ace638433d6bf96f"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/architecture/access_authorization.csv",
+      "sha256": "d14f2b16f55abe181d294a6813c9c579898e35922201b7c59aabb33fe1c5c705"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/architecture/system_architecture.mmd",
+      "sha256": "d77dd63289151c4619c21feb665d5d2c7ffac06d2145ea1c9bc3e535f6f32d55"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/architecture/system_architecture.png",
+      "sha256": "c2d868232d7c9b6d9b869e357d864f0fbd5813a7d5c409337d0523210d439e9b"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/budget/06_mass_budget.md",
+      "sha256": "341db1d3d485874ac44d1c74f2792399f841563fb04f1f3396b62e9490a5514d"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/budget/07_financial_budget.md",
+      "sha256": "f4fa0c87d531c70f1d33b93b14c04a4cd04080a998569539d4fbaba86d5f400f"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/budget/financial_budget.csv",
+      "sha256": "9e6eb4f2b5ec8ca1f12dd12a031f5f6b6fa707a268d063c1309ab0b6992b368e"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/budget/mass_budget.csv",
+      "sha256": "2dc72354a31e8ca4060fa9826f688a06066f37f530f05a9e78e06dec369b404d"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/cad_specifications/README.md",
+      "sha256": "b37e32bb0677b6694a3ec297820aaf564870213f2ee85583def7b2d32a95737e"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/cad_specifications/candidate_joints.csv",
+      "sha256": "7807852d921a7393a1507349a2485ea8e067a77435e860693932b6161c7260fe"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/cad_specifications/parameters.json",
+      "sha256": "925b303a610dc72987dd867f04ab59badbf97eeaea7d12f7699a40aac4929a3c"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/caregiver_workflows/04_caregiver_workflows.md",
+      "sha256": "efca95128a60d07c6cf98fbe6a7f49357856ec12e61e4ba45c78a6e2cc08acd9"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/evidence/README.md",
+      "sha256": "4fcb34213df98479f3db4d71b1014097b9b0b005a68b7f5471ae7dd384cc3de7"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/evidence/document_qa.json",
+      "sha256": "9c3fee4bb74d58b980582c737a98baefd3b4b8f2a664e5b96714df039a58f3a3"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/evidence/evidence_record_template.json",
+      "sha256": "98b2f3a6925e08c1ae48fa127e83ded6b26704e1e4e7806851a322ff3dffe414"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/procurement/11_make_versus_buy.md",
+      "sha256": "325d6c57a3881ea080c183c6760602dedac098bd2ace55fd48ca48b7c7ae3dfa"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/procurement/make_vs_buy.csv",
+      "sha256": "beb54084f1f8dac69aab2464fd9cc6f1aeff1c0c0b3e2357e060f5bd8caddde7"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/release_archive/README.md",
+      "sha256": "983e75fd4568a5f34e973c0645f9a85101ac89e2e0570cdbd3318f990a0e8051"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/requirements/01_mission_and_scope.md",
+      "sha256": "d11f0b7ae99b8ca41455a2a273bfb5ccb096deb711fc3a287b27256f247a0b49"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/requirements/03_requirement_matrix.md",
+      "sha256": "e886de873be4e657a3283140135f4ed0c90d6d4325bdc61cf1f82140748c5fee"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/requirements/08_feature_backlog.md",
+      "sha256": "5f243e2a4d96305caac285ef9a449cfe9c86ddb0dc2bc8e9d189728615a63ebf"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/requirements/feature_backlog.csv",
+      "sha256": "6087c64c64806f629fe513dea661382687a46b781eca9e1adda2acb4864445c5"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/requirements/requirements.csv",
+      "sha256": "efb250bc3af67225c06c2dc2b6d72b3b927071b0d596abb6b8b777edd31678b1"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/requirements/sources.csv",
+      "sha256": "120a5c58aabe58ff5143915484d58ce54df1faf15e081ca3eafe7073d477ed41"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/revision_history/12_one_year_roadmap.md",
+      "sha256": "31f624d6ee9ba22fe69bf57b6b26eb37e511d0702be6fac103b84f10ae306d62"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/revision_history/CHANGELOG.md",
+      "sha256": "7a72e2a1b4fe8e799cb10a4584b14f62e78e8491ba9b71a41e376f86f93ceec4"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/revision_history/decisions.csv",
+      "sha256": "1a43c82dee19b4e041b8dd933711f20b79411fccea6574453ca7fca9e8de92c9"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/revision_history/gates.csv",
+      "sha256": "e2202b6a111f5d9459f64cfd60f8ca7c5caf5ec685de8e1229321d45e76a920d"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/risk_records/09_hazard_and_ethical_risk_register.md",
+      "sha256": "feec3dac77e969c940f47ffc037bfb75a5732f7fa0728773f258d5c54fc2056f"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/risk_records/assumptions.csv",
+      "sha256": "b07e0c3857c1ab578df5edb51127515b10826fa3654907a47b64f8f116e17729"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/risk_records/excluded_claims.md",
+      "sha256": "6a3b457418319121b4b4220f07824f8226e0f865f71ce81fdeb84cc885effe06"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/risk_records/hazards.csv",
+      "sha256": "117f1fa2585c61e2de30f4498d555066733500b3e78268afdf69e2c0f5193061"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/simulated_patient_data/fictional_fixture.json",
+      "sha256": "869a2f08b64394320a31b8456f5cc4d2076527758e95c2fd5454c5170553e245"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/simulation/README.md",
+      "sha256": "a3e7709af1e8b3a64ca46be2079e7a2b64ad435eaa5380f591568304656e9af0"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/software/README.md",
+      "sha256": "e9dd35a1388cafbbe2395bf0e5710cdb7bbc1fbf253e0042eaa580f111b1bf66"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/tests/05_demonstration_script.md",
+      "sha256": "a4064ec58cbb35d306f93abe7f5a663db441f22c7a0b78e8f9b4c733268ff924"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/tests/10_verification_matrix.md",
+      "sha256": "1c8c142c0bef2459a31630a1108f2a26ec6aa83ff9c64b137ca2c8a5e99ace92"
+    },
+    {
+      "path": "Project_ASTRO_R0_1/tests/verification_matrix.csv",
+      "sha256": "60bbc9f22aeaa26324e83b0578eaf76ecca6d3b4b3efab7d0080076527b5848b"
+    },
+    {
+      "path": "MANIFEST_SHA256.txt",
+      "sha256": "bcd7eee1d401899884ab56b3655cb4a57438796bc717fe9187d3599119733de3"
+    },
+    {
+      "path": "START_HERE.md",
+      "sha256": "49a2915e5126722f468c775240153ab27445d913f2ef285b657d115fb45ce190"
+    }
+  ],
+  "filesystem_authorization": {
+    "path": "/Users/sudadabdulrazak/BerkeleyProjects/Project ASTRO/ProjectASTRO",
+    "source": "App filesystem write grant during this Day 2 turn",
+    "scope": "turn; file setup only"
+  },
+  "assistant_timed_interval": {
+    "start_utc": "2026-10-25T19:25:12Z",
+    "finish_utc": "2026-10-25T19:29:40.834922+00:00",
+    "elapsed_seconds": 268.4,
+    "basis": "Elapsed wall time from archive preparation through installation checks; includes approval/interaction time and is separate from user-reported effort."
+  },
+  "new_files_added": 87,
+  "new_spend_usd": 0,
+  "robot_tests_executed": false,
+  "engineering_gates_released": []
+}

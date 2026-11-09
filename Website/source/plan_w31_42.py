@@ -1,9 +1,9 @@
 from plan_model import W, d, O
 
-R = "JacobsBaymax/"
+R = "ProjectASTRO/"
 STOPOP = "A second competent adult as stop operator, briefed on the e-stop and standing outside the fall zone. Get: their name and signature on the run sheet."
 PERMIT = "The reviewer named on Day 133 signs the stage permit. Get: signed permit naming the configuration, limits file hash and people."
-BACKUP = "Export a website backup (Settings → Export progress JSON) into JacobsBaymax/evidence/backups/."
+BACKUP = "Export a website backup (Settings → Export progress JSON) into ProjectASTRO/evidence/backups/."
 
 
 def review_day(n, stage, inputs, goal, extra_step, calc="Runs accepted / runs attempted."):
@@ -23,7 +23,7 @@ d(211, "Review the sensor test permit",
   inp=[O(210), O(116), O(132)],
   st=[(40, "Fill the permit: you as operator; bench setup with drives unpowered; sensor logic from a current-limited bench supply (≤ 24 V, ≤ 1 A); procedure; calibrated references."),
       (40, "List every channel to check: 10 joint encoders, 1 IMU, 8 foot load cells, drive current and temperature channels."),
-      (20, "Get the reviewer's signature and save the scan in JacobsBaymax/tests/permits/.")],
+      (20, "Get the reviewer's signature and save the scan in ProjectASTRO/tests/permits/.")],
   calc="Channels: 10 + 1 + 8 + current/temperature.",
   chk=["Permit signed and saved.", "Channel list complete.", "Calibration references listed with dates."],
   kind="review", help=PERMIT)
@@ -213,7 +213,7 @@ d(230, "Check charging and service controls",
 
 review_day(231, "S4", [O(226), O(227), O(228), O(229), O(230)],
   "A real S4 decision on the power system.",
-  "Update the power model and hazards JB-H-04 and JB-H-17 with measured values.")
+  "Update the power model and hazards ASTRO-H-04 and ASTRO-H-17 with measured values.")
 
 # ---------------------------------------------------------------- Week 34 · S5 safety
 W(34)

@@ -1,0 +1,15 @@
+ID,Subsystem,Quantity,Allowance USD per unit,Basis,Gate
+B-01,Ten lower-body actuator assemblies,10,300,"Derived affordability ceiling per assembly, not a vendor quote",G3
+B-02,Structure and qualified fabrication,1,650,Unquoted allowance,G4
+B-03,Feet and contact sensors,1,180,Unquoted allowance,G3
+B-04,Battery charger and power distribution,1,650,Unquoted allowance,G3
+B-05,Independent safety hardware,1,450,Unquoted allowance; performance level not established,G3
+B-06,Compute perception audio and display,1,500,Assumes modest/reused laptop capability; ownership unconfirmed,G1
+B-07,Plastic panels and mounts,1,550,Unquoted allowance,G4
+B-08,Supported handling module,1,350,Unquoted allowance,G3
+B-09,Rated robot fall protection and anchorage access,1,1000,Rental/access allowance; no facility or equipment confirmed,G2
+B-10,Fixtures tools and inspection equipment access,1,500,Access allowance; no equipment confirmed,G2
+B-11,Qualified independent engineering review,1,600,Unquoted limited review allowance; sufficient hours unknown,G2
+B-12,Software communication and content licenses,1,120,Local-first allocation,G1
+B-13,Freight taxes duties and standards access,1,650,Provisional combined allowance; jurisdiction unknown,G3
+B-14,Spares and uncommitted contingency,1,800,"Reserve, not available to disguise known overruns",G3

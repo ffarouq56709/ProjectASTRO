@@ -1,4 +1,4 @@
-# Jacobs Baymax Caregiver-Support Robot — Project Charter v1.0
+# Project ASTRO Caregiver-Support Robot — Project Charter v1.0
 
 | Field | Value |
 |---|---|
@@ -29,7 +29,7 @@ Parts and materials needed today:
 
 ## 2. Project purpose
 
-The Jacobs Baymax project will create a 1,829 mm-tall Baymax-style caregiver-support robotics prototype.
+The Project ASTRO project will create a 1,829 mm-tall ASTRO-style caregiver-support robotics prototype.
 
 The project will explore:
 
@@ -53,7 +53,7 @@ The first-year prototype will demonstrate the following capabilities as separate
 5. The robot recognizes a scripted concerning event and asks whether assistance is needed.
 6. After confirmation, the robot sends a structured test report to an approved test recipient.
 7. While stationary and mechanically supported, the robot lifts a 2 kg test object.
-8. The robot uses removable plastic panels to create its external Baymax-style body.
+8. The robot uses removable plastic panels to create its external ASTRO-style body.
 9. The robot records test evidence and clearly communicates its limitations.
 
 Walking while carrying the payload is not included in the first-year demonstration.
@@ -207,7 +207,7 @@ These questions do not block completion of the Day 2 charter. They must be resol
 
 Day 1 established the following accepted planning inputs:
 
-- Baymax-style caregiver-support research prototype
+- ASTRO-style caregiver-support research prototype
 - 1,829 mm overall height target
 - 55 kg operating-mass target
 - 65 kg mass design-stop limit

@@ -1,0 +1,23 @@
+Feature ID,Feature,Benefit 1-5,Risk 1-5,Cost 1-5,Time 1-5,Dependency,Scope,Planning score
+F-01,Consent dashboard and persistent simulated labels,5,1,1,1,None,Year 1 core,25
+F-02,Large text high contrast captions and speech rate,5,1,1,1,Local UI,Year 1 core,25
+F-03,Manual human-contact button and communication board,5,2,1,1,Approved recipient list,Year 1 core,24
+F-04,Caregiver shift summary and explanation of actions,5,2,1,2,Records audit and approval,Year 1 core,23
+F-08,Battery maintenance and cleaning reminders,4,1,1,1,Selected hardware instructions,Year 1 core,23
+F-05,Daily feelings check-in and comfort preferences,4,2,1,1,Consent and human handoff,Year 1 core,22
+F-06,Privacy mode with visible microphone and camera off,5,2,2,2,Capture hardware/software controls,Year 1 core,22
+F-07,Games stories licensed music and relaxation,4,2,1,2,Age presets and content rights,Year 1 core,21
+F-10,Approved telepresence call,5,3,2,2,Consent identity and connection status,Year 1 core,21
+F-09,Appointment reminders and static wayfinding,3,2,1,1,Fictional schedule and map,Year 1 core,20
+F-11,Teach-back of exact approved instructions,4,3,1,2,Human-approved source and no clinical interpretation,Later candidate,20
+F-12,Supply laundry and meal pickup request relay,3,2,1,2,Approved service endpoints,Later candidate,19
+F-20,Caregiver-loaded cargo drawer,3,2,2,2,Mounting load and access review,Later candidate,18
+F-13,Family messages and approved photos,3,3,2,2,Media consent moderation and retention,Later candidate,17
+F-14,Multilingual interaction,4,3,3,3,Human-reviewed translations and accessibility testing,Later candidate,17
+F-15,Room lights music blinds and temperature controls,3,3,2,2,Approved interfaces and permission model,Later candidate,17
+F-19,Counterbalanced stationary arm,4,3,3,3,Fixture structural and pinch review,Year 1 design option,17
+F-21,Detachable handling module,4,3,3,3,Interface retention and separate tests,Year 1 design option,17
+F-16,Clinician-directed rehabilitation games,4,4,3,3,Qualified clinician scripts and separate motion approval,Later candidate,16
+F-17,Low wheeled supply cart guided by robot,4,4,3,3,Coupled stability and braking review,Later candidate,16
+F-18,Separate powered trolley,4,3,4,3,Independent machine safety review,Later candidate,16
+F-22,5 kg handling payload,3,5,5,5,Validated 2 kg subsystem and full redesign analysis,Later stretch only,9
